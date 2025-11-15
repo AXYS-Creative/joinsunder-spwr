@@ -75,11 +75,11 @@
       --link-size: 28px;
     }
 
-    @include desktop-hover {
-      .social-media__link-img {
-        background: white;
-      }
-    }
+    // @include desktop-hover {
+    //   .social-media__link-img {
+    //     background: white; // Delete me, overriding vars in nav menu social media
+    //   }
+    // }
 
     &-img {
       background: currentColor;

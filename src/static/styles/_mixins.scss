@@ -230,7 +230,9 @@ $min-breakpoints: (
 }
 
 @mixin light-theme {
-  --font-color--primary: #{$blue};
+  --surface-color: #{$spwr-light};
+
+  --font-color--primary: #{$spwr-dark};
 
   --link-color: #{$blue};
   --link-color-hover: #{$blue};
@@ -313,11 +315,7 @@ $min-breakpoints: (
 
 @mixin section-fade {
   border-radius: var(--radius-lg);
-  background: linear-gradient(
-    to bottom,
-    var(--surface-color-2) 10%,
-    var(--background-color) 50%
-  );
+  background: linear-gradient(to bottom, var(--surface-color-2) 10%, var(--background-color) 50%);
 }
 
 @mixin blue-gradient($dir: 180deg, $start: 30%, $end: 70%) {

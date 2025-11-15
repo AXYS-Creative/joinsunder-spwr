@@ -151,9 +151,9 @@
   }
 
   .ethos-bottom {
+    @include light-theme;
     @include row-center(space-between);
-    @include dark-theme;
-    background-color: var(--hero-color--primary);
+    background-color: var(--surface-color);
     padding: var(--body-padding);
     border-radius: var(--radius);
     gap: var(--section-gap);
@@ -464,11 +464,7 @@
 
       @include mq-min(lg) {
         border-inline: 4px solid var(--background-color);
-        background: linear-gradient(
-          0deg,
-          rgba($blue, 1) 20%,
-          rgba($white, 1) 72.5%
-        );
+        background: linear-gradient(0deg, rgba($blue, 1) 20%, rgba($white, 1) 72.5%);
       }
 
       &__stripe {

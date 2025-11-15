@@ -283,26 +283,18 @@ body {
       &:hover,
       &:focus-visible {
         border-color: var(--hero-color--primary);
-        color: $blue;
+        color: var(--hero-color--primary);
 
         &::before {
           width: 100%;
         }
 
         .reveal {
-          width: 5.75ch;
+          width: 4.1ch;
           pointer-events: none;
 
-          @include mq-max(xl) {
-            width: 5.6ch;
-          }
-
-          @include mq-max(lg) {
-            width: 5.5ch;
-          }
-
           @include mq-max(sm) {
-            width: 5.4ch;
+            width: 4ch;
           }
         }
       }
@@ -334,8 +326,8 @@ body {
 }
 
 .site-footer {
-  @include dark-theme;
-  background-color: var(--hero-color--primary);
+  // @include dark-theme;
+  background-color: var(--surface-color);
   width: calc(100vw - var(--body-padding-sm-double));
   max-width: var(--header-max-width);
   // max-width: unset; // toggle for ultra-wide behavior
@@ -367,6 +359,9 @@ body {
     }
 
     .social-media {
+      --link-color: #{$spwr-yellow};
+      --link-color-hover: #{$spwr-light};
+
       @include mq-max(lg) {
         display: none;
       }

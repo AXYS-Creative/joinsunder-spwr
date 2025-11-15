@@ -1,5 +1,10 @@
 $brand-font: "satoshi", system-ui, sans-serif;
 
+$spwr-light: #ffffff;
+$spwr-dark: #141414;
+$spwr-mid: #2f2f2f;
+$spwr-yellow: #fdfd00;
+
 $sunder-snow: #f7f7f7;
 $sunder-ice-light: #efefef;
 $sunder-ice: #d9d9d9;
@@ -51,12 +56,14 @@ $test: 2px dashed rgba(coral, 0.75);
 $test-bg: rgba(navy, 0.75);
 
 :root {
-  --background-color: #{$white};
-  --font-color--primary: #{$blue};
+  --background-color: #{$spwr-dark};
+
+  // --font-color--primary: #{$spwr-yellow};
+  --font-color--primary: #{$spwr-light};
   --font-color--secondary: #{$grey};
   --font-color--error: #{$red};
 
-  --hero-color--primary: #{$blue};
+  --hero-color--primary: #{$spwr-yellow};
 
   --font-family: #{$brand-font};
 
@@ -77,12 +84,12 @@ $test-bg: rgba(navy, 0.75);
 
   --btn-padding: 8px 20px;
 
-  --link-color: #{$blue};
-  --link-color-hover: #{$blue};
+  --link-color: #{$spwr-light};
+  --link-color-hover: #{$spwr-yellow};
 
   // Surface Colors
-  --surface-color: #{$grey}; // Nav menu bg
-  --surface-color-2: #{$grey-light}; // hero-img-partial bg, form field bg
+  --surface-color: #{$spwr-mid}; // Nav menu bg || ethos bottom when in light theme
+  --surface-color-2: #{$spwr-mid}; // hero-img-partial bg, form field bg
 
   // Size & Spacing
   --body-padding: 24px;
