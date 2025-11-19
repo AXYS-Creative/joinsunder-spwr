@@ -37,8 +37,10 @@
   @include sr-only;
 }
 
-.section-gradient {
-  @include top-fade-section;
+// Reskin turns this into solid color from gradient
+.section-solid-bg {
+  // @include top-fade-section;
+  @include top-solid-section;
 
   @include mq-min(lg) {
     padding-inline: var(--body-padding-double);
@@ -46,6 +48,7 @@
 
   &__title {
     @include h3;
+    color: var(--color-accent);
 
     @include mq-max(md) {
       @include h4;
@@ -92,7 +95,7 @@
 }
 
 body .hide-load {
-  display: none; // strange issue when visiting page on prod, the video shows briefly then goes away
+  display: none; // fixes a strange issue when visiting page on prod, the video shows briefly then goes away
 }
 
 // Form Submit & 404 pages
@@ -116,28 +119,6 @@ body .hide-load {
     text-wrap: balance;
   }
 }
-
-// // Library
-// @media all {
-//   .magnet {
-//     transition: $magnet;
-//   }
-
-//   .fill-text,
-//   .fill-text-hover {
-//     @include fill-text;
-
-//     &:is(.fill-text-hover) {
-//       background-size: 0%;
-//       // -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
-//       transition: $ease;
-
-//       @include desktop-hover {
-//         background-size: 100%;
-//       }
-//     }
-//   }
-// }
 
 // Media Query Utility, be mindful of flex vs block
 @media all {
@@ -211,5 +192,15 @@ body .hide-load {
   }
   .color-secondary {
     color: var(--hero-color--secondary);
+  }
+  .color-accent {
+    color: var(--color-accent);
+  }
+
+  .small-title {
+    @include mq-min(lg) {
+      font-size: 0.55em;
+      line-height: 1;
+    }
   }
 }

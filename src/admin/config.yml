@@ -70,7 +70,7 @@ collections:
             label: Section Title
             widget: string
             required: true
-            hint: Semantic page heading for accessibility and SEO. Not visually shown on the page (per design) but improves site indexing and other areas. If left blank, defaults to 'Welcome to Sunder Energy'
+            hint: Semantic page heading for accessibility and SEO. Not visually shown on the page (per design) but improves site indexing and other areas. If left blank, defaults to 'Welcome to Sunpower'
           - name: external_panel
             label: External Panel (sunderenergy.com)
             widget: object
@@ -131,18 +131,18 @@ collections:
                 required: true
                 hint: Customize text with tokens. Visit https://axyscreative.com/tokens to learn more.
               - *cta_field
-  - name: page_sunder_way
-    label: Page - Sunder Way
+  - name: page_spwr_way
+    label: Page - SPWR Way
     files:
       - name: ethos
         label: Section - Ethos
-        file: src/_data/page_sunder_way/ethos.yaml
-        preview_path: /sunder-way
+        file: src/_data/page_spwr_way/ethos.yaml
+        preview_path: /spwr-way
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (Sunder Way - Ethos)
+            label: Show Section (SPWR Way - Ethos)
             widget: boolean
             default: true
           - name: section_title
@@ -212,13 +212,13 @@ collections:
           - *cta_field
       - name: competitions
         label: Section - Competitions
-        file: src/_data/page_sunder_way/competitions.yaml
-        preview_path: /sunder-way#competitions
+        file: src/_data/page_spwr_way/competitions.yaml
+        preview_path: /spwr-way#competitions
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (Sunder Way - Competitions)
+            label: Show Section (SPWR Way - Competitions)
             widget: boolean
             default: true
           - name: section_title
@@ -318,13 +318,13 @@ collections:
                     max_file_size: 1000000 # 1MB = 1,000,000 bytes
       - name: experiences
         label: Section - Experiences
-        file: src/_data/page_sunder_way/experiences.yaml
-        preview_path: /sunder-way#experiences
+        file: src/_data/page_spwr_way/experiences.yaml
+        preview_path: /spwr-way#experiences
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (Sunder Way - Experiences)
+            label: Show Section (SPWR Way - Experiences)
             widget: boolean
             default: true
           - name: section_title
@@ -421,13 +421,13 @@ collections:
                 hint: Use 13 images for mobile column 2
       - name: oss
         label: Section - OSS
-        file: src/_data/page_sunder_way/oss.yaml
-        preview_path: /sunder-way#operation-sunder-serves
+        file: src/_data/page_spwr_way/oss.yaml
+        preview_path: /spwr-way#operation-spwr-serves
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (Sunder Way - OSS)
+            label: Show Section (SPWR Way - OSS)
             widget: boolean
             default: true
           - name: section_title
@@ -458,13 +458,13 @@ collections:
           - *cta_field
       - name: quotes
         label: Section - Quote
-        file: src/_data/page_sunder_way/quotes.yaml
-        preview_path: /sunder-way#quote-section
+        file: src/_data/page_spwr_way/quotes.yaml
+        preview_path: /spwr-way#quote-section
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (Sunder Way - Quote)
+            label: Show Section (SPWR Way - Quote)
             widget: boolean
             default: true
           - name: list
@@ -1035,7 +1035,7 @@ collections:
       - name: hero_oss
         label: Section - Hero
         file: src/_data/page_oss/hero.yaml
-        preview_path: /operation-sunder-serves
+        preview_path: /operation-spwr-serves
         editor:
           preview: true
         fields:
@@ -1064,7 +1064,7 @@ collections:
       - name: history
         label: Section - History
         file: src/_data/page_oss/history.yaml
-        preview_path: /operation-sunder-serves#history
+        preview_path: /operation-spwr-serves#history
         editor:
           preview: true
         fields:
@@ -1213,7 +1213,7 @@ collections:
       - name: footer
         label: Site Footer
         file: src/_data/global/footer.yaml
-        preview_path: /sunder-way#site-footer
+        preview_path: /spwr-way#site-footer
         editor:
           preview: true
         fields:
@@ -1275,7 +1275,7 @@ collections:
       - name: social_media
         label: Social Media
         file: src/_data/global/social_media.yaml
-        preview_path: /sunder-way#site-footer
+        preview_path: /spwr-way#site-footer
         editor:
           preview: false
         fields:

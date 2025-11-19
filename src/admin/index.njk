@@ -68,12 +68,7 @@
                 alt: "",
               }),
 
-            title &&
-              h(
-                TitleTag,
-                { className: `partial-img-hero__${titleTag}` },
-                title
-              ),
+            title && h(TitleTag, { className: `partial-img-hero__${titleTag}` }, title),
 
             h(
               "div",
@@ -99,14 +94,7 @@
         );
       };
 
-      const LogosGroupPreview = ({
-        id,
-        title,
-        desc,
-        logos = [],
-        grid = 3,
-        gridSm = 2,
-      }) => {
+      const LogosGroupPreview = ({ id, title, desc, logos = [], grid = 3, gridSm = 2 }) => {
         return h(
           "div",
           { className: "logos-group", id },
@@ -239,8 +227,7 @@
                       h(
                         "a",
                         {
-                          className:
-                            "footer-links__link classic-link tab-element-page",
+                          className: "footer-links__link classic-link tab-element-page",
                           href: link.url,
                           target: link.new_tab ? "_blank" : null,
                           rel: link.new_tab ? "noopener noreferrer" : null,
@@ -278,7 +265,7 @@
           const entry = this.props.entry;
           const data = entry.getIn(["data"]).toJS();
 
-          const fallbackTitle = "Welcome to Sunder Energy";
+          const fallbackTitle = "Welcome to Sunpower";
           const sectionTitle = data.section_title || fallbackTitle;
 
           const renderPanel = (panelData, panelClass) => {
@@ -307,16 +294,8 @@
                 h(
                   "h2",
                   { className: "hero-panel__title" },
-                  h(
-                    "span",
-                    { className: "hero-panel__title-sm" },
-                    panelData.pre_title
-                  ),
-                  h(
-                    "span",
-                    { className: "hero-panel__title-lg" },
-                    panelData.title
-                  )
+                  h("span", { className: "hero-panel__title-sm" }, panelData.pre_title),
+                  h("span", { className: "hero-panel__title-lg" }, panelData.title)
                 ),
                 // CTA
                 panelData.cta?.text &&
@@ -329,17 +308,11 @@
                         className: "cta-1 tab-element-page",
                         href: panelData.cta.url || "#",
                         target: panelData.cta.new_tab ? "_blank" : null,
-                        rel: panelData.cta.new_tab
-                          ? "noopener noreferrer"
-                          : null,
+                        rel: panelData.cta.new_tab ? "noopener noreferrer" : null,
                         "aria-label": `Learn More about ${panelData.title}`,
                       },
                       panelData.cta.text,
-                      h(
-                        "span",
-                        { className: "sr-only" },
-                        `Learn More about ${panelData.title}`
-                      )
+                      h("span", { className: "sr-only" }, `Learn More about ${panelData.title}`)
                     )
                   )
               )
@@ -388,10 +361,7 @@
                   { className: "ethos-top__title" },
                   ...sectionTitle
                     .split(" ")
-                    .map((word, i) => [
-                      word,
-                      h("br", { "aria-hidden": "true", key: i }),
-                    ])
+                    .map((word, i) => [word, h("br", { "aria-hidden": "true", key: i })])
                 ),
                 h(
                   "div",
@@ -432,10 +402,7 @@
                         { className: "panel-title" },
                         ...val.title
                           .split(" ")
-                          .map((word, i) => [
-                            word,
-                            h("br", { "aria-hidden": "true", key: i }),
-                          ])
+                          .map((word, i) => [word, h("br", { "aria-hidden": "true", key: i })])
                       ),
                       h(
                         "p",
@@ -488,17 +455,13 @@
           return h(
             "section",
             {
-              className: "section-competitions section-gradient",
+              className: "section-competitions section-solid-bg",
               id: "competitions",
             },
 
             // Title + Description
-            h(
-              "h2",
-              { className: "section-gradient__title" },
-              data.section_title
-            ),
-            h("p", { className: "section-gradient__desc" }, data.section_desc),
+            h("h2", { className: "section-solid-bg__title" }, data.section_title),
+            h("p", { className: "section-solid-bg__desc" }, data.section_desc),
 
             // Competition Types
             h(
@@ -516,22 +479,10 @@
                   h(
                     "figcaption",
                     { className: "competition-types__caption" },
-                    h(
-                      "h3",
-                      { className: "competition-types__caption-title" },
-                      type.title
-                    ),
-                    h(
-                      "p",
-                      { className: "competition-types__caption-p" },
-                      type.caption
-                    )
+                    h("h3", { className: "competition-types__caption-title" }, type.title),
+                    h("p", { className: "competition-types__caption-p" }, type.caption)
                   ),
-                  h(
-                    "span",
-                    { className: "cta-1 competition-types__badge" },
-                    "Read More"
-                  )
+                  h("span", { className: "cta-1 competition-types__badge" }, "Read More")
                 )
               )
             ),
@@ -563,9 +514,7 @@
                     { className: "yog-merch__row", key: i },
                     row.items?.map((item, j) =>
                       h("img", {
-                        className: `yog-merch__row-img gsap-animate ${
-                          item.rotate || ""
-                        }`,
+                        className: `yog-merch__row-img gsap-animate ${item.rotate || ""}`,
                         style: {
                           opacity: 1,
                         },
@@ -593,11 +542,7 @@
               ),
 
               // Stripe element
-              h(
-                "div",
-                { className: "yog-stripes" },
-                h("div", { className: "yog-stripes__stripe" })
-              )
+              h("div", { className: "yog-stripes" }, h("div", { className: "yog-stripes__stripe" }))
             )
           );
         },
@@ -611,12 +556,7 @@
           const videos = data.videos || [];
           const collage = data.collage || {};
           // Handles both desktop and mobile, with opt-in for alternating mode
-          const renderImage = (
-            img,
-            imgIndex,
-            colIndex,
-            alternateByCol = false
-          ) => {
+          const renderImage = (img, imgIndex, colIndex, alternateByCol = false) => {
             const isPortrait = alternateByCol
               ? colIndex % 2 === 0 // col 0 and 2 → portrait first
                 ? imgIndex % 2 === 0
@@ -633,7 +573,7 @@
           return h(
             "section",
             {
-              className: "section-experiences section-gradient",
+              className: "section-experiences section-solid-bg",
               id: "experiences",
             },
 
@@ -641,13 +581,13 @@
             h(
               "h2",
               {
-                className: "section-gradient__title section-experiences__title",
+                className: "section-solid-bg__title section-experiences__title",
               },
               data.section_title
             ),
             h(
               "p",
-              { className: "section-gradient__desc section-experiences__desc" },
+              { className: "section-solid-bg__desc section-experiences__desc" },
               data.section_desc
             ),
 
@@ -694,20 +634,16 @@
               h(
                 "div",
                 { className: "collage" },
-                ["column_1", "column_2", "column_3", "column_4"].map(
-                  (colKey, colIndex) =>
-                    h(
-                      "div",
-                      {
-                        className: `collage__column collage__column-${
-                          colIndex + 1
-                        }`,
-                      },
-                      (collage[colKey] || []).map(
-                        (img, imgIndex) =>
-                          renderImage(img, imgIndex, colIndex, true) // ← alternateByCol = true
-                      )
+                ["column_1", "column_2", "column_3", "column_4"].map((colKey, colIndex) =>
+                  h(
+                    "div",
+                    {
+                      className: `collage__column collage__column-${colIndex + 1}`,
+                    },
+                    (collage[colKey] || []).map(
+                      (img, imgIndex) => renderImage(img, imgIndex, colIndex, true) // ← alternateByCol = true
                     )
+                  )
                 ),
                 ["column_1_mobile", "column_2_mobile"].map((colKey, colIndex) =>
                   h(
@@ -718,8 +654,7 @@
                       }`,
                     },
                     (collage[colKey] || []).map(
-                      (img, imgIndex) =>
-                        renderImage(img, imgIndex, colIndex, false) // ← standard alt logic
+                      (img, imgIndex) => renderImage(img, imgIndex, colIndex, false) // ← standard alt logic
                     )
                   )
                 )
@@ -777,11 +712,7 @@
                       h("br", { "aria-hidden": "true" }),
                       item.name?.split(" ").slice(1).join(" ")
                     ),
-                    h(
-                      "h4",
-                      { className: "portrait-gradient__caption-role" },
-                      item.role
-                    )
+                    h("h4", { className: "portrait-gradient__caption-role" }, item.role)
                   )
                 ),
                 h(
@@ -851,11 +782,7 @@
             { className: "section-tools", id: "platform-tools" },
 
             // Hidden H2 for a11y/SEO (optional)
-            h(
-              "h2",
-              { className: "sr-only" },
-              data.section_title || "Sunder Tools"
-            ),
+            h("h2", { className: "sr-only" }, data.section_title || "Sunder Tools"),
 
             // Loop over tools and render ImgHeroPreview for each
             ...tools.map((tool, i) =>
@@ -879,7 +806,7 @@
 
           return h(
             "section",
-            { className: "section-values section-gradient" },
+            { className: "section-values section-solid-bg" },
 
             // Text Block
             h(
@@ -889,7 +816,7 @@
               h(
                 "p",
                 {
-                  className: "section-values__text-desc section-gradient__desc",
+                  className: "section-values__text-desc section-solid-bg__desc",
                 },
                 data.section_desc
               ),
@@ -958,15 +885,11 @@
           return h(
             "section",
             {
-              className: "section-leadership section-gradient",
+              className: "section-leadership section-solid-bg",
               id: "leadership",
             },
-            h(
-              "h2",
-              { className: "section-gradient__title" },
-              data.section_title
-            ),
-            h("p", { className: "section-gradient__desc" }, data.section_desc),
+            h("h2", { className: "section-solid-bg__title" }, data.section_title),
+            h("p", { className: "section-solid-bg__desc" }, data.section_desc),
             h(
               "div",
               { className: "leadership-portraits" },
@@ -988,16 +911,8 @@
                       className: "portrait-gradient__caption",
                       "aria-hidden": "true",
                     },
-                    h(
-                      "h3",
-                      { className: "portrait-gradient__caption-name" },
-                      person.name
-                    ),
-                    h(
-                      "h4",
-                      { className: "portrait-gradient__caption-role" },
-                      person.role
-                    )
+                    h("h3", { className: "portrait-gradient__caption-name" }, person.name),
+                    h("h4", { className: "portrait-gradient__caption-role" }, person.role)
                   )
                 )
               )
@@ -1013,7 +928,7 @@
 
           return h(
             "section",
-            { className: "section-timeline section-gradient", id: "timeline" },
+            { className: "section-timeline section-solid-bg", id: "timeline" },
             h(
               "div",
               { className: "timeline-pin" },
@@ -1022,13 +937,13 @@
               h(
                 "h2",
                 {
-                  className: "section-timeline__title section-gradient__title",
+                  className: "section-timeline__title section-solid-bg__title",
                 },
                 data.section_title
               ),
               h(
                 "p",
-                { className: "section-timeline__desc section-gradient__desc" },
+                { className: "section-timeline__desc section-solid-bg__desc" },
                 data.section_desc
               ),
 
@@ -1113,30 +1028,22 @@
                       className: "form-block-group form-block-group--full-name",
                     },
                     [
-                      h(
-                        "div",
-                        { className: "form-block form-block--first-name" },
-                        [
-                          h("input", {
-                            className: "input",
-                            placeholder: "",
-                            required: true,
-                          }),
-                          h("label", { className: "label" }, "First Name"),
-                        ]
-                      ),
-                      h(
-                        "div",
-                        { className: "form-block form-block--last-name" },
-                        [
-                          h("input", {
-                            className: "input",
-                            placeholder: "",
-                            required: true,
-                          }),
-                          h("label", { className: "label" }, "Last Name"),
-                        ]
-                      ),
+                      h("div", { className: "form-block form-block--first-name" }, [
+                        h("input", {
+                          className: "input",
+                          placeholder: "",
+                          required: true,
+                        }),
+                        h("label", { className: "label" }, "First Name"),
+                      ]),
+                      h("div", { className: "form-block form-block--last-name" }, [
+                        h("input", {
+                          className: "input",
+                          placeholder: "",
+                          required: true,
+                        }),
+                        h("label", { className: "label" }, "Last Name"),
+                      ]),
                     ]
                   ),
 
@@ -1144,8 +1051,7 @@
                   h(
                     "div",
                     {
-                      className:
-                        "form-block-group form-block-group--email-phone",
+                      className: "form-block-group form-block-group--email-phone",
                     },
                     [
                       h("div", { className: "form-block form-block--email" }, [
@@ -1207,43 +1113,30 @@
 
                   // Optional: Discovery Field
                   form.show_field_discovery &&
-                    h(
-                      "div",
-                      { className: "form-block form-block--discovery" },
-                      [
-                        h("textarea", {
-                          className: "input input--textarea",
-                          placeholder: "",
-                          required: true,
-                          maxLength: form.max_count_discovery || 250,
-                        }),
-                        h(
-                          "label",
-                          { className: "label label--textarea" },
-                          form.label_discovery
-                        ),
-                      ]
-                    ),
+                    h("div", { className: "form-block form-block--discovery" }, [
+                      h("textarea", {
+                        className: "input input--textarea",
+                        placeholder: "",
+                        required: true,
+                        maxLength: form.max_count_discovery || 250,
+                      }),
+                      h("label", { className: "label label--textarea" }, form.label_discovery),
+                    ]),
 
                   // Optional: Awareness Checkbox
                   form.show_checkbox_awareness &&
-                    h(
-                      "div",
-                      { className: "form-block form-block--awareness" },
-                      [
-                        h("input", {
-                          type: "checkbox",
-                          className: "checkbox",
-                          required: true,
-                        }),
-                        h(
-                          "label",
-                          { className: "checkbox-label" },
-                          form.label_checkbox_awareness ||
-                            "I understand this is a sales position."
-                        ),
-                      ]
-                    ),
+                    h("div", { className: "form-block form-block--awareness" }, [
+                      h("input", {
+                        type: "checkbox",
+                        className: "checkbox",
+                        required: true,
+                      }),
+                      h(
+                        "label",
+                        { className: "checkbox-label" },
+                        form.label_checkbox_awareness || "I understand this is a sales position."
+                      ),
+                    ]),
 
                   // Optional: reCAPTCHA
                   form.show_recaptcha &&
@@ -1301,11 +1194,7 @@
               }),
 
               // Title (h1) — this version uses h1 for the hero
-              h(
-                "h1",
-                { className: "partial-img-hero__h1" },
-                data.section_title
-              ),
+              h("h1", { className: "partial-img-hero__h1" }, data.section_title),
 
               // Footer
               h("div", { className: "partial-img-hero__footer" }, [
@@ -1355,7 +1244,7 @@
           return h(
             "section",
             {
-              className: "section-oss-history section-gradient",
+              className: "section-oss-history section-solid-bg",
               id: "history",
             },
 
@@ -1363,13 +1252,13 @@
             h(
               "h2",
               {
-                className: "section-gradient__title section-oss-history__title",
+                className: "section-solid-bg__title section-oss-history__title",
               },
               data.section_title
             ),
             h(
               "p",
-              { className: "section-gradient__desc section-oss-history__desc" },
+              { className: "section-solid-bg__desc section-oss-history__desc" },
               data.section_desc
             ),
 
@@ -1394,19 +1283,10 @@
                     h("h3", { className: "service-event__year" }, item.year),
                     h("h4", { className: "service-event__location" }, [
                       item.city &&
-                        h(
-                          "span",
-                          { className: "service-event__location-city" },
-                          `${item.city}, `
-                        ),
-                      h(
-                        "span",
-                        { className: "service-event__location-country" },
-                        item.country
-                      ),
+                        h("span", { className: "service-event__location-city" }, `${item.city}, `),
+                      h("span", { className: "service-event__location-country" }, item.country),
                     ]),
-                    item.desc &&
-                      h("p", { className: "service-event__desc" }, item.desc),
+                    item.desc && h("p", { className: "service-event__desc" }, item.desc),
 
                     // Image Gallery Carousel (Simulated as horizontal scroll)
                     gallery.length > 0 &&
@@ -1449,9 +1329,7 @@
                             href: cta.url || "#",
                             "aria-label": cta.text,
                             target: cta.new_tab ? "_blank" : "_self",
-                            rel: cta.new_tab
-                              ? "noopener noreferrer"
-                              : undefined,
+                            rel: cta.new_tab ? "noopener noreferrer" : undefined,
                           },
                           cta.text,
                           h("span", { className: "sr-only" })
@@ -1487,11 +1365,7 @@
                   data.cta_1.text
                 ),
               data.cta_2?.text &&
-                h(
-                  "a",
-                  { className: "cta-2", href: data.cta_2.url || "#" },
-                  data.cta_2.text
-                )
+                h("a", { className: "cta-2", href: data.cta_2.url || "#" }, data.cta_2.text)
             )
           );
         },

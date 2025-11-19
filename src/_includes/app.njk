@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="{{ meta_data.theme_color }}" />
     <meta name="author" content="{{ meta_data.author }}" />
-    <meta
-      name="google-site-verification"
-      content="7Cdu3lU_M9cUyGA-GJLcoZ8T3jWjsOlFm3OqmHxwn0Q"
-    />
+    <meta name="google-site-verification" content="7Cdu3lU_M9cUyGA-GJLcoZ8T3jWjsOlFm3OqmHxwn0Q" />
 
     <!-- prettier-ignore -->
     {% set pageMeta = null %}
@@ -31,10 +28,7 @@
     <!-- Open Graph Tags -->
     <meta property="og:title" content="{{ meta_data.og_title }}" />
     <meta property="og:description" content="{{ meta_data.og_description }}" />
-    <meta
-      property="og:image"
-      content="{{ meta_data.url }}{{ meta_data.og_image }}"
-    />
+    <meta property="og:image" content="{{ meta_data.url }}{{ meta_data.og_image }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ meta_data.url }}" />
     <meta property="og:site_name" content="{{ meta_data.site_name }}" />
@@ -44,10 +38,7 @@
     <title>{{ title }}</title>
 
     {% if path != '404' %}
-    <link
-      rel="canonical"
-      href="{{ meta_data.url }}{%if path != 'home'%}/{{ path }}{%endif%}"
-    />
+    <link rel="canonical" href="{{ meta_data.url }}{%if path != 'home'%}/{{ path }}{%endif%}" />
     {% endif %}
 
     <!-- Favicons -->
@@ -66,18 +57,8 @@
       media="(prefers-color-scheme: light)"
     />
 
-    <link
-      rel="icon"
-      href="/static/img/favicon-32x32.png"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="/static/img/favicon-192x192.png"
-      sizes="192x192"
-      type="image/png"
-    />
+    <link rel="icon" href="/static/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/static/img/favicon-192x192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png" />
 
     <!-- Font preload -->
@@ -91,10 +72,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Script Tags -->
     {% if path == "home" %}
@@ -137,8 +115,8 @@
 
     <!-- prettier-ignore -->
     {% 
-      if path == "sunder-way" 
-      or path == "operation-sunder-serves" 
+      if path == "spwr-way" 
+      or path == "operation-spwr-serves" 
     %}
       {% include "./components/video-overlay.njk" %}
     {% endif %}

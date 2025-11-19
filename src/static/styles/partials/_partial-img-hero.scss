@@ -1,6 +1,7 @@
 .partial-img-hero {
   @include dark-theme;
-  @include top-fade-section;
+  // @include top-fade-section;
+  @include top-solid-section;
   padding: var(--body-padding);
 
   &__inner {
@@ -21,7 +22,7 @@
 
     // Blue gradient
     &::before {
-      @include blue-gradient(60deg, 0%, 70%);
+      @include dark-gradient(60deg, 0%, 70%);
       content: "";
       position: absolute;
       top: 0;
@@ -31,7 +32,7 @@
       z-index: -1;
 
       @include mq-max(md) {
-        @include blue-gradient(180deg, 15%, 120%);
+        @include dark-gradient(180deg, 15%, 120%);
       }
     }
   }
@@ -138,18 +139,10 @@
 
       // Blue gradient
       &::before {
-        background: linear-gradient(
-          60deg,
-          rgba($blue, 1) 30%,
-          rgba($blue, 0) 70%
-        );
+        background: linear-gradient(60deg, rgba($blue, 1) 30%, rgba($blue, 0) 70%);
 
         @include mq-max(md) {
-          background: linear-gradient(
-            180deg,
-            rgba($blue, 1) 36%,
-            rgba($blue, 0) 80%
-          );
+          background: linear-gradient(180deg, rgba($blue, 1) 36%, rgba($blue, 0) 80%);
         }
       }
     }
@@ -203,11 +196,7 @@
   &.ciq {
     .partial-img-hero__inner::before {
       @include mq-max(md) {
-        background: linear-gradient(
-          180deg,
-          rgba($blue, 1) 56%,
-          rgba($blue, 0) 100%
-        );
+        background: linear-gradient(180deg, rgba($blue, 1) 56%, rgba($blue, 0) 100%);
       }
     }
 
@@ -223,18 +212,14 @@
     }
   }
 
-  // OSS section (The Sunder Way)
+  // OSS section (The SPWR Way)
   &.oss-section {
     .partial-img-hero__inner {
       padding: var(--body-padding-double); // overrides with original above
 
       &::before {
         @include mq-max(md) {
-          background: linear-gradient(
-            0deg,
-            rgba($blue, 1) 15%,
-            rgba($blue, 0) 120%
-          );
+          background: linear-gradient(0deg, rgba($blue, 1) 15%, rgba($blue, 0) 120%);
         }
       }
     }
@@ -274,7 +259,7 @@
 
     .partial-img-hero__inner::before {
       @include mq-max(md) {
-        @include blue-gradient(180deg, 40%, 100%);
+        @include dark-gradient(180deg, 40%, 100%);
       }
     }
   }

@@ -10,7 +10,7 @@ hide_footer: false
 ---
 
 {% if page_about.values.toggle_section %}
-<section class="section-values section-gradient">
+<section class="section-values section-solid-bg">
   <div class="values-pin">
     <div class="section-values__text">
       <h1 aria-label="{{ page_about.values.section_title | removeTokens }}">
@@ -18,7 +18,7 @@ hide_footer: false
           {{ page_about.values.section_title }}
         </span>
       </h1>
-      <p class="section-values__text-desc section-gradient__desc">
+      <p class="section-values__text-desc section-solid-bg__desc">
         {{ page_about.values.section_desc }}
       </p>
 
@@ -28,15 +28,8 @@ hide_footer: false
       {% include "./_includes/components/cta-group.njk" %}
     </div>
 
-    <figure
-      class="section-values__figure"
-      aria-label="{{ page_about.values.img_desc }}"
-    >
-      <svg
-        class="values-svg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1028.49 1028.49"
-      >
+    <figure class="section-values__figure" aria-label="{{ page_about.values.img_desc }}">
+      <svg class="values-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1028.49 1028.49">
         <g>
           <path
             class="values-svg__frame cls-1"
@@ -297,9 +290,7 @@ hide_footer: false
   <div class="mission-pin-steps pin-steps" aria-hidden="true">
     <div class="mission-pin-step mission-pin-step-1 pin-step"></div>
     {% for item in page_about.mission.title %}
-    <div
-      class="mission-pin-step mission-pin-step-{{ loop.index + 1 }} pin-step"
-    ></div>
+    <div class="mission-pin-step mission-pin-step-{{ loop.index + 1 }} pin-step"></div>
     {% endfor %}
   </div>
 </section>
@@ -307,12 +298,9 @@ hide_footer: false
 
 <!-- prettier-ignore -->
 {% if page_about.growth.toggle_section %}
-<section class="section-growth section-gradient" id="growth">
+<section class="section-growth section-solid-bg" id="growth">
   <div class="growth-pin">
-    <h2
-      class="growth-title"
-      aria-label="{{ page_about.growth.section_title | removeTokens }}"
-    >
+    <h2 class="growth-title" aria-label="{{ page_about.growth.section_title | removeTokens }}">
       <span aria-hidden="true">
         {{ page_about.growth.section_title }}
       </span>
@@ -321,9 +309,7 @@ hide_footer: false
     <div class="growth-links">
       {% for step in page_about.growth.history %}
       <a
-        class="growth-link growth-link-{{
-          loop.index
-        }} classic-link tab-element-page"
+        class="growth-link growth-link-{{ loop.index }} classic-link tab-element-page"
         href="#growth-year-{{ step.year }}"
       >
         <span class="sr-only">Growth for</span>
@@ -516,16 +502,16 @@ hide_footer: false
 
 <!-- prettier-ignore -->
 {% if page_about.leadership.toggle_section %}
-<section class="section-leadership section-gradient" id="leadership">
+<section class="section-leadership section-solid-bg" id="leadership">
   <h2
-    class="section-gradient__title"
+    class="section-solid-bg__title"
     aria-label="{{ page_about.leadership.section_title | removeTokens }}"
   >
     <span aria-hidden="true">
       {{ page_about.leadership.section_title }}
     </span>
   </h2>
-  <p class="section-gradient__desc">
+  <p class="section-solid-bg__desc">
     {{ page_about.leadership.section_desc }}
   </p>
 
@@ -547,12 +533,12 @@ hide_footer: false
 
 <!-- prettier-ignore -->
 {% if page_about.timeline.toggle_section %}
-<section class="section-timeline section-gradient">
+<section class="section-timeline section-solid-bg">
   <div class="timeline-pin">
-    <h2 class="section-timeline__title section-gradient__title">
+    <h2 class="section-timeline__title section-solid-bg__title">
       {{ page_about.timeline.section_title }}
     </h2>
-    <p class="section-timeline__desc section-gradient__desc">
+    <p class="section-timeline__desc section-solid-bg__desc">
       {{ page_about.timeline.section_desc }}
     </p>
 
@@ -574,18 +560,14 @@ hide_footer: false
   <div class="timeline-pin-steps pin-steps" aria-hidden="true">
     <div class="timeline-pin-step timeline-pin-step-1 pin-step"></div>
     {% for event in page_about.timeline.events %}
-    <div
-      class="timeline-pin-step timeline-pin-step-{{ loop.index + 1 }} pin-step"
-    ></div>
+    <div class="timeline-pin-step timeline-pin-step-{{ loop.index + 1 }} pin-step"></div>
     {% endfor %}
 
     <!-- prettier-ignore -->
     {# Add 3 extra divs after the events #}
     {% set offset = page_about.timeline.events | length + 2 %}
     {% for i in range(0, 2) %}
-    <div
-      class="timeline-pin-step timeline-pin-step-{{ offset + i }} pin-step"
-    ></div>
+    <div class="timeline-pin-step timeline-pin-step-{{ offset + i }} pin-step"></div>
     {% endfor %}
   </div>
 </section>

@@ -1,3 +1,3 @@
-# Join Sunder Energy
+# Join Sunpower
 
 Empower your future and join America's leading solar sales company

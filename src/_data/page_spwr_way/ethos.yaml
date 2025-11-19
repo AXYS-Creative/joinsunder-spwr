@@ -1,5 +1,5 @@
 toggle_section: true
-section_title: The[%br%] Sunder[%br%] Way
+section_title: "[%span.small-title%]The[%span%][%br%] [%span.color-accent%]SPWR[%span%][%br%] Way"
 autoplay_interval: 2800
 section_imgs:
   - title: Roof with solar panels
@@ -10,20 +10,17 @@ section_imgs:
     src: /static/img/way-ethos-3.png
   - title: Sunder rep closing a sale
     src: /static/img/way-ethos-4.png
-section_desc: "At Sunder Energy, we believe that trust is earned through
-  honesty, ethics, and transparency. Our commitment is to empowering customers
-  and reps with clear, accurate, and verifiable information—ensuring every
-  decision is made with confidence. We pledge to:"
+section_desc: "We believe that trust is earned through honesty, ethics, and transparency. Our commitment is to empowering customers and reps with clear, accurate, and verifiable information—ensuring every decision is made with confidence. We pledge to:"
 values:
-  - title: Be[%br%] honest
+  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]honest[%span%]"
     caption: No misleading claims, no half-truths—[%br%]just facts.
-  - title: Be[%br%] ethical
+  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]ethical[%span%]"
     caption: Treat everyone with respect, fairness, [%br%]and integrity.
-  - title: Be[%br%] transparent
+  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]transparent[%span%]"
     caption: Offer clear terms, real numbers, and full disclosure in [%br%]every
       interaction.
 cta_p: Deception has no place in our business. Our reputation is built on the
-  trust of those we serve. At Sunder Energy, we win with integrity—always.
+  trust of those we serve. At Sunpower, we win with integrity—always.
 cta:
   text: Join the squad
   text_desc: null

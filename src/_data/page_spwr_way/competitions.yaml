@@ -15,7 +15,7 @@ types:
     caption: The OG. Survive and advance in Sunder’s original Team vs Team tournament. Teams earn swag and move up the power rankings by winning weekly matchups that culminate in a 32 team winner-take-all playoff bracket.
     src: /static/img/Way-Competitions-4RS.png
 
-yog_logo: /static/img/Way-YOG-1YOG.svg
+yog_logo: /static/img/way-competitions-icon-yog-logo.svg
 yog_merch:
   - items:
       - title: Blue Sunder hat
@@ -45,10 +45,10 @@ yog_merch:
         rotate: none
 yog_types:
   - title: The Boom
-    src: /static/img/Way-YOG-2Boom.svg
+    src: /static/img/way-competitions-icon-the-boom.svg
   - title: The Drop
-    src: /static/img/Way-YOG-3Drop.svg
+    src: /static/img/way-competitions-icon-the-drop.svg
   - title: The Club
-    src: /static/img/Way-YOG-4Club.svg
+    src: /static/img/way-competitions-icon-the-club.svg
   - title: Battle Box
-    src: /static/img/Way-YOG-5Box.svg
+    src: /static/img/way-competitions-icon-battle-box.svg

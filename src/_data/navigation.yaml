@@ -5,7 +5,7 @@
 # Missing forward slash "/" to allow active page nav close
 links:
   - text: The [%span.reveal%]SWPR[%span%]Way
-    url: "sunder-way"
+    url: "spwr-way"
   - text: The [%span.reveal%]SWPR[%span%] Platform
     url: "platform"
   - text: About [%span.reveal%]SWPR[%span%]

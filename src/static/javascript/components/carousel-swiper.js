@@ -1,10 +1,10 @@
 let page;
 
-if (document.querySelector(".main-operation-sunder-serves")) {
+if (document.querySelector(".main-operation-spwr-serves")) {
   page = "pageOss";
 }
 
-if (document.querySelector(".main-sunder-way")) {
+if (document.querySelector(".main-spwr-way")) {
   page = "pageSunderWay";
 }
 
@@ -40,6 +40,4 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 // Remove role attribute from video toggle elements (invalid HTML)
-document
-  .querySelectorAll(".video-toggle")
-  .forEach((el) => el.removeAttribute("role"));
+document.querySelectorAll(".video-toggle").forEach((el) => el.removeAttribute("role"));

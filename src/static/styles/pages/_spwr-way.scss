@@ -76,7 +76,7 @@
       }
 
       &-panel {
-        background: var(--surface-color);
+        // background: var(--surface-color);
         border-radius: var(--radius);
         padding: var(--body-padding);
         flex: 1 1 auto;
@@ -186,7 +186,8 @@
   }
 
   .ethos-pin {
-    @include top-fade-section;
+    @include top-solid-section;
+    background: none; // override for reskin
     @include column-center;
     gap: var(--section-gap-half);
     padding: var(--body-padding-double) var(--body-padding-double) 0;
@@ -203,7 +204,7 @@
 }
 
 .section-competitions {
-  // using section-gradient util
+  // using section-solid-bg util
 
   .competition-types {
     @include row-center(flex-start);
@@ -224,6 +225,7 @@
     }
 
     &__figure {
+      @include primary-border-hover;
       position: relative;
       border-radius: var(--radius);
       overflow: hidden;
@@ -231,17 +233,6 @@
       aspect-ratio: 1 / 1.65;
       min-width: 364px;
       scroll-snap-align: start;
-
-      @include mq-max(xxl) {
-        min-width: 320px;
-      }
-
-      @include mq-max(md) {
-        aspect-ratio: 1;
-        width: 100%;
-        max-width: 500px;
-        min-width: 0;
-      }
 
       &:hover,
       &:focus-visible {
@@ -252,6 +243,7 @@
         }
 
         .competition-types__caption {
+          // @include inset-shadow-border;
           opacity: 1;
 
           &-title,
@@ -267,6 +259,17 @@
 
       picture {
         height: 100%;
+      }
+
+      @include mq-max(xxl) {
+        min-width: 320px;
+      }
+
+      @include mq-max(md) {
+        aspect-ratio: 1;
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
       }
     }
 
@@ -285,7 +288,7 @@
 
       @include dark-theme;
       @include column-start(flex-end);
-      @include blue-gradient(0deg, 50%, 100%);
+      @include dark-gradient(0deg, 50%, 100%);
       position: absolute;
       height: 100%;
       width: 100%;
@@ -300,6 +303,7 @@
       &-title {
         @include h4;
         margin-block-end: var(--panel-gap);
+        color: var(--color-accent);
 
         @include mq-motion-allow {
           translate: var(--content-offset);
@@ -341,7 +345,7 @@
 
   // Year of Gear (YOG)
   .yog {
-    @include blue-gradient(0deg, 20%, 80%);
+    @include dark-gradient(0deg, 20%, 80%);
     isolation: isolate;
     position: relative;
 
@@ -463,14 +467,16 @@
       z-index: -2;
 
       @include mq-min(lg) {
-        border-inline: 4px solid var(--background-color);
-        background: linear-gradient(0deg, rgba($blue, 1) 20%, rgba($white, 1) 72.5%);
+        // border-inline: 4px solid var(--background-color);
+        border-inline: 4px solid var(--surface-color);
+        // background: linear-gradient(0deg, rgba($spwr-dark, 1) 20%, rgba($white, 1) 72.5%);
       }
 
       &__stripe {
         width: 4px;
         height: 100%;
-        background: var(--background-color);
+        // background: var(--background-color);
+        background: var(--surface-color);
 
         @include mq-max(md) {
           width: 3px;
@@ -484,14 +490,15 @@
   }
 }
 
-// .section-experiences {
-// using section-gradient util
+.section-experiences {
+  margin-block-start: var(--body-padding-double);
+  // using section-solid-bg util
 
-// .carousel {
-// see _carousel-swiper.scss
-// }
+  // .carousel {
+  // see _carousel-swiper.scss
+  // }
 
-// .collage {
-// see _collage.scss
-// }
-// }
+  // .collage {
+  // see _collage.scss
+  // }
+}

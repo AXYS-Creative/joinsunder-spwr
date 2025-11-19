@@ -36,7 +36,7 @@
       }
 
       &::before {
-        @include blue-gradient(0deg, 0%, 64%);
+        @include dark-gradient(0deg, 0%, 64%);
       }
     }
 

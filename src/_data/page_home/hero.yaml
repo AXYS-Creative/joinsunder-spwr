@@ -1,4 +1,4 @@
-section_title: Welcome to Sunder Energy
+section_title: Welcome to Sunpower
 external_panel:
   bg_img: /static/img/landing-hero-bg3.png
   logo: /static/img/logo-external-light.svg
@@ -13,9 +13,9 @@ internal_panel:
   bg_img: /static/img/Landing-Hero-BG2.png
   logo: /static/img/logo-squad-light.svg
   pre_title: Join America’s leading
-  title: solar company
+  title: solar sales[%br%] company
   cta:
     text: joinspwr.com
     text_desc: null
-    url: /sunder-way
+    url: /spwr-way
     new_tab: false

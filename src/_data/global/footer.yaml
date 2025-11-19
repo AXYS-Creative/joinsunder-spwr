@@ -1,8 +1,8 @@
 logo_src: /static/img/logo-squad-light.svg
 show_social: true
 links:
-  - title: The Sunder Way
-    url: "/sunder-way"
+  - title: The SPWR Way
+    url: "/spwr-way"
     new_tab: false
   - title: The Sunder Platform
     url: "/platform"
@@ -11,7 +11,7 @@ links:
     url: "/about"
     new_tab: false
   - title: OSS
-    url: "/operation-sunder-serves"
+    url: "/operation-spwr-serves"
     new_tab: false
   - title: Privacy Policy
     url: "https://sunderenergy.com/privacy-policy/"
@@ -22,7 +22,7 @@ links:
   - title: Contact Us
     url: "https://sunderenergy.com/contact/"
     new_tab: true
-  - title: Sunder Energy
+  - title: Sunpower
     url: "https://sunderenergy.com/"
     new_tab: true
 cta:

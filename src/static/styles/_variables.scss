@@ -58,12 +58,14 @@ $test-bg: rgba(navy, 0.75);
 :root {
   --background-color: #{$spwr-dark};
 
+  --hero-color--primary: #{$spwr-yellow};
+
   // --font-color--primary: #{$spwr-yellow};
   --font-color--primary: #{$spwr-light};
   --font-color--secondary: #{$grey};
   --font-color--error: #{$red};
 
-  --hero-color--primary: #{$spwr-yellow};
+  --color-accent: var(--hero-color--primary);
 
   --font-family: #{$brand-font};
 
@@ -130,7 +132,7 @@ $test-bg: rgba(navy, 0.75);
   --radius-sm: 6px; // form input fields, carousel images
   --radius: 8px; // full-width panels & nav
   --radius-lg: 24px; // sections & footer
-  --radius-btn: 10px;
+  --radius-btn: 64px;
 
   // Components / JS
   --carousel-gap: var(--panel-gap);

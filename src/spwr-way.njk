@@ -1,50 +1,45 @@
 ---
 layout: app
-path: sunder-way
+path: spwr-way
 
-title: The Sunder Way
+title: The SPWR Way
 
 # master props
 hide_header: false
 hide_footer: false
 ---
 
-{% if page_sunder_way.ethos.toggle_section %}
+{% if page_spwr_way.ethos.toggle_section %}
 <section class="section-ethos">
   <div class="ethos-pin deactivated">
     <div class="ethos-top">
       <h1
         class="ethos-top__title"
-        aria-label="{{ page_sunder_way.ethos.section_title | removeTokens }}"
+        aria-label="{{ page_spwr_way.ethos.section_title | removeTokens }}"
       >
         <span aria-hidden="true">
-          {{ page_sunder_way.ethos.section_title }}
+          {{ page_spwr_way.ethos.section_title }}
         </span>
       </h1>
 
       <!-- prettier-ignore -->
-      {% set carousel_list = page_sunder_way.ethos.section_imgs %}
-      {% set carousel_interval = page_sunder_way.ethos.autoplay_interval %}
+      {% set carousel_list = page_spwr_way.ethos.section_imgs %}
+      {% set carousel_interval = page_spwr_way.ethos.autoplay_interval %}
       {% set carousel_class = 'carousel-gallery--ethos' %}
       {% include "./_includes/components/carousel-gallery.njk" %}
     </div>
     <div class="ethos-middle">
-      <p
-        class="ethos-middle__p"
-        aria-label="{{ page_sunder_way.ethos.section_desc | removeTokens }}"
-      >
+      <p class="ethos-middle__p" aria-label="{{ page_spwr_way.ethos.section_desc | removeTokens }}">
         <span aria-hidden="true">
-          {{ page_sunder_way.ethos.section_desc }}
+          {{ page_spwr_way.ethos.section_desc }}
         </span>
       </p>
 
       <div class="ethos-middle__panels" tabindex="-1">
         <!-- prettier-ignore -->
-        {% for item in page_sunder_way.ethos.values %}
+        {% for item in page_spwr_way.ethos.values %}
         <div
-          class="ethos-middle__panels-panel value-panel value-panel-{{
-            loop.index
-          }} gsap-animate"
+          class="ethos-middle__panels-panel value-panel value-panel-{{ loop.index }} gsap-animate"
         >
           <h2 class="panel-title" aria-label="{{ item.title | removeTokens }}">
             <span aria-hidden="true">
@@ -65,44 +60,37 @@ hide_footer: false
       </div>
     </div>
     <div class="ethos-bottom gsap-animate">
-      <p class="ethos-bottom__p">{{ page_sunder_way.ethos.cta_p }}</p>
+      <p class="ethos-bottom__p">{{ page_spwr_way.ethos.cta_p }}</p>
 
       <!-- prettier-ignore -->
-      {% set cta_1 = page_sunder_way.ethos.cta %}
+      {% set cta_1 = page_spwr_way.ethos.cta %}
       {% set cta_1_outline = true %}
       {% include "./_includes/components/cta-group.njk" %}
     </div>
   </div>
   <div class="ethos-pin-steps pin-steps" aria-hidden="true">
     <div class="ethos-pin-step ethos-pin-step-1 pin-step"></div>
-    {% for item in page_sunder_way.ethos.values %}
-    <div
-      class="ethos-pin-step ethos-pin-step-{{ loop.index + 1 }} pin-step"
-    ></div>
+    {% for item in page_spwr_way.ethos.values %}
+    <div class="ethos-pin-step ethos-pin-step-{{ loop.index + 1 }} pin-step"></div>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 
 <!-- prettier-ignore -->
-{% if page_sunder_way.competitions.toggle_section %}
-<section class="section-competitions section-gradient" id="competitions">
-  <h2 class="section-gradient__title">
-    {{ page_sunder_way.competitions.section_title }}
+{% if page_spwr_way.competitions.toggle_section %}
+<section class="section-competitions section-solid-bg" id="competitions">
+  <h2 class="section-solid-bg__title">
+    {{ page_spwr_way.competitions.section_title }}
   </h2>
-  <p class="section-gradient__desc">
-    {{ page_sunder_way.competitions.section_desc }}
+  <p class="section-solid-bg__desc">
+    {{ page_spwr_way.competitions.section_desc }}
   </p>
 
   <div class="competition-types">
-    {% for type in page_sunder_way.competitions.types %}
+    {% for type in page_spwr_way.competitions.types %}
     <figure class="competition-types__figure tab-element-page" tabindex="0">
-      <img
-        class="competition-types__img"
-        src="{{ type.src }}"
-        alt=""
-        loading="eager"
-      />
+      <img class="competition-types__img" src="{{ type.src }}" alt="" loading="eager" />
 
       <figcaption class="competition-types__caption">
         <h3 class="competition-types__caption-title">{{ type.title }}</h3>
@@ -118,7 +106,7 @@ hide_footer: false
     <figure class="yog-logo">
       <img
         class="yog-logo__img"
-        src="{{ page_sunder_way.competitions.yog_logo }}"
+        src="{{ page_spwr_way.competitions.yog_logo }}"
         alt="Year of Gear"
         loading="lazy"
         width="300"
@@ -128,7 +116,7 @@ hide_footer: false
     </figure>
 
     <div class="yog-merch">
-      {% for row in page_sunder_way.competitions.yog_merch %}
+      {% for row in page_spwr_way.competitions.yog_merch %}
       <div class="yog-merch__row">
         <!-- prettier-ignore -->
         {% for item in row.items %}
@@ -145,14 +133,9 @@ hide_footer: false
 
     <div class="yog-types">
       <!-- prettier-ignore -->
-      {% for type in page_sunder_way.competitions.yog_types %}
+      {% for type in page_spwr_way.competitions.yog_types %}
       <!-- no optimize -->
-      <img
-        class="yog-types__img"
-        src="{{ type.src }}"
-        alt="{{ type.title }}"
-        eleventy:ignore
-      />
+      <img class="yog-types__img" src="{{ type.src }}" alt="{{ type.title }}" eleventy:ignore />
       {% endfor %}
     </div>
 
@@ -164,29 +147,29 @@ hide_footer: false
 {% endif %}
 
 <!-- prettier-ignore -->
-{% if page_sunder_way.experiences.toggle_section %}
-<section class="section-experiences section-gradient" id="experiences">
-  <h2 class="section-gradient__title section-experiences__title">
-    {{ page_sunder_way.experiences.section_title }}
+{% if page_spwr_way.experiences.toggle_section %}
+<section class="section-experiences" id="experiences">
+  <h2 class="section-solid-bg__title section-experiences__title">
+    {{ page_spwr_way.experiences.section_title }}
   </h2>
-  <p class="section-gradient__desc section-experiences__desc">
-    {{ page_sunder_way.experiences.section_desc }}
+  <p class="section-solid-bg__desc section-experiences__desc">
+    {{ page_spwr_way.experiences.section_desc }}
   </p>
 
   <!-- prettier-ignore -->
   {% set video_carousel = true %}
-  {% set list = page_sunder_way.experiences.videos %}
-  {% set carousel_autoplay = page_sunder_way.experiences.carousel_autoplay %}
+  {% set list = page_spwr_way.experiences.videos %}
+  {% set carousel_autoplay = page_spwr_way.experiences.carousel_autoplay %}
   {% set carousel_cta_text = "" %}
   {% set carousel_progress = true %}
   {% set cta_1 = null %}
   {% include "./_includes/components/carousel-swiper.njk" %}
 
-  {% if page_sunder_way.experiences.toggle_collage %}
+  {% if page_spwr_way.experiences.toggle_collage %}
   <div class="collage">
     <div class="collage__column collage__column-1">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_1 %}
+      {% for img in page_spwr_way.experiences.collage.column_1 %}
       <img
         class="{% if loop.index0 % 2 == 0 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -196,7 +179,7 @@ hide_footer: false
     </div>
     <div class="collage__column collage__column-2">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_2 %}
+      {% for img in page_spwr_way.experiences.collage.column_2 %}
       <img
         class="{% if loop.index0 % 2 == 1 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -206,7 +189,7 @@ hide_footer: false
     </div>
     <div class="collage__column collage__column-3">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_3 %}
+      {% for img in page_spwr_way.experiences.collage.column_3 %}
       <img
         class="{% if loop.index0 % 2 == 0 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -216,7 +199,7 @@ hide_footer: false
     </div>
     <div class="collage__column collage__column-4">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_4 %}
+      {% for img in page_spwr_way.experiences.collage.column_4 %}
       <img
         class="{% if loop.index0 % 2 == 1 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -226,11 +209,9 @@ hide_footer: false
     </div>
 
     <!-- mobile -->
-    <div
-      class="collage__column collage__column-mobile collage__column-mobile-1"
-    >
+    <div class="collage__column collage__column-mobile collage__column-mobile-1">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_1_mobile %}
+      {% for img in page_spwr_way.experiences.collage.column_1_mobile %}
       <img
         class="{% if loop.index0 % 2 == 1 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -239,11 +220,9 @@ hide_footer: false
       />
       {% endfor %}
     </div>
-    <div
-      class="collage__column collage__column-mobile collage__column-mobile-2"
-    >
+    <div class="collage__column collage__column-mobile collage__column-mobile-2">
       <!-- prettier-ignore -->
-      {% for img in page_sunder_way.experiences.collage.column_2_mobile %}
+      {% for img in page_spwr_way.experiences.collage.column_2_mobile %}
       <img
         class="{% if loop.index0 % 2 == 1 %}portrait{% else %}landscape{% endif %}"
         src="{{ img.src }}"
@@ -258,15 +237,15 @@ hide_footer: false
 {% endif %}
 
 <!-- prettier-ignore -->
-{% if page_sunder_way.oss.toggle_section %}
-  {% set section_id = "operation-sunder-serves" %}
-  {% set section_graphic = page_sunder_way.oss.graphic %}
-  {% set graphic_title = page_sunder_way.oss.section_title | removeTokens %}
+{% if page_spwr_way.oss.toggle_section %}
+  {% set section_id = "operation-spwr-serves" %}
+  {% set section_graphic = page_spwr_way.oss.graphic %}
+  {% set graphic_title = page_spwr_way.oss.section_title | removeTokens %}
   {% set section_h1 = '' %}
-  {% set section_h2 = page_sunder_way.oss.section_title %}
-  {% set section_p = page_sunder_way.oss.section_desc %}
-  {% set section_bg = page_sunder_way.oss.section_bg %}
-  {% set cta_1 = page_sunder_way.oss.cta %}
+  {% set section_h2 = page_spwr_way.oss.section_title %}
+  {% set section_p = page_spwr_way.oss.section_desc %}
+  {% set section_bg = page_spwr_way.oss.section_bg %}
+  {% set cta_1 = page_spwr_way.oss.cta %}
   {% set cta_1_outline = false %}
   {% set is_hero = false %}
   {% set container_tag = 'section' %}
@@ -276,8 +255,8 @@ hide_footer: false
 {% endif %}
 
 <!-- prettier-ignore -->
-{% if page_sunder_way.quotes.toggle_section %}
-  {% set section_title = page_sunder_way.quotes.section_title %}
-  {% set quote_list = page_sunder_way.quotes.list %}
+{% if page_spwr_way.quotes.toggle_section %}
+  {% set section_title = page_spwr_way.quotes.section_title %}
+  {% set quote_list = page_spwr_way.quotes.list %}
   {% include "./_includes/partials/partial-quote.njk" %}
 {% endif %}

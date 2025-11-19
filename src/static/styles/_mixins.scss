@@ -237,11 +237,11 @@ $min-breakpoints: (
   --link-color: #{$blue};
   --link-color-hover: #{$blue};
 
-  --btn-color-bg: #{$blue};
+  --btn-color-bg: #{$spwr-dark};
   --btn-color-text: #{$white};
   --btn-color-border: var(--btn-color-bg);
   --btn-color-bg--hover: #{$white};
-  --btn-color-text--hover: #{$blue};
+  --btn-color-text--hover: #{$spwr-dark};
   --btn-color-border--hover: var(--btn-color-bg--hover);
 }
 
@@ -313,17 +313,44 @@ $min-breakpoints: (
   }
 }
 
-@mixin section-fade {
+@mixin dark-gradient($dir: 180deg, $start: 30%, $end: 70%) {
+  background: linear-gradient($dir, rgba($spwr-dark, 1) $start, rgba(0, 0, 0, 0) $end);
+}
+
+@mixin primary-border-hover {
+  border: 2px solid transparent;
+  transition: border-color $ease;
+
+  @include desktop-hover {
+    border-color: var(--hero-color--primary);
+  }
+}
+
+@mixin inset-shadow-border {
+  box-shadow: inset 0 0 0 3px var(--hero-color--primary);
+
+  @include mq-max(md) {
+    box-shadow: inset 0 0 0 2px var(--hero-color--primary);
+  }
+}
+
+// @mixin section-fade {
+//   border-radius: var(--radius-lg);
+//   background: linear-gradient(to bottom, var(--surface-color-2) 10%, var(--background-color) 50%);
+// }
+
+// @mixin top-fade-section {
+//   @include section-fade;
+//   margin-top: var(--top-spacing-header);
+// }
+
+@mixin section-solid {
   border-radius: var(--radius-lg);
-  background: linear-gradient(to bottom, var(--surface-color-2) 10%, var(--background-color) 50%);
+  background: var(--surface-color-2);
 }
 
-@mixin blue-gradient($dir: 180deg, $start: 30%, $end: 70%) {
-  background: linear-gradient($dir, rgba($blue, 1) $start, rgba($blue, 0) $end);
-}
-
-@mixin top-fade-section {
-  @include section-fade;
+@mixin top-solid-section {
+  @include section-solid;
   margin-top: var(--top-spacing-header);
 }
 

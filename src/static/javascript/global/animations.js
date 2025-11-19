@@ -35,8 +35,7 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
       noMotion: "(prefers-reduced-motion: reduce)",
     },
     (context) => {
-      let { maxSm, maxMd, maxLg, maxXl, maxXxl, minMd, minLg, noMotion } =
-        context.conditions;
+      let { maxSm, maxMd, maxLg, maxXl, maxXxl, minMd, minLg, noMotion } = context.conditions;
 
       let navyMarkers = {
         startColor: "navy",
@@ -53,10 +52,10 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
       let bodyPadding = 24;
       let bodyPaddingDouble = bodyPadding * 2;
 
-      // Page - Sunder Way
+      // Page - SPWR Way
       {
         // Sunday way scrollTrigger fix
-        if (document.querySelector(".main-sunder-way")) {
+        if (document.querySelector(".main-spwr-way")) {
           window.addEventListener("load", () => {
             setTimeout(() => {
               ScrollTrigger.refresh();
@@ -300,9 +299,7 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
 
           // Text/Line Animations
           {
-            const missionLines = document.querySelectorAll(
-              ".mission-title__line"
-            );
+            const missionLines = document.querySelectorAll(".mission-title__line");
             missionLines.forEach((line, index) => {
               gsap.fromTo(
                 line,
@@ -336,11 +333,7 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
                     scrub: 0.25,
                   },
                 })
-                .fromTo(
-                  ripple,
-                  { scale: 1, opacity: 0 },
-                  { scale: 2, opacity: 1, ease: "none" }
-                )
+                .fromTo(ripple, { scale: 1, opacity: 0 }, { scale: 2, opacity: 1, ease: "none" })
                 .to(ripple, { scale: 2.5, opacity: 0, ease: "none" });
             });
           }
@@ -455,8 +448,7 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
               const digitElements = counter.querySelectorAll(".digit");
 
               digits.forEach((digitValue, index) => {
-                const sequence =
-                  digitElements[index]?.querySelector(".sequence");
+                const sequence = digitElements[index]?.querySelector(".sequence");
 
                 gsap.to(sequence, {
                   y: `-${digitValue * 10}%`,
@@ -560,19 +552,17 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
               },
             ];
 
-            highlightGroups.forEach(
-              ({ elements, trigger, start, end, toggleClass, markers }) => {
-                elements.forEach((element) => {
-                  ScrollTrigger.create({
-                    trigger,
-                    start,
-                    end,
-                    toggleClass: { targets: element, className: toggleClass },
-                    markers: markers,
-                  });
+            highlightGroups.forEach(({ elements, trigger, start, end, toggleClass, markers }) => {
+              elements.forEach((element) => {
+                ScrollTrigger.create({
+                  trigger,
+                  start,
+                  end,
+                  toggleClass: { targets: element, className: toggleClass },
+                  markers: markers,
                 });
-              }
-            );
+              });
+            });
           }
         }
 
@@ -679,11 +669,9 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
       // GLOBAL (place under other tweens i.e. pinned sections) - Animate any element with the class 'gsap-animate' using the 'animate' companion class
       {
         // BASE: All screen sizes
-        document
-          .querySelectorAll(".gsap-animate:not([class*='gsap-animate-'])")
-          .forEach((el) => {
-            setupScrollAnimation(el);
-          });
+        document.querySelectorAll(".gsap-animate:not([class*='gsap-animate-'])").forEach((el) => {
+          setupScrollAnimation(el);
+        });
 
         // LARGE SCREENS ONLY
         if (maxLg) {
