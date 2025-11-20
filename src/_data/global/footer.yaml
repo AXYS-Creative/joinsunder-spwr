@@ -1,10 +1,10 @@
-logo_src: /static/img/logo-squad-light.svg
+logo_src: /static/img/spwr-white-word-mark.svg
 show_social: true
 links:
   - title: The SPWR Way
     url: "/spwr-way"
     new_tab: false
-  - title: The Sunder Platform
+  - title: The SPWR platform
     url: "/platform"
     new_tab: false
   - title: About Sunder

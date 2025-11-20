@@ -1,22 +1,25 @@
-$brand-font: "satoshi", system-ui, sans-serif;
+$brand-font--heading: "Fander", system-ui, sans-serif;
+$brand-font--body: "Geist", system-ui, sans-serif;
 
-$spwr-light: #ffffff;
-$spwr-dark: #141414;
-$spwr-mid: #2f2f2f;
+$spwr-white: #ffffff;
+$spwr-grey-light: #dddddd;
+$spwr-grey-dark: #797979;
+$spwr-black: #141414;
+$spwr-navy: #002d52;
 $spwr-yellow: #fdfd00;
+$spwr-orange: #ff8700;
+$spwr-royal-blue: #095cfb;
+$spwr-mid: #2f2f2f;
 
-$sunder-snow: #f7f7f7;
-$sunder-ice-light: #efefef;
 $sunder-ice: #d9d9d9;
 $sunder-royal-light: #0058f5;
 $sunder-royal: #074895;
 $sunder-navy: #061a2a;
 $sunder-midnight: #000014;
 
-$black: $sunder-midnight;
+$black: $spwr-black;
 $grey: $sunder-ice;
-$grey-light: $sunder-ice-light;
-$white: $sunder-snow;
+$white: $spwr-white;
 
 $blue: $sunder-royal-light;
 $blue-opaque: rgba($sunder-royal-light, 0.8);
@@ -56,25 +59,26 @@ $test: 2px dashed rgba(coral, 0.75);
 $test-bg: rgba(navy, 0.75);
 
 :root {
-  --background-color: #{$spwr-dark};
+  --background-color: #{$spwr-black};
 
   --hero-color--primary: #{$spwr-yellow};
 
   // --font-color--primary: #{$spwr-yellow};
-  --font-color--primary: #{$spwr-light};
+  --font-color--primary: #{$spwr-white};
   --font-color--secondary: #{$grey};
   --font-color--error: #{$red};
 
   --color-accent: var(--hero-color--primary);
 
-  --font-family: #{$brand-font};
+  --font-family-heading: #{$brand-font--heading};
+  --font-family-body: #{$brand-font--body};
 
   // Button/Link Colors
-  --btn-color-bg: #{$blue};
+  --btn-color-bg: #{$black};
   --btn-color-text: #{$white};
   --btn-color-border: var(--btn-color-bg);
   --btn-color-bg--hover: #{$white};
-  --btn-color-text--hover: #{$blue};
+  --btn-color-text--hover: #{$black};
   --btn-color-border--hover: var(--btn-color-bg--hover);
 
   --btn-color-2-bg: #{$white};
@@ -86,7 +90,7 @@ $test-bg: rgba(navy, 0.75);
 
   --btn-padding: 8px 20px;
 
-  --link-color: #{$spwr-light};
+  --link-color: #{$spwr-white};
   --link-color-hover: #{$spwr-yellow};
 
   // Surface Colors
@@ -127,7 +131,6 @@ $test-bg: rgba(navy, 0.75);
   --top-spacing-header: calc(var(--header-height) + var(--body-padding) * 2);
 
   --border-bold-girth: 4px;
-  --border-bold-color: #{$grey};
 
   --radius-sm: 6px; // form input fields, carousel images
   --radius: 8px; // full-width panels & nav

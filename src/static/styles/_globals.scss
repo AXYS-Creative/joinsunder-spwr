@@ -4,7 +4,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: var(--font-family);
 
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
@@ -37,39 +36,6 @@ body {
   & > * {
     max-width: $content-width;
     margin: auto;
-  }
-
-  // Loader styles, controlled by having a loader partial present in the html
-  &:has(.site-loader) {
-    $duration: 1s;
-    $delay: 0.25s;
-
-    .hero {
-      h1,
-      p,
-      div {
-        opacity: 0;
-        transition: opacity $duration ease $delay;
-      }
-
-      p {
-        transition-delay: $delay + 0.075s;
-      }
-      div {
-        transition-delay: $delay + 0.125s;
-      }
-    }
-  }
-
-  // Loader complete styles
-  &:has(.load-complete) {
-    .hero {
-      h1,
-      p,
-      div {
-        opacity: 1;
-      }
-    }
   }
 }
 
@@ -104,9 +70,10 @@ body {
 
     .site-nav-btn {
       --line-offset: 3px;
+      --nav-btn-color: #{$spwr-royal-blue};
 
-      border: 1px solid var(--btn-color-border);
-      background: var(--btn-color-bg);
+      border: 1px solid var(--nav-btn-color);
+      background: var(--nav-btn-color);
       width: 100%;
       aspect-ratio: 1;
       border-radius: 50%;
@@ -135,7 +102,7 @@ body {
         @include absolute-center;
         width: 125%;
         height: 3px;
-        background: var(--btn-color-text);
+        background: var(--background-color);
         transition: 0.3s ease;
 
         @include mq-max(lg) {
@@ -159,7 +126,7 @@ body {
         }
         .site-nav-btn-line {
           translate: -50% -50%;
-          background: var(--btn-color-bg);
+          background: var(--nav-btn-color);
 
           &:last-of-type {
             rotate: 90deg;
@@ -247,7 +214,7 @@ body {
       display: inline-flex;
       gap: 0.2ch;
       outline: none;
-      padding: 12px 0; // fixes edge hover issue
+      padding: 16px 0; // fixes edge hover issue
       transition: color $ease;
 
       @include mq-max(xl) {
@@ -255,9 +222,10 @@ body {
         @include h3;
       }
 
-      @include mq-max(lg) {
+      @include mq-max(md) {
         // any updates here should update the .reveal class
         @include h4;
+        padding: 12px 0;
       }
 
       @include mq-max(sm) {
@@ -268,7 +236,7 @@ body {
       &::before {
         content: "";
         position: absolute;
-        top: 0;
+        top: 12px;
         left: 0;
         width: 0;
         height: var(--border-bold-girth);
@@ -290,7 +258,7 @@ body {
         }
 
         .reveal {
-          width: 4.1ch;
+          width: 4.45ch;
           pointer-events: none;
 
           @include mq-max(sm) {
@@ -360,7 +328,7 @@ body {
 
     .social-media {
       --link-color: #{$spwr-yellow};
-      --link-color-hover: #{$spwr-light};
+      --link-color-hover: #{$spwr-white};
 
       @include mq-max(lg) {
         display: none;
@@ -419,7 +387,6 @@ h1 {
 p,
 strong,
 em,
-a,
 figcaption,
 blockquote,
 input,
@@ -439,6 +406,9 @@ strong {
 }
 
 a {
+  font-family: var(--font-family-heading);
+  font-size: 20px;
+  text-decoration: none;
   color: var(--link-color);
 
   @include desktop-hover {

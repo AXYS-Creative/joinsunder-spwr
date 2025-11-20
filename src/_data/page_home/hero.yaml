@@ -11,7 +11,7 @@ external_panel:
     new_tab: true
 internal_panel:
   bg_img: /static/img/Landing-Hero-BG2.png
-  logo: /static/img/logo-squad-light.svg
+  logo: /static/img/spwr-white-word-mark.svg
   pre_title: Join America’s leading
   title: solar sales[%br%] company
   cta:

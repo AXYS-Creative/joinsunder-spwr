@@ -6,7 +6,7 @@
     $panel-ease: 0.75s ease;
     --logo-width: min(90%, 380px);
 
-    @include dark-theme;
+    // @include dark-theme;
     @include row-center;
     @include full-height-section;
     gap: var(--body-padding-sm);
@@ -140,11 +140,7 @@
         height: 100%;
         z-index: -1;
         opacity: 0;
-        background: linear-gradient(
-          var(--direction),
-          $blue 0%,
-          transparent 100%
-        );
+        background: linear-gradient(var(--direction), $blue 0%, transparent 100%);
         transition: opacity $ease-c, width 0.75s ease, height 0s;
 
         @include mq-min(lg) {
@@ -200,6 +196,7 @@
         @include column-start;
         margin-block: 32px 64px;
         white-space: nowrap;
+        gap: 1ch;
 
         @include mq-max(lg) {
           @include column-center;

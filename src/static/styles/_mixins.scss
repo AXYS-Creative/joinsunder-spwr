@@ -97,15 +97,16 @@ $min-breakpoints: (
 //
 
 @mixin heading-text {
+  font-family: var(--font-family-heading);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 
 @mixin h1 {
   @include heading-text;
   font-size: 96px;
-  line-height: 107.8%;
+  line-height: 80%;
   font-size-adjust: 0.5;
 }
 
@@ -118,7 +119,7 @@ $min-breakpoints: (
 @mixin h3 {
   @include heading-text;
   font-size: 55px;
-  line-height: 110%;
+  line-height: 90%;
   font-size-adjust: 0.5;
 
   // fix text overflow for smaller screens
@@ -137,7 +138,6 @@ $min-breakpoints: (
 @mixin h5 {
   @include heading-text;
   font-size: 24px;
-  letter-spacing: -1px;
 }
 
 // No h6 listed in Figma, sharing with button-text
@@ -151,6 +151,7 @@ $min-breakpoints: (
   --font-size: #{$body-text-1};
 
   color: var(--font-color--primary);
+  font-family: var(--font-family-body);
   font-size: var(--font-size);
   font-weight: 500;
 
@@ -230,18 +231,18 @@ $min-breakpoints: (
 }
 
 @mixin light-theme {
-  --surface-color: #{$spwr-light};
+  --surface-color: #{$spwr-white};
 
-  --font-color--primary: #{$spwr-dark};
+  --font-color--primary: #{$spwr-black};
 
   --link-color: #{$blue};
   --link-color-hover: #{$blue};
 
-  --btn-color-bg: #{$spwr-dark};
+  --btn-color-bg: #{$spwr-black};
   --btn-color-text: #{$white};
   --btn-color-border: var(--btn-color-bg);
   --btn-color-bg--hover: #{$white};
-  --btn-color-text--hover: #{$spwr-dark};
+  --btn-color-text--hover: #{$spwr-black};
   --btn-color-border--hover: var(--btn-color-bg--hover);
 }
 
@@ -314,7 +315,7 @@ $min-breakpoints: (
 }
 
 @mixin dark-gradient($dir: 180deg, $start: 30%, $end: 70%) {
-  background: linear-gradient($dir, rgba($spwr-dark, 1) $start, rgba(0, 0, 0, 0) $end);
+  background: linear-gradient($dir, rgba($spwr-black, 1) $start, rgba(0, 0, 0, 0) $end);
 }
 
 @mixin primary-border-hover {
