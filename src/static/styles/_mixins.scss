@@ -218,31 +218,24 @@ $min-breakpoints: (
   --font-color--primary: #{$white};
 
   --link-color: #{$white};
-  --link-color-hover: #{$grey};
-
-  --btn-color-bg: #{$white};
-  --btn-color-text: #{$blue};
-  --btn-color-border: var(--btn-color-bg);
-  --btn-color-bg--hover: #{$blue};
-  --btn-color-text--hover: #{$white};
-  --btn-color-border--hover: var(--btn-color-bg--hover);
+  --link-color-hover: #{$grey-light};
 
   color: var(--font-color--primary);
 }
 
 @mixin light-theme {
-  --surface-color: #{$spwr-white};
+  --surface-color: #{$white};
 
-  --font-color--primary: #{$spwr-black};
+  --font-color--primary: #{$black};
 
   --link-color: #{$blue};
   --link-color-hover: #{$blue};
 
-  --btn-color-bg: #{$spwr-black};
+  --btn-color-bg: #{$black};
   --btn-color-text: #{$white};
   --btn-color-border: var(--btn-color-bg);
   --btn-color-bg--hover: #{$white};
-  --btn-color-text--hover: #{$spwr-black};
+  --btn-color-text--hover: #{$black};
   --btn-color-border--hover: var(--btn-color-bg--hover);
 }
 
@@ -315,7 +308,7 @@ $min-breakpoints: (
 }
 
 @mixin dark-gradient($dir: 180deg, $start: 30%, $end: 70%) {
-  background: linear-gradient($dir, rgba($spwr-black, 1) $start, rgba(0, 0, 0, 0) $end);
+  background: linear-gradient($dir, rgba($black, 1) $start, rgba(0, 0, 0, 0) $end);
 }
 
 @mixin primary-border-hover {
@@ -346,8 +339,9 @@ $min-breakpoints: (
 // }
 
 @mixin section-solid {
+  @include dark-theme;
   border-radius: var(--radius-lg);
-  background: var(--surface-color-2);
+  background: var(--surface-color);
 }
 
 @mixin top-solid-section {
@@ -457,10 +451,18 @@ $min-breakpoints: (
   user-select: auto;
 }
 
-@mixin mask-image($url) {
-  mask-image: url($url);
+@mixin mask-image($url: null, $color: currentColor) {
   mask-size: contain;
   mask-repeat: no-repeat;
+  mask-position: center;
+  aspect-ratio: 1/1;
+  background: $color;
+  display: inline-block;
+  vertical-align: middle;
+
+  @if $url {
+    mask-image: url($url);
+  }
 }
 
 // Library

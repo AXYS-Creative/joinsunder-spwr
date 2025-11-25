@@ -7,9 +7,6 @@ links:
   - title: The SPWR platform
     url: "/platform"
     new_tab: false
-  - title: About Sunder
-    url: "/about"
-    new_tab: false
   - title: OSS
     url: "/operation-spwr-serves"
     new_tab: false
@@ -22,11 +19,11 @@ links:
   - title: Contact Us
     url: "https://sunderenergy.com/contact/"
     new_tab: true
-  - title: Sunpower
-    url: "https://sunderenergy.com/"
+  - title: SunPower
+    url: "https://sunpower.com/"
     new_tab: true
 cta:
-  text: Join the squad
+  text: Join today
   text_desc:
   url: /join
   new_tab: false

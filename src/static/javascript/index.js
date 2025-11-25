@@ -6,7 +6,6 @@ import "./components/collage.js";
 import "./components/form-redirect.js";
 import "./components/video-overlay.js";
 
-import "./pages/about.js";
 import "./pages/home.js";
 
 import "./global/header.js";

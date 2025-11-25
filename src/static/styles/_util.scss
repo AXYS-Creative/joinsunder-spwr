@@ -48,12 +48,20 @@
 
   &__title {
     @include h3;
-    color: var(--color-accent);
 
     @include mq-max(md) {
       @include h4;
       margin-block-end: var(--panel-gap);
       text-align: center;
+    }
+  }
+
+  &__icon-divider {
+    color: var(--hero-color--primary);
+
+    .icon-svg {
+      width: 4em;
+      height: auto;
     }
   }
 
@@ -194,7 +202,7 @@ body .hide-load {
     color: var(--hero-color--secondary);
   }
   .color-accent {
-    color: var(--color-accent);
+    color: var(--accent-color--primary);
   }
 
   .small-title {

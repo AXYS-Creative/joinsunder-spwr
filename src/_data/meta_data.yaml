@@ -1,17 +1,17 @@
 site_name: Join SPWR
 url: https://joinspwr.com
-author: Sunpower
-contact_email: info@sunderenergy.com
+author: SunPower
+contact_email: info@Sunenergy.com
 theme_color: "#f7f7f7"
 page_descriptions:
   - page: null
     label: Home
-    description: Welcome to Sunder, America's leading solar sales company. Empower
+    description: Welcome to SunPower, America's leading solar sales company. Empower
       your future with us and discover why thousands are building brighter
       careers in the solar industry.
   - page: spwr-way
     label: SPWR Way
-    description: Discover what it means to be a solar rep at Sunder. Explore our
+    description: Discover what it means to be a solar rep at SunPower. Explore our
       core values, competitions, exclusive merch, unforgettable trips, and a
       behind-the-scenes look at how we lead with integrity and service.
   - page: platform
@@ -20,25 +20,19 @@ page_descriptions:
       unparalleled options, ensures top-tier customer service, and delivers
       industry-leading pay—setting a new standard that no other platform can
       match
-  - page: about
-    label: About
-    description: Learn about Sunpower’s mission, core values, and rapid growth
-      as the leading solar sales company in the U.S. Meet the leadership team
-      and explore key milestones on their journey to making clean energy
-      accessible nationwide.
   - page: operation-spwr-serves
-    label: Operation Sunder Serves
-    description: See how Sunpower gives back. From building schools to donating
+    label: Operation SunPower Serves
+    description: See how SunPower gives back. From building schools to donating
       bikes and creating community spaces, explore our timeline of service
       projects impacting lives across Mexico, Costa Rica, Peru, and beyond.
   - page: join
     label: Join
-    description: Ready to power your future with solar? Join Sunpower and
+    description: Ready to power your future with solar? Join SunPower and
       become part of a team that’s making a real impact. Fill out the form and
       take the first step toward a rewarding career in solar sales.
   - page: form-submit
     label: Form Submit
-    description: Thanks for reaching out to Sunpower! Your form has been
+    description: Thanks for reaching out to SunPower! Your form has been
       submitted — we’ll be in touch soon to help you start your journey in solar
       sales.
   - page: "404"
@@ -46,7 +40,7 @@ page_descriptions:
     description: The page you are looking for cannot be found. Please check the URL
       or return to the home page.
 og_label: Join Americas Leading Solar Company
-og_description: Looking for your next opportunity? Join Sunpower, where our
+og_description: Looking for your next opportunity? Join SunPower, where our
   mission is to empower individuals to shape a brighter future through
   sustainable energy solutions.
 og_image: /static/img/open-graph-image-100.jpg

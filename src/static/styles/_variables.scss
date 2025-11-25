@@ -1,28 +1,22 @@
 $brand-font--heading: "Fander", system-ui, sans-serif;
 $brand-font--body: "Geist", system-ui, sans-serif;
 
-$spwr-white: #ffffff;
-$spwr-grey-light: #dddddd;
-$spwr-grey-dark: #797979;
-$spwr-black: #141414;
-$spwr-navy: #002d52;
-$spwr-yellow: #fdfd00;
-$spwr-orange: #ff8700;
-$spwr-royal-blue: #095cfb;
-$spwr-mid: #2f2f2f;
+$white: #ffffff;
+$sand: #f9f4ed;
+$grey-light: #dddddd;
+$grey-dark: #797979;
+$black: #141414;
+$navy: #002d52;
+$yellow: #fdfd00;
+$orange: #ff8700;
+$royal-blue: #095cfb;
 
-$sunder-ice: #d9d9d9;
+$gradient-root: #{$royal-blue};
+
 $sunder-royal-light: #0058f5;
 $sunder-royal: #074895;
-$sunder-navy: #061a2a;
-$sunder-midnight: #000014;
-
-$black: $spwr-black;
-$grey: $sunder-ice;
-$white: $spwr-white;
 
 $blue: $sunder-royal-light;
-$blue-opaque: rgba($sunder-royal-light, 0.8);
 $red: #dc143c;
 
 $content-width: 1750px;
@@ -59,25 +53,25 @@ $test: 2px dashed rgba(coral, 0.75);
 $test-bg: rgba(navy, 0.75);
 
 :root {
-  --background-color: #{$spwr-black};
+  --background-color: #{$sand};
 
-  --hero-color--primary: #{$spwr-yellow};
+  --hero-color--primary: #{$yellow};
+  --accent-color--primary: #{$royal-blue};
 
-  // --font-color--primary: #{$spwr-yellow};
-  --font-color--primary: #{$spwr-white};
-  --font-color--secondary: #{$grey};
+  --font-color--primary: #{$black};
+  --font-color--secondary: #{$grey-light};
   --font-color--error: #{$red};
 
-  --color-accent: var(--hero-color--primary);
+  // --color-accent: var(--hero-color--primary);
 
   --font-family-heading: #{$brand-font--heading};
   --font-family-body: #{$brand-font--body};
 
   // Button/Link Colors
-  --btn-color-bg: #{$black};
-  --btn-color-text: #{$white};
+  --btn-color-bg: #{$white};
+  --btn-color-text: #{$black};
   --btn-color-border: var(--btn-color-bg);
-  --btn-color-bg--hover: #{$white};
+  --btn-color-bg--hover: #{$yellow};
   --btn-color-text--hover: #{$black};
   --btn-color-border--hover: var(--btn-color-bg--hover);
 
@@ -88,14 +82,14 @@ $test-bg: rgba(navy, 0.75);
   --btn-color-2-text--hover: #{$white};
   --btn-color-2-border--hover: var(--btn-color-2-bg--hover);
 
-  --btn-padding: 8px 20px;
+  --btn-padding: 10px 20px;
 
-  --link-color: #{$spwr-white};
-  --link-color-hover: #{$spwr-yellow};
+  --link-color: #{$white};
+  --link-color-hover: #{$yellow};
 
   // Surface Colors
-  --surface-color: #{$spwr-mid}; // Nav menu bg || ethos bottom when in light theme
-  --surface-color-2: #{$spwr-mid}; // hero-img-partial bg, form field bg
+  --surface-color: #{$navy}; // Nav menu bg || ethos bottom when in light theme
+  --surface-color-2: #{$white}; // hero-img-partial bg, form field bg
 
   // Size & Spacing
   --body-padding: 24px;
@@ -133,7 +127,7 @@ $test-bg: rgba(navy, 0.75);
   --border-bold-girth: 4px;
 
   --radius-sm: 6px; // form input fields, carousel images
-  --radius: 8px; // full-width panels & nav
+  --radius: 10px; // full-width panels & nav
   --radius-lg: 24px; // sections & footer
   --radius-btn: 64px;
 
@@ -161,20 +155,12 @@ $test-bg: rgba(navy, 0.75);
 
     --logo-offset: 6px;
 
-    --panel-gap: 12px;
+    --btn-padding: 7px 14px;
 
-    --radius: 5px;
+    --panel-gap: 12px;
   }
 
   @media (max-width: 480px) {
     --body-padding: 12px;
   }
 }
-
-// If you add a dark/light theme
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background-color: #{$black};
-//     --font-color--primary: #{$white};
-//   }
-// }

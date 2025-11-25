@@ -205,6 +205,7 @@
 
 .section-competitions {
   // using section-solid-bg util
+  @include column-center;
 
   .competition-types {
     @include row-center(flex-start);
@@ -303,7 +304,6 @@
       &-title {
         @include h4;
         margin-block-end: var(--panel-gap);
-        color: var(--color-accent);
 
         @include mq-motion-allow {
           translate: var(--content-offset);
@@ -348,6 +348,7 @@
     @include dark-gradient(0deg, 20%, 80%);
     isolation: isolate;
     position: relative;
+    width: 100%;
 
     &-logo {
       @include row-start;
@@ -469,7 +470,7 @@
       @include mq-min(lg) {
         // border-inline: 4px solid var(--background-color);
         border-inline: 4px solid var(--surface-color);
-        // background: linear-gradient(0deg, rgba($spwr-black, 1) 20%, rgba($white, 1) 72.5%);
+        // background: linear-gradient(0deg, rgba($black, 1) 20%, rgba($white, 1) 72.5%);
       }
 
       &__stripe {

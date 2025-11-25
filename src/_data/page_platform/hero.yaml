@@ -5,7 +5,7 @@ section_desc: We’re proud to offer a platform that empowers Sales Reps with un
 section_bg: /static/img/Platform-Hero-BG.png
 
 cta:
-  text: Join The Squad
+  text: Join today
   text_desc:
   url: /join
   new_tab: false

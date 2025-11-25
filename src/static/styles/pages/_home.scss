@@ -140,7 +140,7 @@
         height: 100%;
         z-index: -1;
         opacity: 0;
-        background: linear-gradient(var(--direction), $blue 0%, transparent 100%);
+        background: linear-gradient(var(--direction), $gradient-root 0%, transparent 100%);
         transition: opacity $ease-c, width 0.75s ease, height 0s;
 
         @include mq-min(lg) {
@@ -176,6 +176,7 @@
       }
 
       &__text {
+        @include dark-theme;
         @include column-center;
         @include absolute-center;
         opacity: 0;

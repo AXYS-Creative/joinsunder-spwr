@@ -40,16 +40,19 @@ body {
 }
 
 .site-header {
+  --nav-bg-color: var(--surface-color);
+
   @include header-spacing;
   @include row-center(space-between);
   position: fixed;
   top: var(--body-padding-sm);
   // height: var(--header-height);
   z-index: $z-index--header;
+  background: var(--nav-bg-color);
   width: var(--full-width-snip-sm);
   max-width: var(--header-max-width);
   padding: var(--body-padding);
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
   border-radius: var(--radius);
   transition: transform $ease, border $ease, background $ease;
 
@@ -60,7 +63,8 @@ body {
   }
 
   .site-nav-btn-wrapper {
-    --nav-btn-height: 36px;
+    --nav-btn-height: 32px;
+
     // @include right-spacing;
     // top: var(--body-padding);
     // height: var(--header-height);
@@ -69,20 +73,21 @@ body {
     transition: opacity 0.3s ease;
 
     .site-nav-btn {
-      --line-offset: 3px;
-      --nav-btn-color: #{$spwr-royal-blue};
+      --line-offset: 2.5px;
+      --nav-btn-color-bg: #{$white};
+      --nav-btn-color-line: var(--nav-bg-color);
 
-      border: 1px solid var(--nav-btn-color);
-      background: var(--nav-btn-color);
+      border: 1px solid var(--nav-btn-color-bg);
+      background: var(--nav-btn-color-bg);
       width: 100%;
       aspect-ratio: 1;
       border-radius: 50%;
-      padding: 8px;
+      padding: 7px;
       transition: $ease-c;
 
-      @include mq-max(lg) {
-        --line-offset: 3px;
-      }
+      // @include mq-max(lg) {
+      //   --line-offset: 3px;
+      // }
 
       &:hover,
       &:focus-visible {
@@ -102,7 +107,7 @@ body {
         @include absolute-center;
         width: 125%;
         height: 3px;
-        background: var(--background-color);
+        background: var(--nav-btn-color-line);
         transition: 0.3s ease;
 
         @include mq-max(lg) {
@@ -126,7 +131,7 @@ body {
         }
         .site-nav-btn-line {
           translate: -50% -50%;
-          background: var(--nav-btn-color);
+          background: var(--nav-btn-color-bg);
 
           &:last-of-type {
             rotate: 90deg;
@@ -136,10 +141,10 @@ body {
     }
   }
 
-  &.away-from-top {
-    background: var(--background-color);
-    border: 1px solid var(--surface-color);
-  }
+  // &.away-from-top {
+  //   background: var(--background-color);
+  //   border: 1px solid var(--surface-color);
+  // }
 
   &.near-bottom {
     @include mq-max(lg) {
@@ -159,8 +164,9 @@ body {
 }
 
 .site-nav {
-  @include hide-content;
   @include column-start;
+  @include dark-theme;
+  @include hide-content;
   position: fixed;
   top: 0;
   left: 0;
@@ -240,7 +246,7 @@ body {
         left: 0;
         width: 0;
         height: var(--border-bold-girth);
-        background: var(--hero-color--primary);
+        background: var(--accent-color--primary);
 
         @include mq-mouse {
           transition: width $ease;
@@ -250,8 +256,7 @@ body {
       // @include desktop-hover // Manual hover for mobile/touch
       &:hover,
       &:focus-visible {
-        border-color: var(--hero-color--primary);
-        color: var(--hero-color--primary);
+        // border-color: var(--accent-color--primary);
 
         &::before {
           width: 100%;
@@ -268,6 +273,7 @@ body {
       }
 
       .reveal {
+        color: var(--hero-color--primary);
         width: 0;
         overflow: hidden;
 
@@ -279,6 +285,9 @@ body {
   }
 
   &__footer {
+    --link-color: #{$white};
+    --link-color-hover: #{$yellow};
+
     @include row-center(flex-end);
     width: 100%;
   }
@@ -327,8 +336,8 @@ body {
     }
 
     .social-media {
-      --link-color: #{$spwr-yellow};
-      --link-color-hover: #{$spwr-white};
+      --link-color: #{$yellow};
+      --link-color-hover: #{$white};
 
       @include mq-max(lg) {
         display: none;
@@ -367,8 +376,8 @@ body {
 // }
 
 .main-platform,
-.main-operation-spwr-serves,
-.main-spwr-way {
+.main-operation-spwr-serves {
+  // .main-spwr-way {
   padding: var(--body-padding-sm);
 }
 

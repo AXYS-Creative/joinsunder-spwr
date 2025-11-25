@@ -83,6 +83,12 @@ hide_footer: false
   <h2 class="section-solid-bg__title">
     {{ page_spwr_way.competitions.section_title }}
   </h2>
+
+  <div class="section-solid-bg__icon-divider">
+    <!-- prettier-ignore -->
+    {% set icon_svg = ({ src: '/static/img/icon-dots-divider.svg', class: '' }) %}
+    {% include "./_includes/components/icon-svg.njk" %}
+  </div>
   <p class="section-solid-bg__desc">
     {{ page_spwr_way.competitions.section_desc }}
   </p>
@@ -152,6 +158,11 @@ hide_footer: false
   <h2 class="section-solid-bg__title section-experiences__title">
     {{ page_spwr_way.experiences.section_title }}
   </h2>
+  <div class="section-solid-bg__icon-divider">
+    <!-- prettier-ignore -->
+    {% set icon_svg = ({ src: '/static/img/icon-dots-divider.svg', class: '' }) %}
+    {% include "./_includes/components/icon-svg.njk" %}
+  </div>
   <p class="section-solid-bg__desc section-experiences__desc">
     {{ page_spwr_way.experiences.section_desc }}
   </p>

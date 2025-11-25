@@ -19,9 +19,9 @@ values:
   - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]transparent[%span%]"
     caption: Offer clear terms, real numbers, and[%br%] full disclosure in every interaction.
 cta_p: Deception has no place in our business. Our reputation is built on the
-  trust of those we serve. At Sunpower, we win with integrity—always.
+  trust of those we serve. At SunPower, we win with integrity—always.
 cta:
-  text: Join the squad
+  text: Join today
   text_desc: null
   url: /join
   new_tab: false

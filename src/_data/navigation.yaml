@@ -8,7 +8,5 @@ links:
     url: "spwr-way"
   - text: The [%span.reveal%]SWPR[%span%] Platform
     url: "platform"
-  # - text: About [%span.reveal%]SWPR[%span%]
-  #   url: "about"
   - text: Join [%span.reveal%]SWPR[%span%]
     url: "join"

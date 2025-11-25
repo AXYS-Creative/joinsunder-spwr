@@ -24,7 +24,7 @@
   &__label {
     @include heading-text;
     letter-spacing: -1px;
-    color: var(--text-color);
+    color: var(--font-color--primary);
     transition: $ease 0.2s;
     font-size: 24px;
 

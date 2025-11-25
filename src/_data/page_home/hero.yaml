@@ -1,13 +1,13 @@
-section_title: Welcome to Sunpower
+section_title: Welcome to SunPower
 external_panel:
   bg_img: /static/img/landing-hero-bg3.png
-  logo: /static/img/logo-external-light.svg
+  logo: /static/img/logo-sunpower.svg
   pre_title: Learn more about
   title: powering[%br%] your home[%br%] for the future
   cta:
-    text: sunderenergy.com
+    text: sunpower.com
     text_desc: null
-    url: https://sunderenergy.com/
+    url: https://sunpower.com/
     new_tab: true
 internal_panel:
   bg_img: /static/img/Landing-Hero-BG2.png
