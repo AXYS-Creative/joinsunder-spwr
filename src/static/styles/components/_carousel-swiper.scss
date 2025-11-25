@@ -106,9 +106,7 @@
       &.swiper-slide-active {
         // Mimic hover state above, consider making these a mixin?
         @include mq-max(lg) {
-          &::after {
-            box-shadow: inset 0 0 0 5px var(--hero-color--primary);
-          }
+          border: 2px solid var(--accent-color--primary);
 
           .badge {
             opacity: 1;

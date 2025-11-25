@@ -52,7 +52,7 @@ body {
   width: var(--full-width-snip-sm);
   max-width: var(--header-max-width);
   padding: var(--body-padding);
-  // border: 1px solid transparent;
+  border: 1px solid var(--background-color);
   border-radius: var(--radius);
   transition: transform $ease, border $ease, background $ease;
 

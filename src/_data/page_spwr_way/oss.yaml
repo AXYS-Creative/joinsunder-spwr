@@ -1,11 +1,10 @@
 toggle_section: true
-section_title: Operation[%br%] Sunder Serves
-section_desc: Experience the joy of giving back through service, adventure, and
-  connection as we help communities in Peru!
-section_bg: /static/img/inca-city-of-machu-picchu-in-peru-2025-03-18-14-42-14-utc.jpg
+section_title: Operation[%br%] SPWR Serves
+section_desc: We believe giving back should reach beyond borders. Every year, our team serves communities around the world, bringing relief, resources, and hope while learning from the people and cultures we encounter.
+section_bg: /static/img/way-oss-background.jpg
 graphic: /static/img/Way-OSS-Emblem.png
 cta:
   text: Learn more
-  text_desc: Learn more about how Sunder serves
+  text_desc: Learn more about how SunPower serves
   url: /operation-spwr-serves
   new_tab: false

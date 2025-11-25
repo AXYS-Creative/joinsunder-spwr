@@ -307,6 +307,10 @@ $min-breakpoints: (
   }
 }
 
+@mixin blue-gradient($dir: 180deg, $start: 30%, $end: 70%) {
+  background: linear-gradient($dir, $gradient-root $start, rgba(0, 0, 0, 0) $end);
+}
+
 @mixin dark-gradient($dir: 180deg, $start: 30%, $end: 70%) {
   background: linear-gradient($dir, rgba($black, 1) $start, rgba(0, 0, 0, 0) $end);
 }
@@ -316,7 +320,7 @@ $min-breakpoints: (
   transition: border-color $ease;
 
   @include desktop-hover {
-    border-color: var(--hero-color--primary);
+    border-color: var(--accent-color--primary);
   }
 }
 
@@ -339,6 +343,7 @@ $min-breakpoints: (
 // }
 
 @mixin section-solid {
+  // Carful with using display: flex, messes up the carousel
   @include dark-theme;
   border-radius: var(--radius-lg);
   background: var(--surface-color);

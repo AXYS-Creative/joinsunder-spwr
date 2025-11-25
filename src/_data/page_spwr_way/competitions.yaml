@@ -18,25 +18,25 @@ types:
 yog_logo: /static/img/way-competitions-icon-yog-logo.svg
 yog_merch:
   - items:
-      - title: Blue Sunder hat
+      - title: White SunPower hat
         src: /static/img/Way-YOG-2Hat.png
         rotate: none
   - items:
-      - title: Black long sleave Sunder shirt
+      - title: Black long sleave SunPower shirt
         src: /static/img/Way-YOG-1Shirt.png
         rotate: left
       - title: Louis Vuitton bag
         src: /static/img/Way-YOG-3Bag.png
         rotate: none
   - items:
-      - title: Sunder skateboard
+      - title: SunPower skateboard
         src: /static/img/Way-YOG-4Skateboard.png
         rotate: left
   - items:
-      - title: Sunder jacket
+      - title: SunPower jacket
         src: /static/img/Way-YOG-5Jacket.png
         rotate: left
-      - title: Sunder t-shirt
+      - title: SunPower t-shirt
         src: /static/img/Way-YOG-7Shirt.png
         rotate: right
   - items:
@@ -45,10 +45,10 @@ yog_merch:
         rotate: none
 yog_types:
   - title: The Boom
-    src: /static/img/way-competitions-icon-the-boom.svg
+    src: /static/img/Way-YOG-2Boom.svg
   - title: The Drop
-    src: /static/img/way-competitions-icon-the-drop.svg
+    src: /static/img/Way-YOG-3Drop.svg
   - title: The Club
-    src: /static/img/way-competitions-icon-the-club.svg
+    src: /static/img/Way-YOG-4Club.svg
   - title: Battle Box
-    src: /static/img/way-competitions-icon-battle-box.svg
+    src: /static/img/Way-YOG-5Box.svg

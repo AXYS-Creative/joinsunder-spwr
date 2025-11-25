@@ -29,7 +29,7 @@ $z-index--video-overlay: 6;
 
 // Figma Font size (body)
 $body-text-1: 24px;
-$body-text-2: 22px;
+$body-text-2: 18px;
 $body-text-3: 15px;
 
 // Easing
@@ -111,7 +111,7 @@ $test-bg: rgba(navy, 0.75);
   --full-height-snip: calc(100vh - var(--body-padding-double));
   --full-height-snip-sm: calc(100vh - var(--body-padding-sm-double));
 
-  --paragraph-snip: 572px; // for larger than md
+  --paragraph-snip: 650px; // for larger than md
 
   --section-min-height: 720px;
 

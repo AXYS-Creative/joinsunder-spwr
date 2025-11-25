@@ -40,7 +40,7 @@
 // Reskin turns this into solid color from gradient
 .section-solid-bg {
   // @include top-fade-section;
-  @include top-solid-section;
+  @include section-solid;
 
   @include mq-min(lg) {
     padding-inline: var(--body-padding-double);
@@ -57,6 +57,7 @@
   }
 
   &__icon-divider {
+    @include row-center;
     color: var(--hero-color--primary);
 
     .icon-svg {
@@ -68,6 +69,8 @@
   &__desc {
     @include paragraph-width-snip;
     margin-block-end: var(--section-gap);
+    margin-inline: auto;
+    text-align: center;
 
     @include mq-max(md) {
       text-align: center;
