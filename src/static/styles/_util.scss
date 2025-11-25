@@ -48,11 +48,11 @@
 
   &__title {
     @include h3;
+    text-align: center;
 
     @include mq-max(md) {
       @include h4;
       margin-block-end: var(--panel-gap);
-      text-align: center;
     }
   }
 

@@ -682,6 +682,7 @@ br.gap-sm {
   font-size: 55px;
   line-height: 90%;
   font-size-adjust: 0.5;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .section-solid-bg__title {
@@ -692,7 +693,6 @@ br.gap-sm {
     font-size: 36px;
     line-height: 1;
     margin-block-end: var(--panel-gap);
-    text-align: center;
   }
 }
 .section-solid-bg__icon-divider {
