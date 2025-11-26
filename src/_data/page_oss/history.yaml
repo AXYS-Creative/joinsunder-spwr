@@ -89,23 +89,23 @@ events:
       url: https://www.dropbox.com/scl/fi/57gdmg2rbch560buyis8l/OSS-History-2Video.mov?rlkey=z76at8all9e3dqh6hq5dnof5p&st=icbls5cs&dl=0
       new_tab: true
     gallery:
-      - src: /static/img/oss-peru-1photo.jpg
+      - src: /static/img/OSS-Peru-1Photo.jpg
         title: The group at Machu Picchu
-      - src: /static/img/oss-peru-2photo.jpg
+      - src: /static/img/OSS-Peru-2Photo.jpg
         title: Max supporting a child
-      - src: /static/img/oss-peru-3photo.jpg
+      - src: /static/img/OSS-Peru-3Photo.jpg
         title: Reps posing in front of a fountain
-      - src: /static/img/oss-peru-4photo.jpg
+      - src: /static/img/OSS-Peru-4Photo.jpg
         title: Reps posing with locals
-      - src: /static/img/oss-peru-5photo.jpg
+      - src: /static/img/OSS-Peru-5Photo.jpg
         title: Rep helping school children
-      - src: /static/img/oss-peru-6photo.jpg
+      - src: /static/img/OSS-Peru-6Photo.jpg
         title: Rep supporing a kid
-      - src: /static/img/oss-peru-7photo.jpg
+      - src: /static/img/OSS-Peru-7Photo.jpg
         title: Reps building a structure
-      - src: /static/img/oss-peru-8photo.jpg
+      - src: /static/img/OSS-Peru-8Photo.jpg
         title: A man smiling at Machu Picchu
-      - src: /static/img/oss-peru-9photo.jpg
+      - src: /static/img/OSS-Peru-9Photo.jpg
         title: Llamas vibing
-      - src: /static/img/oss-peru-10photo.jpg
+      - src: /static/img/OSS-Peru-10Photo.jpg
         title: A group of reps painting a wall
