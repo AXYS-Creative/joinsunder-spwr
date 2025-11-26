@@ -5,6 +5,7 @@
     @include row-start;
     padding: 0;
     gap: var(--body-padding);
+    margin-block-start: calc(var(--header-height) + var(--body-padding-sm));
 
     > * {
       width: 100%;

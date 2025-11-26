@@ -110,7 +110,8 @@ $test-bg: rgba(navy, 0.75);
   --full-width-snip-sm: calc(100vw - var(--body-padding-sm-double));
 
   --full-height-snip: calc(100vh - var(--body-padding-double));
-  --full-height-snip-sm: calc(100vh - var(--body-padding-sm-double));
+  // --full-height-snip-sm: calc(100vh - var(--body-padding-sm-double));
+  --full-height-snip-lg: calc(100vh - calc(var(--body-padding-double) + var(--header-height)));
 
   --paragraph-snip: 650px;
   --paragraph-snip-sm: 550px;
@@ -118,14 +119,14 @@ $test-bg: rgba(navy, 0.75);
 
   --section-min-height: 720px;
 
-  --header-height: 36px;
+  --header-height: 80px;
   --header-max-width: calc(
     var(--content-width) - var(--body-padding-sm-double)
   ); // used on both header and nav menu
   --logo-offset: 4px;
-  --logo-height: calc(var(--header-height) - var(--logo-offset));
+  --logo-height: 32px;
 
-  --top-spacing-header: calc(var(--header-height) + var(--body-padding) * 2);
+  --top-spacing-header: calc(var(--header-height) + var(--body-padding-sm));
 
   --border-bold-girth: 4px;
 
@@ -149,7 +150,7 @@ $test-bg: rgba(navy, 0.75);
 
   @media (max-width: 1024px) {
     --section-gap--lg: 24px;
-    --header-height: 32px;
+    --header-height: 64px;
     --border-bold-girth: 2px;
   }
 

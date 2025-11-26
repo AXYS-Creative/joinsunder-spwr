@@ -81,7 +81,8 @@
 
 .stack-section {
   position: sticky;
-  top: calc(var(--top-spacing-header) + var(--body-padding-sm-double));
+  top: var(--top-spacing-header);
+  padding-block-start: 0;
   transition: $ease;
 
   &.scrolling-down {

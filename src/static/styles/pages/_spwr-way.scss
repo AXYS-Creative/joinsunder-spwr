@@ -386,6 +386,10 @@
       margin: auto;
       padding-block: 264px 148px; // flag
 
+      @include mq-max(lg) {
+        padding-block-start: 96px;
+      }
+
       &__row {
         @include row-center(space-around);
         gap: 12vw;

@@ -22,10 +22,14 @@
 
   <div class="controls">
     <div class="swiper-button-prev tab-element-page">
-      <img src="{{ global.carousel.arrow_img }}" alt="" eleventy:ignore />
+      <!-- prettier-ignore -->
+      {% set icon_svg = ({ src: global.carousel.arrow_img, class: '' }) %}
+      {% include "../components/icon-svg.njk" %}
     </div>
     <div class="swiper-button-next tab-element-page">
-      <img src="{{ global.carousel.arrow_img }}" alt="" eleventy:ignore />
+      <!-- prettier-ignore -->
+      {% set icon_svg = ({ src: global.carousel.arrow_img, class: '' }) %}
+      {% include "../components/icon-svg.njk" %}
     </div>
 
     <!-- prettier-ignore -->

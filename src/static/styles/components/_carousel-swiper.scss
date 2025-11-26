@@ -1,4 +1,6 @@
 .swiper {
+  --swiper-navigation-color: var(--hero-color--primary);
+
   margin-block: var(--section-gap);
 
   .swiper-wrapper {
@@ -39,6 +41,10 @@
 
     &::after {
       display: none;
+    }
+
+    .icon-svg {
+      --icon-size: 1.5em;
     }
 
     @include mq-max(md) {

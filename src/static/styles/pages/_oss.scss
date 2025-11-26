@@ -1,12 +1,20 @@
 .section-oss-history {
+  padding-inline: var(--body-padding-double);
   padding-block-end: var(--section-gap-double);
 
   @include mq-max(lg) {
     @include column-center;
   }
 
+  &__title {
+    text-align: start;
+  }
+
   &__desc {
-    // one-off 👍
+    margin-inline: 0;
+    text-align: start;
+    max-width: var(--paragraph-snip-sm);
+
     @include mq-max(lg) {
       text-align: center;
       text-wrap: balance;
@@ -102,6 +110,12 @@
     .cta-group {
       @include mq-min(lg) {
         justify-content: flex-start;
+      }
+    }
+
+    .swiper {
+      .icon-svg {
+        color: var(--font-color--primary);
       }
     }
   }
