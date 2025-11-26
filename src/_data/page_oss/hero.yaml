@@ -1,14 +1,11 @@
 toggle_section: true
-section_title: Operation[%br%] SPWR Serves
-section_desc: Every year, we commit to serving communities around the world
-  because real impact happens when we step outside ourselves. By donating
-  resources and volunteering directly with those in need, we help support
-  long-term growth in the places we visit. And while we aim to leave each
-  community better than we found it, the experience leaves an impact on us too,
-  strengthening our gratitude, perspective, and purpose as a team.
-section_bg: /static/img/way-oss-background.jpg
+
+section_title: Operation[%br%] Sunder Serves
+section_desc: This year, Operation Sunder Serves will head to Cuzco, Peru, where our team will work alongside locals to maintain schools, build furniture, and create brighter futures for children by providing hands-on education and support, while also enjoying the adventure of exploring ancient ruins like Machu Picchu.
+section_bg: /static/img/OSS-Hero-BG.jpg
+
 cta:
-  text: ""
-  text_desc: ""
-  url: ""
+  text: Register
+  text_desc: Register to serve with Sunder
+  url: https://globeaware.org/sunder-energy-in-machu-picchu-peru-2025?fbclid=PAZXh0bgNhZW0CMTEAAaZ_fbbNjdEwGA_xOH16EksdFJoRKhZ6wuNyHzytwiM8uRgJmYfeuNWCvXY_aem_ae35dXlu-IxrcortjTkCcA
   new_tab: true
