@@ -1,7 +1,7 @@
 import { mqMinMd } from "../util.js";
 
-const externalPanel = document.querySelector(".sunder-external"),
-  internalPanel = document.querySelector(".sunder-internal");
+const externalPanel = document.querySelector(".spwr-external"),
+  internalPanel = document.querySelector(".spwr-internal");
 
 if (document.querySelector(".main-home") && mqMinMd) {
   const externalLink = externalPanel.querySelector(".cta-1");
