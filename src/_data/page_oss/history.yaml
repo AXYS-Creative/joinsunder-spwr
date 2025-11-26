@@ -1,27 +1,29 @@
 toggle_section: true
 section_title: History
 section_desc: What we've achieved is impressive, but we’re just getting started.
-
 events:
   - year: 2021
     country: Afghanistan
-    city:
-    desc: "Sunder created its charity event O.S.S. (Operation Sunder Serves) and donated over $50k to helping civilians evacuate Afghanistan from the Taliban."
+    city: null
+    desc: Sunder created its charity event O.S.S. (Operation Sunder Serves) and
+      donated over $50k to helping civilians evacuate Afghanistan from the
+      Taliban.
     graphic: /static/img/OSS-Emblem-1Afghanistan.png
     cta:
-      text: null
-      text_desc: null
-      url: null
-      new_tab: null
-    gallery:
+      ? text
+      ? text_desc
+      ? url
+      ? new_tab
+    gallery: null
   - year: 2022
     country: Mexico
     city: Merida
-    desc: "Sunder helped build/renovate a community elementary school and donated bikes to the students."
+    desc: Sunder helped build/renovate a community elementary school and donated
+      bikes to the students.
     graphic: /static/img/OSS-Emblem-2Mexico.png
     cta:
       text: Play video
-      text_desc:
+      text_desc: null
       url: https://www.dropbox.com/scl/fi/rty8m7ra1isbcswv0q8jv/OSS-History-1Video.mov?rlkey=xh7aeis50ghl2qw29dfl9sw50&st=1c767ax0&dl=0
       new_tab: false
     gallery:
@@ -52,7 +54,7 @@ events:
     graphic: /static/img/OSS-Emblem-3CostaRica.png
     cta:
       text: Play video
-      text_desc:
+      text_desc: null
       url: https://www.dropbox.com/scl/fi/57gdmg2rbch560buyis8l/OSS-History-2Video.mov?rlkey=z76at8all9e3dqh6hq5dnof5p&st=icbls5cs&dl=0
       new_tab: false
     gallery:
@@ -82,8 +84,14 @@ events:
     desc: Sunder is currently preparing to serve in Peru![%br%] Register to join us!
     graphic: /static/img/OSS-Emblem-4Peru.png
     cta:
-      text: Register
-      text_desc: Register for OSS Cuzco, Peru
-      url: https://globeaware.org/sunder-energy-in-machu-picchu-peru-2025?fbclid=PAZXh0bgNhZW0CMTEAAaZ_fbbNjdEwGA_xOH16EksdFJoRKhZ6wuNyHzytwiM8uRgJmYfeuNWCvXY_aem_ae35dXlu-IxrcortjTkCcA
+      text: Play video
+      text_desc: ""
+      url: ""
       new_tab: true
     gallery:
+      - src: /static/img/oss-peru-1photo.jpg
+        title: The group at Machu Picchu
+      - src: /static/img/oss-peru-2photo.jpg
+        title: Max supporting a child
+      - src: /static/img/oss-peru-3photo.jpg
+        title: Reps posing in front of a fountain
