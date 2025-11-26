@@ -10,10 +10,10 @@ events:
       Taliban.
     graphic: /static/img/OSS-Emblem-1Afghanistan.png
     cta:
-      ? text
-      ? text_desc
-      ? url
-      ? new_tab
+      text:
+      text_desc:
+      url:
+      new_tab:
     gallery: null
   - year: 2022
     country: Mexico
@@ -86,7 +86,7 @@ events:
     cta:
       text: Play video
       text_desc: ""
-      url: ""
+      url: https://www.dropbox.com/scl/fi/57gdmg2rbch560buyis8l/OSS-History-2Video.mov?rlkey=z76at8all9e3dqh6hq5dnof5p&st=icbls5cs&dl=0
       new_tab: true
     gallery:
       - src: /static/img/oss-peru-1photo.jpg
@@ -95,3 +95,17 @@ events:
         title: Max supporting a child
       - src: /static/img/oss-peru-3photo.jpg
         title: Reps posing in front of a fountain
+      - src: /static/img/oss-peru-4photo.jpg
+        title: Reps posing with locals
+      - src: /static/img/oss-peru-5photo.jpg
+        title: Rep helping school children
+      - src: /static/img/oss-peru-6photo.jpg
+        title: Rep supporing a kid
+      - src: /static/img/oss-peru-7photo.jpg
+        title: Reps building a structure
+      - src: /static/img/oss-peru-8photo.jpg
+        title: A man smiling at Machu Picchu
+      - src: /static/img/oss-peru-9photo.jpg
+        title: Llamas vibing
+      - src: /static/img/oss-peru-10photo.jpg
+        title: A group of reps painting a wall

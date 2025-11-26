@@ -114,6 +114,8 @@
     }
 
     .swiper {
+      @include light-theme;
+
       .icon-svg {
         color: var(--font-color--primary);
       }

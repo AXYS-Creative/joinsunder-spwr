@@ -558,6 +558,7 @@ a {
 }
 
 button {
+  font-family: var(--font-family-heading);
   border: none;
   background: none;
   cursor: pointer;
@@ -1440,6 +1441,18 @@ body .hide-load {
     justify-content: flex-start;
   }
 }
+.section-oss-history .service-event .swiper {
+  --surface-color: #ffffff;
+  --font-color--primary: #141414;
+  --link-color: #0058f5;
+  --link-color-hover: #0058f5;
+  --btn-color-bg: #141414;
+  --btn-color-text: #ffffff;
+  --btn-color-border: var(--btn-color-bg);
+  --btn-color-bg--hover: #fdfd00;
+  --btn-color-text--hover: #141414;
+  --btn-color-border--hover: var(--btn-color-bg--hover);
+}
 .section-oss-history .service-event .swiper .icon-svg {
   color: var(--font-color--primary);
 }
@@ -2172,6 +2185,9 @@ body .hide-load {
 }
 .swiper div.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: var(--hero-color--primary);
+}
+.swiper .controls {
+  min-height: 24px;
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {

@@ -34,6 +34,10 @@
     }
   }
 
+  .controls {
+    min-height: 24px; // Edge case for oss history, where no cta button is added... but maybe they still want the carousel?
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     top: auto;
