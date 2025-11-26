@@ -91,9 +91,9 @@ events:
     gallery:
       - src: /static/img/OSS-Peru-1Photo.jpg
         title: The group at Machu Picchu
-      - src: /static/img/OSS-Peru-1Photo.jpg
+      - src: /static/img/OSS-Peru-2Photo.jpg
         title: Max supporting a child
-      - src: /static/img/OSS-Peru-1Photo.jpg
+      - src: /static/img/OSS-Peru-3Photo.jpg
         title: Reps posing in front of a fountain
       - src: /static/img/OSS-Peru-4Photo.jpg
         title: Reps posing with locals
