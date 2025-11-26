@@ -22,7 +22,7 @@
     .form-panel {
       @include column-center;
       align-self: center;
-      padding-block: var(--section-gap);
+      // padding-block: var(--section-gap);
       gap: 96px;
 
       @media all {

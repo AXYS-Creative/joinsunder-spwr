@@ -1248,7 +1248,6 @@ body .hide-load {
   justify-content: center;
   align-items: center;
   align-self: center;
-  padding-block: var(--section-gap);
   gap: 96px;
 }
 @media screen and (max-width: 1512px) {
