@@ -11,7 +11,8 @@ $yellow: #fdfd00;
 $orange: #ff8700;
 $royal-blue: #095cfb;
 
-$gradient-root: #{$royal-blue};
+$gradient-root: $royal-blue;
+$gradient-root-2: $black;
 
 $sunder-royal-light: #0058f5;
 $sunder-royal: #074895;
@@ -111,7 +112,9 @@ $test-bg: rgba(navy, 0.75);
   --full-height-snip: calc(100vh - var(--body-padding-double));
   --full-height-snip-sm: calc(100vh - var(--body-padding-sm-double));
 
-  --paragraph-snip: 650px; // for larger than md
+  --paragraph-snip: 650px;
+  --paragraph-snip-sm: 550px;
+  --paragraph-snip-lg: 916px;
 
   --section-min-height: 720px;
 
@@ -126,8 +129,8 @@ $test-bg: rgba(navy, 0.75);
 
   --border-bold-girth: 4px;
 
-  --radius-sm: 6px; // form input fields, carousel images
-  --radius: 10px; // full-width panels & nav
+  --radius: 6px; // full-width panels & nav
+  --radius-sm: var(--radius); // form input fields, carousel images
   --radius-lg: 24px; // sections & footer
   --radius-btn: 64px;
 

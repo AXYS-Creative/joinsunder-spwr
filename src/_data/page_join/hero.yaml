@@ -9,7 +9,7 @@ imgs:
     src: /static/img/Join-SlideShow-3Photo.jpg
   - title: Solar rep in a neighborhood
     src: /static/img/Join-SlideShow-4Photo.jpg
-  - title: Man in a Sunder jacket at a conference
+  - title: Man in a SPWR jacket at a conference
     src: /static/img/Join-SlideShow-5Photo.jpg
   - title: Enjoying the pool
     src: /static/img/Join-SlideShow-6Photo.png
@@ -22,7 +22,7 @@ imgs:
   - title: Man rock climbing
     src: /static/img/Join-SlideShow-10Photo.png
 
-section_title: Join Sunder
+section_title: Join SPWR
 
 form_data:
   show_field_discovery: true

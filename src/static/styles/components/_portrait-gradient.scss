@@ -5,7 +5,7 @@
   overflow: hidden;
 
   &::before {
-    @include blue-gradient(0deg, 20%, 50%);
+    @include dark-gradient(0deg, 20%, 50%);
     content: "";
     position: absolute;
     top: 0;

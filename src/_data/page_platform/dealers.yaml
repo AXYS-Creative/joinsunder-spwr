@@ -1,0 +1,55 @@
+toggle_section: true
+
+section_title: "The SPWR [%br%] Dealers Platform"
+section_desc: We’re proud to offer a platform that empowers Sales Reps with unparalleled options, ensures top-tier customer service, and delivers industry-leading pay—setting a new standard that no other platform can match.
+
+logo_grid: 5
+logo_grid_sm: 2
+
+img_list:
+  - title: 1 Solar
+    src: /static/img/Platform-Installers-1Logo.svg
+  - title: Action Solar
+    src: /static/img/Platform-Installers-2Logo.svg
+  - title: Bright Planet Solar
+    src: /static/img/Platform-Installers-4Logo.svg
+  - title: Brilliant Solar
+    src: /static/img/Platform-Installers-5Logo.svg
+  - title: Empower Solar
+    src: /static/img/Platform-Installers-6Logo.svg
+  - title: ESP
+    src: /static/img/Platform-Installers-7Logo.svg
+  - title: Fastrac Energy Services
+    src: /static/img/Platform-Installers-8Logo.svg
+  - title: Flo Energy
+    src: /static/img/Platform-Installers-9Logo.svg
+  - title: Go Solar Wolf River Electric
+    src: /static/img/Platform-Installers-10Logo.svg
+  - title: Green Brilliance
+    src: /static/img/Platform-Installers-11Logo.svg
+  - title: Green Light Solar
+    src: /static/img/Platform-Installers-12Logo.svg
+  - title: Ilum Energy Solutions
+    src: /static/img/Platform-Installers-13Logo.svg
+  - title: Lifetime Solar
+    src: /static/img/Platform-Installers-14Logo.svg
+  - title: Malama Solar
+    src: /static/img/Platform-Installers-15Logo.svg
+  - title: NSIS
+    src: /static/img/Platform-Installers-16Logo.svg
+  - title: OC Solar
+    src: /static/img/Platform-Installers-17Logo.svg
+  - title: We Our World Energy
+    src: /static/img/Platform-Installers-18Logo.svg
+  - title: Plug PV
+    src: /static/img/Platform-Installers-19Logo.svg
+  - title: Skyline Smart Energy
+    src: /static/img/Platform-Installers-20Logo.svg
+  - title: Spring Solar
+    src: /static/img/Platform-Installers-21Logo.svg
+  - title: Sun Solar
+    src: /static/img/Platform-Installers-22Logo.svg
+  - title: Tri Smart Solar
+    src: /static/img/Platform-Installers-23Logo.svg
+  - title: Unicity Solar Energy
+    src: /static/img/Platform-Installers-24Logo.svg

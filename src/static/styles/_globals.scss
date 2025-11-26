@@ -336,9 +336,6 @@ body {
     }
 
     .social-media {
-      --link-color: #{$yellow};
-      --link-color-hover: #{$white};
-
       @include mq-max(lg) {
         display: none;
       }
@@ -375,10 +372,14 @@ body {
 //   }
 // }
 
-.main-platform,
+// .main-platform,
 .main-operation-spwr-serves {
   // .main-spwr-way {
   padding: var(--body-padding-sm);
+}
+
+.main-spwr-way {
+  padding-block: var(--body-padding);
 }
 
 section {

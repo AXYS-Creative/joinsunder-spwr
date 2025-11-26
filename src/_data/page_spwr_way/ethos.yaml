@@ -1,22 +1,23 @@
 toggle_section: true
-section_title: "The[%br%] [%span.color-accent%]SPWR[%span%][%br%] Way"
-autoplay_interval: 2800
-section_imgs:
-  - title: Roof with solar panels
-    src: /static/img/way-ethos-1.png
-  - title: Woman in Sunder swag
-    src: /static/img/way-ethos-2.png
-  - title: Man in Sunder swag
-    src: /static/img/way-ethos-3.png
-  - title: Sunder rep closing a sale
-    src: /static/img/way-ethos-4.png
+section_title: "SPWR"
+bg_img: /static/img/way-ethos-bg.png
+# autoplay_interval: 2800
+# section_imgs:
+#   - title: Roof with solar panels
+#     src: /static/img/way-ethos-1.png
+#   - title: Woman in Sunder swag
+#     src: /static/img/way-ethos-2.png
+#   - title: Man in Sunder swag
+#     src: /static/img/way-ethos-3.png
+#   - title: Sunder rep closing a sale
+#     src: /static/img/way-ethos-4.png
 section_desc: "We believe that trust is earned through honesty, ethics, and transparency. Our commitment is to empowering customers and reps with clear, accurate, and verifiable information—ensuring every decision is made with confidence. We pledge to:"
 values:
-  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]honest[%span%]"
+  - title: "Be[%br%]honest"
     caption: No misleading claims, no half-[%br%]truths just facts.
-  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]ethical[%span%]"
+  - title: "Be[%br%]ethical"
     caption: Treat everyone with respect, fairness, [%br%]and integrity.
-  - title: "[%span.color-accent%]Be[%span%][%br%][%span.color-accent%]transparent[%span%]"
+  - title: "Be[%br%]transparent"
     caption: Offer clear terms, real numbers, and[%br%] full disclosure in every interaction.
 cta_p: Deception has no place in our business. Our reputation is built on the
   trust of those we serve. At SunPower, we win with integrity—always.

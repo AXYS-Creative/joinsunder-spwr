@@ -531,15 +531,15 @@ collections:
               config:
                 max_file_size: 5000000 # 1MB = 1,000,000 bytes
           - *cta_field
-      - name: installers
-        label: Section - Installers
-        file: src/_data/page_platform/installers.yaml
-        preview_path: /platform#installers
+      - name: dealers
+        label: Section - Dealers
+        file: src/_data/page_platform/dealers.yaml
+        preview_path: /platform#dealers
         editor:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Installers)
+            label: Show Section (SPWR platform - Dealers)
             widget: boolean
             default: true
           - name: section_title

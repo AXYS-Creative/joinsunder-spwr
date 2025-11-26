@@ -14,41 +14,42 @@
 
   // SPWR Way — Ethos
   &--ethos {
-    position: relative;
-    width: 100%;
-    height: 3lh;
-    object-fit: cover;
-    border-radius: var(--radius);
-    overflow: hidden;
+    display: none; // Delete component in spwr-way.njk if not used
+    // position: relative;
+    // width: 100%;
+    // height: 3lh;
+    // object-fit: cover;
+    // border-radius: var(--radius);
+    // overflow: hidden;
 
-    @include mq-max(lg) {
-      height: 4lh;
-    }
+    // @include mq-max(lg) {
+    //   height: 4lh;
+    // }
 
-    @include mq-max(md) {
-      height: 3lh;
-    }
+    // @include mq-max(md) {
+    //   height: 3lh;
+    // }
 
-    &-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      object-fit: cover;
+    // &-img {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   object-fit: cover;
 
-      @include mq-motion-allow {
-        opacity: 0;
-        transition: opacity $ease;
+    //   @include mq-motion-allow {
+    //     opacity: 0;
+    //     transition: opacity $ease;
 
-        &.active {
-          opacity: 1;
-        }
-      }
-    }
+    //     &.active {
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
 
-    .ethos-img-1 {
-      opacity: 1;
-    }
+    // .ethos-img-1 {
+    //   opacity: 1;
+    // }
   }
 
   // Join page

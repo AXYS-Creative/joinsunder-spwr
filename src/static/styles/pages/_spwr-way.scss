@@ -1,18 +1,27 @@
 .section-ethos {
   --panel-translate-offset: 96px;
 
+  @include dark-gradient($start: 0%, $end: 120%);
+  @include dark-theme;
+  margin-block: var(--top-spacing-header) var(--section-gap-double);
+  margin-inline: var(--body-padding-double);
+  border-radius: var(--radius-lg);
   position: relative;
-  padding: 0;
+  padding-block: var(--body-padding);
+
+  @include mq-max(lg) {
+    margin-inline: var(--body-padding);
+  }
 
   .ethos-top {
-    @include h1; // used to calc img size (lh)
+    // @include h1; // used to calc img size (lh)
     @include row-center;
-    gap: var(--section-gap);
+    // gap: var(--section-gap);
     width: 100%;
 
-    @include mq-max(xl) {
-      @include h3; // One-off to make ethos responsive at 1200px
-    }
+    // @include mq-max(xl) {
+    //   @include h3; // One-off to make ethos responsive at 1200px
+    // }
 
     @include mq-max(lg) {
       flex-direction: column;
@@ -20,14 +29,17 @@
 
     &__title {
       @include h1;
+      font-size: min(36vw, 648px);
+      line-height: 50%;
+      margin-block-end: 128px;
+      text-align: center;
 
-      @include mq-max(xl) {
-        @include h3; // One-off to make ethos responsive at 1200px
+      @include mq-max(xxl) {
+        font-size: 34vw;
       }
 
       @include mq-max(lg) {
-        // @include h3; // Font-size usually drops here (see one-off above)
-        text-align: center;
+        font-size: 32vw;
       }
     }
 
@@ -37,7 +49,7 @@
   }
 
   .ethos-middle {
-    @include row-center;
+    @include row-start;
     flex-wrap: wrap;
     gap: var(--section-gap-half);
     position: relative;
@@ -78,7 +90,7 @@
       &-panel {
         // background: var(--surface-color);
         border-radius: var(--radius);
-        padding: var(--body-padding);
+        // padding: var(--body-padding);
         flex: 1 1 auto;
         flex-shrink: 0;
         width: 32%;
@@ -151,11 +163,7 @@
   }
 
   .ethos-bottom {
-    @include light-theme;
     @include row-center(space-between);
-    background-color: var(--surface-color);
-    padding: var(--body-padding);
-    border-radius: var(--radius);
     gap: var(--section-gap);
     width: 100%;
 
@@ -186,11 +194,11 @@
   }
 
   .ethos-pin {
-    @include top-solid-section;
+    // @include top-solid-section;
     background: none; // override for reskin
     @include column-center;
     gap: var(--section-gap-half);
-    padding: var(--body-padding-double) var(--body-padding-double) 0;
+    padding: var(--body-padding-double) var(--body-padding-double);
 
     @include mq-max(lg) {
       padding: var(--body-padding);

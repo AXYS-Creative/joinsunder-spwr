@@ -84,7 +84,7 @@
 
   &__p {
     @include paragraph-width-snip;
-    margin-block-end: var(--section-gap);
+    margin-block-end: var(--section-gap-double);
   }
 
   &__sub-content {
@@ -132,15 +132,23 @@
     .partial-img-hero__inner {
       @include partial-height-section;
 
-      background-color: var(--surface-color);
+      background-color: $grey-light;
       padding: var(--body-padding-double); // overrides with original above
 
       // Blue gradient
       &::before {
-        background: linear-gradient(60deg, rgba($blue, 1) 30%, rgba($blue, 0) 70%);
+        background: linear-gradient(
+          60deg,
+          rgba($gradient-root-2, 1) 30%,
+          rgba($gradient-root-2, 0) 70%
+        );
 
         @include mq-max(md) {
-          background: linear-gradient(180deg, rgba($blue, 1) 36%, rgba($blue, 0) 80%);
+          background: linear-gradient(
+            180deg,
+            rgba($gradient-root-2, 1) 36%,
+            rgba($gradient-root-2, 0) 80%
+          );
         }
       }
     }
@@ -156,6 +164,7 @@
 
     .partial-img-hero__p {
       margin: 0;
+      max-width: var(--paragraph-snip-sm);
     }
 
     .partial-img-hero__footer {
@@ -194,7 +203,11 @@
   &.ciq {
     .partial-img-hero__inner::before {
       @include mq-max(md) {
-        background: linear-gradient(180deg, rgba($blue, 1) 56%, rgba($blue, 0) 100%);
+        background: linear-gradient(
+          180deg,
+          rgba($gradient-root-2, 1) 56%,
+          rgba($gradient-root-2, 0) 100%
+        );
       }
     }
 
@@ -210,8 +223,15 @@
     }
   }
 
+  // Platform page
+  &.platform-page {
+    margin-block-start: var(--top-spacing-header);
+  }
+
   // OSS section (The SPWR Way)
   &.oss-section {
+    padding-block-start: var(--body-padding-double);
+
     .partial-img-hero__inner {
       padding: var(--body-padding-double); // overrides with original above
 
@@ -242,6 +262,8 @@
 
   // OSS hero (OSS Page)
   &.oss-page {
+    margin-block-start: var(--top-spacing-header);
+
     .partial-img-hero__bg {
       object-position: 50% 25%;
 

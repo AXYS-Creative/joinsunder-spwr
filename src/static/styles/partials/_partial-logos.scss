@@ -13,16 +13,15 @@
 
   &__h2 {
     @include h3;
-    margin-block-end: 24px;
-
-    @include mq-max(md) {
-      text-align: center;
-    }
+    text-align: center;
   }
 
   &__p {
-    @include paragraph-width-snip;
     margin-block-end: var(--section-gap-half);
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+    max-width: var(--paragraph-snip-lg);
   }
 
   &__imgs {

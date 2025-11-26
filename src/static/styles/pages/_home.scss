@@ -19,14 +19,14 @@
       flex-direction: column-reverse;
     }
 
-    &:has(.sunder-external:hover) .sunder-internal,
-    &:has(.sunder-internal:hover) .sunder-external {
+    &:has(.spwr-external:hover) .spwr-internal,
+    &:has(.spwr-internal:hover) .spwr-external {
       &::before {
         background-color: rgba(0, 0, 0, 0.5);
       }
     }
 
-    &:has(.sunder-external:hover) .sunder-internal {
+    &:has(.spwr-external:hover) .spwr-internal {
       @include mq-max(lg) {
         flex: 1;
 
@@ -230,7 +230,7 @@
       }
     }
 
-    .sunder-internal {
+    .spwr-internal {
       // Default to show panel expanded on mobile only
       @include mq-max(lg) {
         flex: 5;
@@ -263,7 +263,7 @@
       }
     }
 
-    .sunder-external {
+    .spwr-external {
       @include mq-max(lg) {
         &::before {
           background-color: rgba(0, 0, 0, 0.5);
