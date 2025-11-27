@@ -372,14 +372,18 @@ body {
 //   }
 // }
 
-// .main-platform,
-// .main-operation-spwr-serves {
-// .main-spwr-way {
-//   padding: var(--body-padding-sm);
-// }
+.main-platform,
+.main-operation-spwr-serves,
+.main-spwr-way {
+  padding: var(--body-padding-sm);
+}
 
 .main-spwr-way {
   padding-block: var(--body-padding);
+
+  @include mq-max(lg) {
+    padding-block: var(--body-padding-double);
+  }
 }
 
 section {
@@ -461,7 +465,7 @@ figure {
 
 br {
   &.gap-sm {
-    content: "";
+    // content: ""; // no idea why this was here... likely good to delete
     margin: 16px;
     display: block;
   }

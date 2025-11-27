@@ -95,8 +95,11 @@ $test-bg: rgba(navy, 0.75);
   // Size & Spacing
   --body-padding: 24px;
   --body-padding-double: calc(var(--body-padding) * 2); // account for edges
+  --body-padding-half: calc(var(--body-padding) / 2);
   --body-padding-sm: 12px;
   --body-padding-sm-double: calc(var(--body-padding-sm) * 2); // account edges
+
+  --space-between-sections: var(--body-padding-half);
 
   --section-gap: 64px;
   --section-gap-double: calc(var(--section-gap) * 2);
@@ -126,13 +129,13 @@ $test-bg: rgba(navy, 0.75);
   --logo-offset: 4px;
   --logo-height: 32px;
 
-  --top-spacing-header: calc(var(--header-height) + var(--body-padding-sm));
+  --top-spacing-header: var(--header-height);
 
   --border-bold-girth: 4px;
 
-  --radius: 6px; // full-width panels & nav
-  --radius-sm: var(--radius); // form input fields, carousel images
-  --radius-lg: 24px; // sections & footer
+  --radius: 10px; // full-width panels & nav
+  --radius-sm: 5px; // form input fields, carousel images
+  --radius-lg: 20px; // sections & footer
   --radius-btn: 64px;
 
   // Components / JS

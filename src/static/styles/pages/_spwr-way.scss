@@ -1,161 +1,139 @@
 .section-ethos {
   --panel-translate-offset: 96px;
 
-  @include dark-gradient($start: 0%, $end: 120%);
   @include dark-theme;
-  margin-block: var(--top-spacing-header) var(--section-gap-double);
-  margin-inline: var(--body-padding-double);
+  margin-block: var(--top-spacing-header) var(--space-between-sections);
   border-radius: var(--radius-lg);
   position: relative;
-  padding-block: var(--body-padding);
+  padding: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 
-  @include mq-max(lg) {
-    margin-inline: var(--body-padding);
-  }
+  // @include mq-max(lg) {
+  //   margin-inline: var(--body-padding);
+  // }
 
   .ethos-top {
-    // @include h1; // used to calc img size (lh)
+    // @include h1; // used to calc carousel img size (lh)
     @include row-center;
-    // gap: var(--section-gap);
     width: 100%;
+    height: min(20vw, 380px);
 
-    // @include mq-max(xl) {
-    //   @include h3; // One-off to make ethos responsive at 1200px
-    // }
+    @include mq-max(xxl) {
+      height: 20vw;
+    }
 
     @include mq-max(lg) {
       flex-direction: column;
+      height: 0;
     }
 
-    &__title {
-      @include h1;
-      font-size: min(36vw, 648px);
-      line-height: 50%;
-      margin-block-end: 128px;
-      text-align: center;
-
-      @include mq-max(xxl) {
-        font-size: 34vw;
-      }
-
-      @include mq-max(lg) {
-        font-size: 32vw;
-      }
-    }
+    // &__title {
+    //   Visually hidden
+    //   @include h1;
+    // }
 
     // .carousel-gallery--ethos {
     // see _carousel-gallery.scss
     // }
   }
 
+  .ethos-copy {
+    @include column-start;
+    gap: var(--section-gap);
+  }
+
   .ethos-middle {
-    @include row-start;
+    @include column-start;
     flex-wrap: wrap;
-    gap: var(--section-gap-half);
+    gap: var(--section-gap);
     position: relative;
+    width: 100%;
 
     @include mq-max(xl) {
       flex-direction: column;
-      width: 100%;
+    }
+
+    .description-title {
+      @include h4;
+      display: block;
+      margin-block-end: 0.5ch;
+
+      @include mq-max(xl) {
+        @include h5;
+      }
     }
 
     &__p {
-      @include mq-min(xl) {
-        // width: 40%;
-        flex: 1;
+      max-width: var(--paragraph-snip);
+
+      @include mq-max(xxl) {
+        max-width: var(--paragraph-snip-lg);
       }
+
       @include mq-max(xl) {
         font-size: $body-text-2;
-      }
-      @include mq-max(lg) {
-        text-align: center;
       }
     }
 
     &__panels {
-      @include row-stretch(flex-start);
+      @include row-center(space-between);
+      width: 100%;
       overflow: hidden;
+      gap: var(--panel-gap);
 
-      @include mq-min(xl) {
-        flex: 0.5 1 650px;
-      }
-      @include mq-min(lg) {
-        gap: var(--panel-gap);
-      }
       @include mq-max(lg) {
-        @include column-center;
+        @include column-start;
         width: 100%;
+        gap: var(--section-gap);
       }
 
       &-panel {
-        // background: var(--surface-color);
         border-radius: var(--radius);
-        // padding: var(--body-padding);
-        flex: 1 1 auto;
-        flex-shrink: 0;
-        width: 32%;
+        max-width: 320px;
         min-width: 248px;
-
-        @include mq-min(lg) {
-          aspect-ratio: 1;
-        }
 
         @include mq-max(lg) {
           width: 100%;
           max-width: 520px;
-          padding-inline: var(--section-gap);
 
-          &.value-panel-1 {
-            border-radius: var(--radius) var(--radius) 0 0;
-            padding-block-start: var(--section-gap);
-          }
-          &.value-panel-2 {
-            border-radius: 0;
-            padding-block: var(--section-gap);
-          }
-          &.value-panel-3 {
-            border-radius: 0 0 var(--radius) var(--radius);
-            padding-block-end: var(--section-gap);
-          }
+          // &.value-panel-1 {
+          //   border-radius: var(--radius) var(--radius) 0 0;
+          //   padding-block-start: var(--section-gap);
+          // }
+          // &.value-panel-2 {
+          //   border-radius: 0;
+          //   padding-block: var(--section-gap);
+          // }
+          // &.value-panel-3 {
+          //   border-radius: 0 0 var(--radius) var(--radius);
+          //   padding-block-end: var(--section-gap);
+          // }
         }
 
-        @include mq-motion-allow {
-          opacity: 0;
-          translate: var(--panel-translate-offset) 0;
-          transition: $ease;
+        @include mq-min(lg) {
+          @include mq-motion-allow {
+            opacity: 0;
+            translate: var(--panel-translate-offset) 0;
+            transition: $ease;
 
-          &:nth-of-type(2) {
-            transition: $ease 0.064s;
-          }
-          &:nth-of-type(3) {
-            transition: $ease 0.128s;
-          }
+            &:nth-of-type(2) {
+              transition: $ease 0.064s;
+            }
+            &:nth-of-type(3) {
+              transition: $ease 0.128s;
+            }
 
-          &.animate {
-            opacity: 1;
-            translate: 0 0;
-          }
-        }
-
-        .panel-title {
-          @include h5;
-          // margin-block-end: calc(var(--section-gap-half) / 2);
-          // using <br> for spacing & voice break (a11y)
-
-          @include mq-max(lg) {
-            @include h4;
-            text-align: center;
-          }
-
-          @include mq-max(md) {
-            @include h5;
+            &.gsap-animated {
+              opacity: 1;
+              translate: 0 0;
+            }
           }
         }
 
         .panel-desc {
-          @include mq-max(lg) {
-            text-align: center;
-            text-wrap: balance;
+          @include mq-max(xl) {
+            font-size: $body-text-2;
           }
         }
       }
@@ -169,17 +147,18 @@
 
     @include mq-max(lg) {
       flex-direction: column;
-      padding: var(--body-padding-double);
     }
 
     @include mq-motion-allow {
-      opacity: 0;
-      translate: calc(var(--panel-translate-offset) * -1) 0;
-      transition: $ease 0.25s;
+      @include mq-min(lg) {
+        opacity: 0;
+        translate: calc(var(--panel-translate-offset) * -1) 0;
+        transition: $ease 0.25s;
 
-      &.animate {
-        opacity: 1;
-        translate: 0 0;
+        &.gsap-animated {
+          opacity: 1;
+          translate: 0 0;
+        }
       }
     }
 
@@ -187,49 +166,72 @@
       @include mq-min(lg) {
         width: min(64%, 664px);
       }
+      @include mq-max(xl) {
+        font-size: $body-text-2;
+      }
+    }
+
+    .cta-group {
       @include mq-max(lg) {
-        text-align: center;
+        align-self: flex-end;
       }
     }
   }
 
   .ethos-pin {
     // @include top-solid-section;
-    background: none; // override for reskin
+
     @include column-center;
-    gap: var(--section-gap-half);
+    gap: var(--section-gap);
     padding: var(--body-padding-double) var(--body-padding-double);
+    background-image: var(--ethos-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 
     @include mq-max(lg) {
+      // height: clamp(500px, 100svh, 950px);
+      height: 96svh;
+      background-image: var(--ethos-bg-sm);
       padding: var(--body-padding);
     }
+  }
+
+  .ethos-cta-mobile {
+    align-self: flex-end;
   }
 
   .ethos-pin-steps {
     // full styles in _util.scss
     padding-top: 48px; // delay animation
   }
+
+  .ethos-gsap-overlay {
+    background: var(--surface-color);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: var(--radius-lg);
+  }
 }
 
 .section-competitions {
   // using section-solid-bg util
   @include column-center;
-  border-end-start-radius: 0;
-  border-end-end-radius: 0;
+  margin-block-end: var(--space-between-sections);
 
   .competition-types {
     @include row-center(flex-start);
+    width: 100%;
     gap: var(--panel-gap);
     overflow: auto;
     scroll-snap-type: x mandatory;
     align-self: flex-start;
     margin-block-end: var(--section-gap-double);
-
-    @include mq-max(xxl) {
-      // padding-inline-start: 48px; // doesn't work for some reason
-      padding-inline-end: 32px;
-      width: calc(100vw - var(--body-padding-double));
-    }
 
     @include mq-max(md) {
       flex-direction: column;
@@ -424,7 +426,7 @@
             scale: 0.8;
             transition: $ease 0.125s;
 
-            &.animate {
+            &.gsap-animated {
               opacity: 1;
               scale: 1;
               transition: $ease 0.25s;
@@ -506,17 +508,15 @@
   }
 }
 
-.section-experiences {
-  border-start-start-radius: 0;
-  border-start-end-radius: 0;
-  // padding-block-start: var(--top-spacing-header);
-  // using section-solid-bg util
+// .section-experiences {
+// padding-block-start: var(--top-spacing-header);
+// using section-solid-bg util
 
-  // .carousel {
-  // see _carousel-swiper.scss
-  // }
+// .carousel {
+// see _carousel-swiper.scss
+// }
 
-  // .collage {
-  // see _collage.scss
-  // }
-}
+// .collage {
+// see _collage.scss
+// }
+// }

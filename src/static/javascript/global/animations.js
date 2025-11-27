@@ -1,21 +1,21 @@
-// Cubic Bézier easing function (for cross-browser compatible animations)
-export const cubicBezier = (p1x, p1y, p2x, p2y) => {
-  // Example: const ease = cubicBezier(0.09, 0.9, 0.5, 1);
-  return function (t) {
-    t = Math.max(0, Math.min(1, t));
+// // Cubic Bézier easing function (for cross-browser compatible animations)
+// export const cubicBezier = (p1x, p1y, p2x, p2y) => {
+//   // Example: const ease = cubicBezier(0.09, 0.9, 0.5, 1);
+//   return function (t) {
+//     t = Math.max(0, Math.min(1, t));
 
-    const t2 = t * t;
-    const t3 = t2 * t;
-    const mt = 1 - t;
-    const mt2 = mt * mt;
-    const mt3 = mt2 * mt;
+//     const t2 = t * t;
+//     const t3 = t2 * t;
+//     const mt = 1 - t;
+//     const mt2 = mt * mt;
+//     const mt3 = mt2 * mt;
 
-    const x = 3 * mt2 * t * p1x + 3 * mt * t2 * p2x + t3;
-    const y = 3 * mt2 * t * p1y + 3 * mt * t2 * p2y + t3;
+//     const x = 3 * mt2 * t * p1x + 3 * mt * t2 * p2x + t3;
+//     const y = 3 * mt2 * t * p1y + 3 * mt * t2 * p2y + t3;
 
-    return y;
-  };
-};
+//     return y;
+//   };
+// };
 
 // GSAP
 {
@@ -64,64 +64,61 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
         }
 
         // Ethos Section (Desktop)
-        // if (document.querySelector(".section-ethos") && minLg) {
-        // const pinDuration = "+=160%";
-        // let bodyPadding = maxXl ? 64 : 96;
-        // // Pinning Ethos Section
-        // gsap.to(".ethos-pin", {
-        //   scrollTrigger: {
-        //     trigger: ".ethos-pin",
-        //     start: `top ${bodyPaddingSm}px`,
-        //     end: pinDuration,
-        //     pin: true,
-        //     // markers: true,
-        //   },
-        // });
-        // // Step animation (Image cycle and panel reveal)
-        // {
-        //   const steps = document.querySelectorAll(
-        //     ".ethos-pin-step-1, .ethos-pin-step-2, .ethos-pin-step-3"
-        //   );
-        //   const panelsDesc = document.querySelectorAll(
-        //     ".panel-desc-1, .panel-desc-2, .panel-desc-3"
-        //   );
-        //   const images = document.querySelectorAll(
-        //     ".ethos-img-2, .ethos-img-3, .ethos-img-4"
-        //   );
-        //   steps.forEach((step, index) => {
-        //     const panel = panelsDesc[index];
-        //     const image = images[index];
-        //     gsap.to(panel, {
-        //       scrollTrigger: {
-        //         trigger: step,
-        //         start: `top ${bodyPadding}px`,
-        //         end: `bottom top`,
-        //         onEnter: () => panel.classList.add("active"),
-        //         onLeaveBack: () => panel.classList.remove("active"),
-        //       },
-        //     });
-        //     gsap.to(image, {
-        //       scrollTrigger: {
-        //         trigger: step,
-        //         start: `top ${bodyPadding}px`,
-        //         end: `bottom top`,
-        //         onEnter: () => image.classList.add("active"),
-        //         onLeaveBack: () => image.classList.remove("active"),
-        //       },
-        //     });
-        //   });
-        // }
-        // // Ethos Bottom slide in
-        // let ethosBottom = document.querySelector(".ethos-bottom");
-        // gsap.to(ethosBottom, {
-        //   scrollTrigger: {
-        //     trigger: ethosBottom,
-        //     start: "bottom bottom",
-        //     onEnter: () => ethosBottom.classList.add("active"),
-        //     onLeaveBack: () => ethosBottom.classList.remove("active"),
-        //   },
-        // });
-        // }
+        if (document.querySelector(".section-ethos") && maxLg) {
+          const pinDuration = "+=160%";
+          // Pinning Ethos Section
+          gsap.to(".ethos-pin", {
+            scrollTrigger: {
+              trigger: ".ethos-pin",
+              start: `top ${bodyPaddingSm}px`,
+              end: pinDuration,
+              pin: true,
+            },
+          });
+
+          // // Ethos Bottom slide in
+          // let ethosBottom = document.querySelector(".ethos-bottom");
+          // gsap.to(ethosBottom, {
+          //   scrollTrigger: {
+          //     trigger: ethosBottom,
+          //     start: "bottom bottom",
+          //     onEnter: () => ethosBottom.classList.add("active"),
+          //     onLeaveBack: () => ethosBottom.classList.remove("active"),
+          //   },
+          // });
+
+          // Ethos Overlay Color (mobile)
+          let ethosOverlay = document.querySelector(".ethos-gsap-overlay");
+          gsap.to(ethosOverlay, {
+            opacity: 0.65,
+            scrollTrigger: {
+              trigger: ".section-ethos",
+              scrub: 0.2,
+              start: "top top",
+              end: "center bottom",
+            },
+          });
+
+          // Ethos Copy Shift (mobile)
+          let ethosCopy = document.querySelector(".ethos-copy");
+          gsap.fromTo(
+            ethosCopy,
+            {
+              y: maxSm ? "68%" : maxMd ? "74%" : "90%",
+              ease: "none",
+            },
+            {
+              y: maxSm ? "-26%" : maxMd ? "-24%" : "-10%",
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".section-ethos",
+                scrub: 0.2,
+                start: `top ${bodyPaddingSm}px`,
+                end: maxSm ? "+=140%" : pinDuration,
+              },
+            }
+          );
+        }
 
         // Competitions Section (YOG)
         if (document.querySelector(".section-competitions")) {
@@ -166,34 +163,62 @@ export const cubicBezier = (p1x, p1y, p2x, p2y) => {
         }
       }
 
-      // GLOBAL (place under other tweens i.e. pinned sections) - Animate any element with the class 'gsap-animate' using the 'animate' companion class
+      // Animate any element with the class 'gsap-animate' using the 'gsap-animated' companion class. Comes with different data attributes for customization.
       {
-        // BASE: All screen sizes
-        document.querySelectorAll(".gsap-animate:not([class*='gsap-animate-'])").forEach((el) => {
-          setupScrollAnimation(el);
+        const gsapElems = document.querySelectorAll(".gsap-animate");
+
+        gsapElems.forEach((gsapElem) => {
+          const animOnce = gsapElem.dataset.gsapOnce === "true";
+          const animTrigger = gsapElem.dataset.gsapTrigger || gsapElem;
+          const animStart = gsapElem.dataset.gsapStart || "top 98%";
+          const animEnd = gsapElem.dataset.gsapEnd || "bottom 2%";
+          const animMediaQueryUp = gsapElem.dataset.gsapMediaQueryUp || "lg"; // only apply above this point
+          const animMarkers = gsapElem.dataset.gsapMarkers === "true";
+
+          // Conditionally running aniamtion based on media query
+          let shouldRun = true;
+
+          switch (animMediaQueryUp) {
+            case "md":
+              shouldRun = minMd;
+              break;
+            case "lg":
+              shouldRun = minLg;
+              break;
+            case "none":
+              shouldRun = true;
+              break;
+            default:
+              shouldRun = true;
+          }
+
+          if (!shouldRun) return;
+
+          if (animOnce) {
+            ScrollTrigger.create({
+              trigger: animTrigger,
+              start: animStart,
+              end: animEnd,
+              once: true,
+              onEnter: () => {
+                gsapElem.classList.add("gsap-animated");
+              },
+              markers: animMarkers,
+            });
+          } else {
+            // Repeating animation
+            ScrollTrigger.create({
+              trigger: animTrigger,
+              start: animStart,
+              end: animEnd,
+              onEnter: () => gsapElem.classList.add("gsap-animated"),
+              onLeave: () => gsapElem.classList.remove("gsap-animated"),
+              onEnterBack: () => gsapElem.classList.add("gsap-animated"),
+              onLeaveBack: () => gsapElem.classList.remove("gsap-animated"),
+              markers: animMarkers,
+            });
+          }
         });
-
-        // LARGE SCREENS ONLY
-        if (maxLg) {
-          document.querySelectorAll(".gsap-animate-lg").forEach((el) => {
-            setupScrollAnimation(el);
-          });
-        }
-
-        function setupScrollAnimation(targetElem) {
-          gsap.to(targetElem, {
-            scrollTrigger: {
-              trigger: targetElem,
-              start: "top 98%",
-              end: "bottom top",
-              onEnter: () => targetElem.classList.add("animate"),
-              onLeave: () => targetElem.classList.remove("animate"),
-              onEnterBack: () => targetElem.classList.add("animate"),
-              onLeaveBack: () => targetElem.classList.remove("animate"),
-              // markers: navyMarkers,
-            },
-          });
-        }
       }
     }
   );

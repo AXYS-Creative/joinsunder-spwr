@@ -177,6 +177,7 @@ $min-breakpoints: (
 }
 
 @mixin link-font-styles {
+  font-family: var(--font-family-heading);
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 900;

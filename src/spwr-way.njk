@@ -11,10 +11,15 @@ hide_footer: false
 
 {% if page_spwr_way.ethos.toggle_section %}
 <section class="section-ethos">
-  <div class="ethos-pin deactivated">
+  <div
+    class="ethos-pin"
+    style="
+      --ethos-bg: url('{{ page_spwr_way.ethos.bg_img }}');
+      --ethos-bg-sm: url('{{ page_spwr_way.ethos.bg_img_sm }}');"
+  >
     <div class="ethos-top">
       <h1
-        class="ethos-top__title"
+        class="ethos-top__title sr-only"
         aria-label="{{ page_spwr_way.ethos.section_title | removeTokens }}"
       >
         <span aria-hidden="true"> {{ page_spwr_way.ethos.section_title }}</span>
@@ -26,44 +31,64 @@ hide_footer: false
       {% set carousel_class = 'carousel-gallery--ethos' %}
       {% include "./_includes/components/carousel-gallery.njk" %}
     </div>
-    <div class="ethos-middle">
-      <p class="ethos-middle__p" aria-label="{{ page_spwr_way.ethos.section_desc | removeTokens }}">
-        <span aria-hidden="true">
-          {{ page_spwr_way.ethos.section_desc }}
-        </span>
-      </p>
-
-      <div class="ethos-middle__panels" tabindex="-1">
+    <div class="ethos-gsap-overlay"></div>
+    <div class="ethos-copy">
+      <div class="ethos-cta-mobile lg-down">
         <!-- prettier-ignore -->
-        {% for item in page_spwr_way.ethos.values %}
-        <div
-          class="ethos-middle__panels-panel value-panel value-panel-{{ loop.index }} gsap-animate"
-        >
-          <h2 class="panel-title" aria-label="{{ item.title | removeTokens }}">
-            <span aria-hidden="true">
-              {{ item.title }}
-            </span>
-          </h2>
-          <br class="gap-sm" aria-hidden="true" />
-          <p
-            class="panel-desc panel-desc-{{ loop.index }}"
-            aria-label="{{ item.caption | removeTokens }}"
-          >
-            <span aria-hidden="true">
-              {{ item.caption }}
-            </span>
-          </p>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="ethos-bottom gsap-animate">
-      <p class="ethos-bottom__p">{{ page_spwr_way.ethos.cta_p }}</p>
-
-      <!-- prettier-ignore -->
-      {% set cta_1 = page_spwr_way.ethos.cta %}
+        {% set cta_1 = page_spwr_way.ethos.cta %}
       {% set cta_1_outline = false %}
       {% include "./_includes/components/cta-group.njk" %}
+      </div>
+      <div class="ethos-middle">
+        <p
+          class="ethos-middle__p"
+          aria-label="{{ page_spwr_way.ethos.section_desc_title | removeTokens }} {{
+            page_spwr_way.ethos.section_desc | removeTokens
+          }}"
+        >
+          <strong class="description-title" aria-hidden="true">
+            {{ page_spwr_way.ethos.section_desc_title }}
+          </strong>
+          <span aria-hidden="true">
+            {{ page_spwr_way.ethos.section_desc }}
+          </span>
+        </p>
+
+        <div class="ethos-middle__panels" tabindex="-1">
+          <!-- prettier-ignore -->
+          {% for item in page_spwr_way.ethos.values %}
+          <div
+            class="ethos-middle__panels-panel value-panel value-panel-{{ loop.index }} gsap-animate"
+            data-gsap-media-query-up="lg"
+            data-gsap-markers="false"
+          >
+            <strong class="description-title" aria-label="{{ item.title | removeTokens }}">
+              <span aria-hidden="true">
+                {{ item.title }}
+              </span>
+            </strong>
+            <p
+              class="panel-desc panel-desc-{{ loop.index }}"
+              aria-label="{{ item.caption | removeTokens }}"
+            >
+              <span aria-hidden="true">
+                {{ item.caption }}
+              </span>
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="ethos-bottom gsap-animate">
+        <p class="ethos-bottom__p">{{ page_spwr_way.ethos.cta_p }}</p>
+
+        <div class="lg-up">
+          <!-- prettier-ignore -->
+          {% set cta_1 = page_spwr_way.ethos.cta %}
+          {% set cta_1_outline = false %}
+          {% include "./_includes/components/cta-group.njk" %}
+        </div>
+      </div>
     </div>
   </div>
   <div class="ethos-pin-steps pin-steps" aria-hidden="true">
@@ -125,6 +150,7 @@ hide_footer: false
         {% for item in row.items %}
         <img
           class="yog-merch__row-img gsap-animate {{ item.rotate }}"
+          data-gsap-media-query-up="none"
           src="{{ item.src }}"
           alt="{{ item.title }}"
           loading="eager"

@@ -231,6 +231,12 @@
   // Platform page
   &.platform-page {
     margin-block-start: var(--top-spacing-header);
+    padding-block: var(--body-padding) var(--body-padding-half);
+    padding-inline: 0;
+
+    @include mq-min(xl) {
+      padding-block: var(--body-padding-half);
+    }
   }
 
   // OSS section (The SPWR Way)
