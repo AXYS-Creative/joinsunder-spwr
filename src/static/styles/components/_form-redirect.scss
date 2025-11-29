@@ -10,12 +10,12 @@
     width: 100%;
     height: 3em;
 
-    // &:hover,
-    // &:focus-within {
-    //   .label {
-    //     opacity: 1;
-    //   }
-    // }
+    &:hover,
+    &:focus-within {
+      .label {
+        color: var(--input-field-color-hover-on-background);
+      }
+    }
 
     &--discovery {
       height: 6em;
@@ -58,7 +58,9 @@
         align-items: flex-start;
       }
     }
+
     .label {
+      color: var(--input-field-color-on-background);
       pointer-events: none;
       transition: 0.25s ease;
       // opacity: 0.75;
@@ -77,15 +79,17 @@
         }
       }
     }
+
     .input {
       border: 1px solid transparent;
       background-color: var(--surface-color-2);
       border-radius: var(--radius-sm);
       resize: none;
-      transition: border $ease;
+      transition: border $ease, background-color $ease, color $ease;
 
       @include desktop-hover {
         border: 1px solid var(--hero-color--primary);
+        background-color: var(--input-field-color-hover-background);
       }
     }
   }
@@ -94,6 +98,12 @@
     display: flex;
     gap: 12px;
     width: 100%;
+  }
+
+  // Filled form field
+  .input:not(:placeholder-shown).input:not(focus) {
+    background-color: var(--input-field-color-hover-background);
+    color: var(--input-field-color-hover-on-background);
   }
 
   .input:focus ~ .label,
@@ -105,13 +115,13 @@
     // font-size: 0.8em;
     opacity: 0;
 
-    .nested-label {
-      translate: 8px 0;
-      opacity: 1;
-      visibility: visible;
+    // .nested-label {
+    //   translate: 8px 0;
+    //   opacity: 1;
+    //   visibility: visible;
 
-      transition: 0.6s $cubic-ease, opacity 0.6s $cubic-ease 0.4s;
-    }
+    //   transition: 0.6s $cubic-ease, opacity 0.6s $cubic-ease 0.4s;
+    // }
   }
 
   .recaptcha {

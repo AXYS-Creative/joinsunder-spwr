@@ -181,6 +181,14 @@ collections:
                 media_library:
                   config:
                     max_file_size: 5000000 # 1MB = 1,000,000 bytes
+              - name: src_sm
+                label: Image Source (Small devices)
+                widget: image
+                required: false
+                hint: Keep below 5MB. If left empty this will fallback to the image source above.
+                media_library:
+                  config:
+                    max_file_size: 5000000 # 1MB = 1,000,000 bytes
           - name: section_desc
             label: Section Description (Middle)
             widget: text

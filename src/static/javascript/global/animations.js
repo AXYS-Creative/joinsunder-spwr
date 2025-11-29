@@ -104,7 +104,7 @@
           gsap.fromTo(
             ethosCopy,
             {
-              y: maxSm ? "68%" : maxMd ? "74%" : "90%",
+              y: maxSm ? "66%" : maxMd ? "74%" : "90%",
               ease: "none",
             },
             {

@@ -184,16 +184,12 @@
     @include column-center;
     gap: var(--section-gap);
     padding: var(--body-padding-double) var(--body-padding-double);
-    background-image: var(--ethos-bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
     border-radius: var(--radius-lg);
     overflow: hidden;
 
     @include mq-max(lg) {
       // height: clamp(500px, 100svh, 950px);
-      height: 96svh;
+      height: calc(100vh - calc(var(--body-padding-double) * 1.5));
       background-image: var(--ethos-bg-sm);
       padding: var(--body-padding);
     }

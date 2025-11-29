@@ -1,9 +1,25 @@
-<div class="carousel-gallery {{ carousel_class }}" data-carousel-interval="{{ carousel_interval }}">
+<!-- prettier-ignore -->
+<div
+  class="carousel-gallery {{ carousel_class }}"
+  data-carousel-interval="{{ carousel_interval }}"
+>
   {% for img in carousel_list %}
-  <!-- prettier-ignore -->
-  <img 
-    class="carousel-gallery__img join-carousel__img" 
-    src="{{ img.src }}" alt="{{ img.title }}" {%if loop.index == 1%} loading="eager" {%endif%} />
-  <!-- prettier-ignore -->
+    {% set src_sm = img.src_sm | default(img.src) %}
+    {% set img_loading = 'lazy' %}
+    {% if loop.first %}
+      {% set img_loading = 'eager' %}
+    {% endif %}
+
+    <picture class="carousel-gallery__picture">
+      <source srcset="{{ src_sm }}" media="(max-width: 768px)">
+      <!-- prettier-ignore -->
+      <img
+        class="carousel-gallery__img join-carousel__img"
+        src="{{ img.src }}"
+        alt="{{ img.title }}"
+        loading="{{ img_loading }}"
+        eleventy:ignore
+      />
+    </picture>
   {% endfor %}
 </div>

@@ -14,61 +14,40 @@
 
   // SPWR Way — Ethos
   &--ethos {
-    display: none; // Delete component in spwr-way.njk if not used
-    // position: relative;
-    // width: 100%;
-    // height: 3lh;
-    // object-fit: cover;
-    // border-radius: var(--radius);
-    // overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    overflow: hidden;
 
-    // @include mq-max(lg) {
-    //   height: 4lh;
-    // }
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
 
-    // @include mq-max(md) {
-    //   height: 3lh;
-    // }
+      @include mq-motion-allow {
+        opacity: 0;
+        transition: opacity $ease;
 
-    // &-img {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   object-fit: cover;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
 
-    //   @include mq-motion-allow {
-    //     opacity: 0;
-    //     transition: opacity $ease;
-
-    //     &.active {
-    //       opacity: 1;
-    //     }
-    //   }
-    // }
-
-    // .ethos-img-1 {
-    //   opacity: 1;
-    // }
+    .ethos-img-1 {
+      opacity: 1;
+    }
   }
 
   // Join page
   &--join {
-    position: sticky;
-    top: var(--body-padding-sm);
-    left: var(--body-padding-sm);
-    height: var(--full-height-snip-lg);
-    min-height: 750px;
-    margin-block: var(--body-padding-sm);
-    border-radius: var(--radius);
-    overflow: hidden;
-
-    @include mq-max(xxl) {
-      min-height: 650px;
-    }
-
-    @include mq-max(lg) {
-      display: none;
-    }
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 }

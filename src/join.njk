@@ -10,13 +10,15 @@ hide_footer: true
 ---
 
 <section class="hero">
-  <!-- prettier-ignore -->
-  {% set carousel_list = page_join.hero.imgs %}
-  {% set carousel_interval = page_join.hero.autoplay_interval %}
-  {% set carousel_class = 'carousel-gallery--join' %}
-  {% include "./_includes/components/carousel-gallery.njk" %}
+  <div class="carousel-panel">
+    <!-- prettier-ignore -->
+    {% set carousel_list = page_join.hero.imgs %}
+    {% set carousel_interval = page_join.hero.autoplay_interval %}
+    {% set carousel_class = 'carousel-gallery--join' %}
+    {% include "./_includes/components/carousel-gallery.njk" %}
+  </div>
 
-  <div class="form-panel">
+  <div class="form-panel" data-lenis-prevent>
     <h1 class="form-panel__title">{{ page_join.hero.section_title }}</h1>
 
     <!-- prettier-ignore -->

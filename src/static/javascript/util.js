@@ -1,11 +1,10 @@
 export const mqMouse = window.matchMedia("(hover: hover) and (pointer: fine)");
-export const mqMotionAllow = window.matchMedia(
-  "(prefers-reduced-motion: no-preference)"
-);
+export const mqMotionAllow = window.matchMedia("(prefers-reduced-motion: no-preference)");
 export const mqMaxLg = window.matchMedia("(max-width: 1024px)").matches;
 export const mqMinLg = window.matchMedia("(min-width: 1025px)").matches;
 export const mqMinMd = window.matchMedia("(min-width: 769px)").matches;
 
+// Remember to add 'data-lenis-prevent' to any element that should scroll naturally, such as overflow: auto
 export const lenis = new Lenis({
   autoRaf: true,
 });

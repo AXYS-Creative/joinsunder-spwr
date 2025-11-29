@@ -3,8 +3,7 @@ document.querySelectorAll(".carousel-gallery").forEach((carousel) => {
 
   if (images.length > 1) {
     let currentIndex = 0;
-    const interval =
-      parseInt(carousel.getAttribute("data-carousel-interval"), 10) || 5000;
+    const interval = parseInt(carousel.getAttribute("data-carousel-interval"), 10) || 5000;
 
     images[currentIndex].classList.add("active");
 

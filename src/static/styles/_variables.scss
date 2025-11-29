@@ -7,6 +7,7 @@ $grey-light: #dddddd;
 $grey-dark: #797979;
 $black: #141414;
 $navy: #002d52;
+$navy-dark: #07253d;
 $yellow: #fdfd00;
 $orange: #ff8700;
 $royal-blue: #095cfb;
@@ -42,7 +43,7 @@ $cubic-ease-sudden-back: cubic-bezier(0.8, -0.11, 0.11, 1.11);
 $cubic-ease-sudden-back-strong: cubic-bezier(0.77, -0.43, 0.11, 1.11);
 $cubic-ease-slow-finish: cubic-bezier(0.09, 0.9, 0.5, 1);
 
-$ease: 0.32s ease;
+$ease: 0.24s ease;
 $ease-c: 0.82s $cubic-ease;
 
 // Library
@@ -85,6 +86,13 @@ $test-bg: rgba(navy, 0.75);
 
   --btn-padding: 10px 20px;
 
+  --input-field-color-background: #{$white};
+  --input-field-color-on-background: #{$black};
+  --input-field-color-border: #{$white};
+  --input-field-color-hover-background: #{$navy-dark};
+  --input-field-color-hover-on-background: #{$yellow};
+  --input-field-color-hover-border: #{$yellow};
+
   --link-color: #{$white};
   --link-color-hover: #{$yellow};
 
@@ -112,9 +120,10 @@ $test-bg: rgba(navy, 0.75);
   --full-width-snip: calc(100vw - var(--body-padding-double));
   --full-width-snip-sm: calc(100vw - var(--body-padding-sm-double));
 
-  --full-height-snip: calc(100vh - var(--body-padding-double));
-  // --full-height-snip-sm: calc(100vh - var(--body-padding-sm-double));
-  --full-height-snip-lg: calc(100vh - calc(var(--body-padding-double) + var(--header-height)));
+  --full-height-snip: calc(100vh - var(--body-padding-double)); // Home page
+  --full-height-snip-header: calc(
+    100vh - calc(var(--body-padding-double) + var(--header-height) - var(--body-padding))
+  ); // Join Page
 
   --paragraph-snip: 650px;
   --paragraph-snip-sm: 550px;
@@ -162,12 +171,14 @@ $test-bg: rgba(navy, 0.75);
 
     --logo-offset: 6px;
 
-    --btn-padding: 7px 14px;
-
     --panel-gap: 12px;
   }
 
   @media (max-width: 480px) {
     --body-padding: 12px;
+  }
+
+  @media (max-width: 380px) {
+    --btn-padding: 7px 14px;
   }
 }

@@ -1,5 +1,6 @@
 // Global - Animate when scrolling away from the top of the page (also restore when scrolling up)
 let siteHeader = document.querySelector(".site-header");
+let siteFooter = document.querySelector(".site-footer");
 let stackSections = document.querySelectorAll(".stack-section");
 let lastScrollY = 0;
 
@@ -30,7 +31,7 @@ window.addEventListener("scroll", () => {
     stackSections.forEach((section) => section.classList.remove("scrolling-down"));
   }
 
-  if (nearBottom) {
+  if (nearBottom && siteFooter) {
     siteHeader.classList.add("near-bottom");
   } else {
     siteHeader.classList.remove("near-bottom");

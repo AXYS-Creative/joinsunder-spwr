@@ -1,28 +1,30 @@
 autoplay_interval: 5000
 
 imgs:
-  - title: Woman going door to door
-    src: /static/img/Join-SlideShow-1Photo.png
-  - title: Group at a service event
-    src: /static/img/Join-SlideShow-2Photo.png
-  - title: Celebrating at a conference
-    src: /static/img/Join-SlideShow-3Photo.jpg
-  - title: Solar rep in a neighborhood
-    src: /static/img/Join-SlideShow-4Photo.jpg
-  - title: Man in a SPWR jacket at a conference
-    src: /static/img/Join-SlideShow-5Photo.jpg
-  - title: Enjoying the pool
-    src: /static/img/Join-SlideShow-6Photo.png
-  - title: Solar rep at the door
-    src: /static/img/Join-SlideShow-7Photo.png
-  - title: Group in front of a plane
-    src: /static/img/Join-SlideShow-8Photo.png
-  - title: Socializing at a conference
-    src: /static/img/Join-SlideShow-9Photo.jpg
-  - title: Man rock climbing
-    src: /static/img/Join-SlideShow-10Photo.png
+  - title: Sunder rep focused and ready
+    src: /static/img/Join-SlideShow-0Photo.png
+  # - title: Woman going door to door
+  #   src: /static/img/Join-SlideShow-1Photo.png
+  # - title: Group at a service event
+  #   src: /static/img/Join-SlideShow-2Photo.png
+  # - title: Celebrating at a conference
+  #   src: /static/img/Join-SlideShow-3Photo.jpg
+  # - title: Solar rep in a neighborhood
+  #   src: /static/img/Join-SlideShow-4Photo.jpg
+  # - title: Man in a SPWR jacket at a conference
+  #   src: /static/img/Join-SlideShow-5Photo.jpg
+  # - title: Enjoying the pool
+  #   src: /static/img/Join-SlideShow-6Photo.png
+  # - title: Solar rep at the door
+  #   src: /static/img/Join-SlideShow-7Photo.png
+  # - title: Group in front of a plane
+  #   src: /static/img/Join-SlideShow-8Photo.png
+  # - title: Socializing at a conference
+  #   src: /static/img/Join-SlideShow-9Photo.jpg
+  # - title: Man rock climbing
+  #   src: /static/img/Join-SlideShow-10Photo.png
 
-section_title: Join SPWR
+section_title: "[%span.title-sm%]Join[%span%] SPWR"
 
 form_data:
   show_field_discovery: true
@@ -32,3 +34,8 @@ form_data:
   label_checkbox_awareness: I am aware this is a role in direct sales
   show_recaptcha: true
   submit_btn_text: Submit
+  cta_2:
+    text: Contact us
+    text_desc: ""
+    url: /
+    new_tab: true
