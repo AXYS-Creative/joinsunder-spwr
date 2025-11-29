@@ -1314,6 +1314,7 @@ body .hide-load {
   background: var(--surface-color);
   border-radius: var(--radius);
   align-self: center;
+  padding-block: 128px 64px;
   padding-inline: var(--body-padding);
   gap: 96px;
   overflow: auto;
@@ -1354,14 +1355,34 @@ body .hide-load {
   align-items: center;
   text-align: center;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1024px) {
+  .main-join .hero .form-panel__title {
+    font-family: var(--font-family-heading);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-size: 55px;
+    line-height: 90%;
+    font-size-adjust: 0.5;
+  }
+}
+.main-join .hero .form-panel__title .title-sm {
+  font-family: var(--font-family-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 36px;
+  line-height: 1;
+}
+@media screen and (max-width: 1024px) {
   .main-join .hero .form-panel__title .title-sm {
     font-family: var(--font-family-heading);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0;
-    font-size: 36px;
-    line-height: 1;
+    font-size: 55px;
+    line-height: 90%;
+    font-size-adjust: 0.5;
   }
 }
 @media screen and (max-width: 1512px) {

@@ -59,7 +59,7 @@
       @include section-solid;
       border-radius: var(--radius); // to override 'section-solid' mixin
       align-self: center;
-      // padding-block: 64px;
+      padding-block: 128px 64px;
       padding-inline: var(--body-padding);
       gap: 96px;
       overflow: auto;
@@ -90,9 +90,15 @@
         @include column-center;
         text-align: center;
 
+        @include mq-max(lg) {
+          @include h3;
+        }
+
         .title-sm {
-          @include mq-min(lg) {
-            @include h4;
+          @include h4;
+
+          @include mq-max(lg) {
+            @include h3;
           }
         }
 
