@@ -1,18 +1,20 @@
 toggle_section: true
-
-section_title: "The SPWR [%br%] Direct Platform"
-section_desc: One company, one team, one seamless experience—premium solar delivered start to finish without handoffs or headaches.
-
+section_title: The SPWR [%br%] Direct Platform
+section_desc: One company, one team, one seamless experience—premium solar
+  delivered start to finish without handoffs or headaches.
 node_img:
   src: /static/img/logo-sunpower.svg
   title: Sunpower
-
 node_chart:
-  - title: "In-House[%br%] Installations"
-    desc: "A fully unified solar experience from sale to install to service, ensuring consistent quality and total accountability."
-  - title: "Premium[%br%] Equipment"
-    desc: "Black-on-black mono panels with interior conduit whenever possible for a clean, sleek look."
-  - title: "Industry-Leading[%br%] Protection"
-    desc: "10-year workmanship + roof-penetration warranty, plus the only 2-year production guarantee in the industry."
+  - title: In-House[%br%] Installations
+    desc: A fully unified solar experience from sale to install to service, ensuring
+      consistent quality and total accountability!
+  - title: Premium[%br%] Equipment
+    desc: Black-on-black mono panels with interior conduit whenever possible for a
+      clean, sleek look. So cool!
+  - title: Industry-Leading[%br%] Protection
+    desc: 10-year workmanship + roof-penetration warranty, plus the only 2-year
+      production guarantee in the industry.
   - title: "Superior[%br%] Technology:"
-    desc: "Safer, more reliable micro-inverters (not string inverters) paired with the Enphase Enlighten app for real-time monitoring."
+    desc: Safer, more reliable micro-inverters (not string inverters) paired with
+      the Enphase Enlighten app for real-time monitoring.
