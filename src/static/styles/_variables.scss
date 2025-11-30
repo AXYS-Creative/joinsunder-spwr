@@ -6,8 +6,9 @@ $sand: #f9f4ed;
 $grey-light: #dddddd;
 $grey-dark: #797979;
 $black: #141414;
+$navy-light: #003e71; // platform - direct
 $navy: #002d52;
-$navy-dark: #07253d;
+$navy-dark: #07253d; // join - form
 $yellow: #fdfd00;
 $orange: #ff8700;
 $royal-blue: #095cfb;
@@ -98,6 +99,7 @@ $test-bg: rgba(navy, 0.75);
 
   // Surface Colors
   --surface-color: #{$navy}; // Nav menu bg || ethos bottom when in light theme
+  --on-surface-color: #{$white};
   --surface-color-2: #{$white}; // hero-img-partial bg, form field bg
 
   // Size & Spacing
@@ -111,6 +113,7 @@ $test-bg: rgba(navy, 0.75);
 
   --section-gap: 64px;
   --section-gap-double: calc(var(--section-gap) * 2);
+  --section-gap-triple: calc(var(--section-gap) * 3);
   --section-gap-half: calc(var(--section-gap) / 2);
 
   --panel-gap: 16px;

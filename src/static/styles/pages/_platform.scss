@@ -1,0 +1,187 @@
+.main-platform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-between-sections);
+}
+
+.direct {
+  // .section-solid-bg__desc {
+  //   max-width: var(--paragraph-snip-lg); // one-off
+  // }
+
+  .node-chart {
+    --node-gap-y: 128px;
+    --node-gap-y-half: calc(var(--node-gap-y) / 2);
+
+    @include column-center;
+    gap: var(--node-gap-y);
+
+    @include mq-max(lg) {
+      flex-direction: column;
+      gap: var(--panel-gap);
+    }
+
+    &__node {
+      @include column-start(flex-start);
+      gap: var(--panel-gap);
+      position: relative;
+      background: $navy-light;
+      padding: var(--body-padding-double) var(--body-padding) var(--body-padding);
+      border-radius: var(--radius-lg);
+      flex: 1;
+
+      &-dot {
+        --dot-size: 48px;
+        --dot-border-size: 12px;
+
+        position: absolute;
+        // position handled in top/bottom nodes
+        width: var(--dot-size);
+        height: var(--dot-size);
+        border-radius: 50%;
+        background: var(--on-surface-color);
+        border: var(--dot-border-size) solid var(--surface-color);
+      }
+
+      &-title {
+        @include h5;
+      }
+      &-desc {
+        @include body-font-styles(xs);
+      }
+    }
+
+    &__top {
+      @include row-center;
+
+      @include mq-max(lg) {
+        width: 100%;
+      }
+
+      &-node {
+        padding-block: var(--section-gap);
+        min-width: 320px; // Edge case — if there's no image
+
+        @include mq-max(lg) {
+          padding-block: var(--section-gap-double);
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          translate: 0 100%;
+          width: 75%;
+          height: var(--node-gap-y-half);
+          z-index: 1;
+          pointer-events: none;
+
+          @include mq-max(lg) {
+            display: none;
+          }
+        }
+
+        &::before {
+          right: calc(50% - 0.5px);
+          border-bottom: 1px solid var(--on-surface-color);
+          border-right: 1px solid var(--on-surface-color);
+          border-bottom-right-radius: var(--radius-lg);
+        }
+
+        &::after {
+          left: calc(50% - 0.5px);
+          border-bottom: 1px solid var(--on-surface-color);
+          border-left: 1px solid var(--on-surface-color);
+          border-bottom-left-radius: var(--radius-lg);
+        }
+
+        .node-chart__node-dot {
+          left: 50%;
+          bottom: 0;
+          translate: -50% 50%;
+
+          @include mq-max(lg) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    // &__middle {
+    //   border: 1px solid var(--on-surface-color);
+    //   width: 100%;
+
+    //   @include mq-max(lg) {
+    //     display: none;
+    //   }
+    // }
+
+    &__bottom {
+      @include row-stretch;
+      // gap: var(--panel-gap);
+      gap: 2.5%;
+
+      @include mq-max(lg) {
+        flex-direction: column;
+        gap: var(--panel-gap);
+      }
+
+      &-node {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1px;
+          height: var(--node-gap-y-half);
+          z-index: 1;
+          pointer-events: none;
+
+          // not first or last node ::before (line) styles
+          // These need to be overwritten below
+          width: 1px;
+          background: var(--on-surface-color);
+          left: 50%;
+          translate: -50% -100%;
+
+          @include mq-max(lg) {
+            display: none;
+          }
+        }
+
+        &.node-chart__node--first,
+        &.node-chart__node--last {
+          &::before {
+            width: 100%;
+            translate: 0 -100%;
+            background: transparent;
+          }
+        }
+
+        &.node-chart__node--first {
+          &::before {
+            left: calc(50% - 0.5px);
+            border-top: 1px solid var(--on-surface-color);
+            border-left: 1px solid var(--on-surface-color);
+            border-top-left-radius: var(--radius-lg);
+          }
+        }
+
+        &.node-chart__node--last {
+          &::before {
+            right: calc(50% - 0.5px);
+            left: auto;
+            border-top: 1px solid var(--on-surface-color);
+            border-right: 1px solid var(--on-surface-color);
+            border-top-right-radius: var(--radius-lg);
+          }
+        }
+
+        .node-chart__node-dot {
+          top: 0;
+          left: 50%;
+          translate: -50% -50%;
+        }
+      }
+    }
+  }
+}

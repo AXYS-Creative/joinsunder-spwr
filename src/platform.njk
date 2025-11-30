@@ -22,17 +22,51 @@ hide_footer: false
   {% include "./_includes/partials/partial-img-hero.njk" %}
 {% endif %}
 
-<!-- <section class="section-logos"> -->
-<!-- prettier-ignore -->
-{% set section_id = "direct" %}
-{% set section_h2 = page_platform.direct.section_title %}
-{% set section_desc = page_platform.direct.section_desc %}
-{% set section_logos = page_platform.direct.img_list %}
-{% set logo_grid = page_platform.direct.logo_grid %}
-{% set logo_grid_sm = page_platform.direct.logo_grid_sm %}
-{% if page_platform.direct.toggle_section %}
-  {% include "./_includes/partials/partial-logos.njk" %}
-{% endif %}
+<section class="direct section-solid-bg" id="direct">
+  <h2 class="section-solid-bg__title">{{ page_platform.direct.section_title }}</h2>
+  <div class="section-solid-bg__icon-divider">
+    <!-- prettier-ignore -->
+    {% set icon_svg = ({ src: '/static/img/icon-dots-divider.svg', class: '' }) %}
+    {% include "./_includes/components/icon-svg.njk" %}
+  </div>
+  <p class="section-solid-bg__desc">{{ page_platform.direct.section_desc }}</p>
+
+  {% set node_chart = page_platform.direct.node_chart %}
+  <div class="node-chart">
+    <div class="node-chart__top">
+      <div class="node-chart__top-node node-chart__node">
+        <img
+          src="{{ page_platform.direct.node_img.src }}"
+          alt="{{ page_platform.direct.node_img.title }}"
+          eleventy:ignore
+        />
+        <div class="node-chart__node-dot"></div>
+      </div>
+    </div>
+
+    <!-- <div class="node-chart__middle">
+      <p>middle</p>
+    </div> -->
+
+    <div class="node-chart__bottom">
+      <!-- prettier-ignore -->
+      {% for node in node_chart %}
+      {% set node_loop_class = loop.first and 'node-chart__node--first' or loop.last and 'node-chart__node--last' or '' %}
+      <!-- prettier-ignore -->
+      <div class="
+        node-chart__bottom-node
+        node-chart__node
+        {{ node_loop_class }}
+        "
+      >
+        <h3 class="node-chart__node-title">{{ node.title }}</h3>
+        <p class="node-chart__node-desc">{{ node.desc }}</p>
+        <div class="node-chart__node-dot"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
 <!-- prettier-ignore -->
 {% set section_id = "dealers" %}

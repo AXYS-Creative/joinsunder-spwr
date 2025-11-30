@@ -10,10 +10,6 @@
     padding-inline: var(--body-padding);
   }
 
-  & + & {
-    margin-block-start: var(--space-between-sections);
-  }
-
   &__h2 {
     @include h3;
     text-align: center;

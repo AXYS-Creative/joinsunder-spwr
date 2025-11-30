@@ -62,9 +62,13 @@
       padding-block: 128px 64px;
       padding-inline: var(--body-padding);
       gap: 96px;
-      overflow: auto;
+      overflow-y: auto;
 
       @media all {
+        @media (max-height: 680px) {
+          padding-block: 248px 64px;
+        }
+
         @include mq-max(xxl) {
           gap: 24px;
         }

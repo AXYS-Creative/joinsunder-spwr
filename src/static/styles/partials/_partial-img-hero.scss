@@ -18,9 +18,8 @@
       @include column-center(flex-start);
     }
 
-    // Blue gradient
     &::before {
-      @include dark-gradient(60deg, 5%, 90%);
+      @include dark-gradient(60deg, 15%, 90%);
       content: "";
       position: absolute;
       top: 0;
@@ -84,7 +83,7 @@
 
   &__p {
     @include paragraph-width-snip;
-    margin-block-end: var(--section-gap-double);
+    margin-block-end: var(--section-gap-triple);
   }
 
   &__sub-content {
@@ -140,7 +139,7 @@
       &::before {
         background: linear-gradient(
           60deg,
-          rgba($gradient-root-2, 1) 30%,
+          rgba($gradient-root-2, 1) 20%,
           rgba($gradient-root-2, 0) 70%
         );
 
@@ -231,11 +230,11 @@
   // Platform page
   &.platform-page {
     margin-block-start: var(--top-spacing-header);
-    padding-block: var(--body-padding) var(--body-padding-half);
+    padding-block: var(--body-padding) 0;
     padding-inline: 0;
 
     @include mq-min(xl) {
-      padding-block: var(--body-padding-half);
+      padding-block: var(--body-padding-half) 0;
     }
   }
 
