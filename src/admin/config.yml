@@ -539,6 +539,61 @@ collections:
               config:
                 max_file_size: 5000000 # 1MB = 1,000,000 bytes
           - *cta_field
+      - name: direct
+        label: Section - Direct
+        file: src/_data/page_platform/direct.yaml
+        preview_path: /platform#direct
+        editor:
+          preview: true
+        fields:
+          - name: toggle_section
+            label: Show Section (SPWR platform - Direct)
+            widget: boolean
+            default: true
+          - name: section_title
+            label: Section Title
+            widget: string
+            required: true
+          - name: section_desc
+            label: Section Description
+            widget: text
+            required: true
+            hint: Customize text with tokens. Visit https://axyscreative.com/tokens to learn more.
+          - name: node_img
+            label: Node Chart Image
+            widget: object
+            collapsed: true
+            required: true
+            hint: Display between 3 and 5 logos per row. (Only affects desktop)
+            fields:
+              - name: src
+                label: Image Source
+                widget: image
+                required: true
+                hint: Recommended to use an SVG file. Keep below 1MB
+                media_library:
+                  config:
+                    max_file_size: 1000000 # 1MB = 1,000,000 bytes
+              - name: title
+                label: Node Image Title
+                widget: string
+                required: true
+          - name: node_chart
+            label: Node Chart
+            label_singular: Node
+            widget: list
+            required: true
+            min: 4
+            max: 4
+            fields:
+              - name: title
+                label: Title
+                widget: string
+                required: true
+              - name: desc
+                label: Description
+                widget: text
+                required: true
       - name: dealers
         label: Section - Dealers
         file: src/_data/page_platform/dealers.yaml

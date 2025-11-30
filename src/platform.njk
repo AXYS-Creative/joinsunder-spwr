@@ -22,6 +22,7 @@ hide_footer: false
   {% include "./_includes/partials/partial-img-hero.njk" %}
 {% endif %}
 
+{% if page_platform.direct.toggle_section %}
 <section class="direct section-solid-bg" id="direct">
   <h2 class="section-solid-bg__title">{{ page_platform.direct.section_title }}</h2>
   <div class="section-solid-bg__icon-divider">
@@ -67,6 +68,7 @@ hide_footer: false
     </div>
   </div>
 </section>
+{% endif %}
 
 <!-- prettier-ignore -->
 {% set section_id = "dealers" %}
