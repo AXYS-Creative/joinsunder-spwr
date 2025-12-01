@@ -111,8 +111,12 @@
   text-rendering: optimizeLegibility;
 }
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus-visible {
-  -webkit-text-fill-color: var(--font-color--primary);
-  -webkit-box-shadow: 0 0 0px 1000px var(--surface-color-2) inset;
+  -webkit-text-fill-color: var(--hero-color--primary);
+  -webkit-box-shadow: 0 0 0px 1000px #07253d inset;
+  border-color: #07253d !important;
+}
+*:-webkit-autofill + .label, *:-webkit-autofill:hover + .label, *:-webkit-autofill:focus-visible + .label {
+  opacity: 0;
 }
 * input::-webkit-outer-spin-button,
 * input::-webkit-inner-spin-button {

@@ -5,7 +5,7 @@ if (document.querySelector(".main-operation-spwr-serves")) {
 }
 
 if (document.querySelector(".main-spwr-way")) {
-  page = "pageSunderWay";
+  page = "pageSpwrWay";
 }
 
 let swiper = new Swiper(".mySwiper", {
@@ -15,7 +15,7 @@ let swiper = new Swiper(".mySwiper", {
   cssMode: true,
   breakpoints: {
     1024: {
-      slidesPerView: page === "pageSunderWay" ? 3 : 4,
+      slidesPerView: page === "pageSpwrWay" ? 3 : 4,
     },
   },
   // Hook up to CMS
