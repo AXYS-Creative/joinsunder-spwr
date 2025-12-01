@@ -5,7 +5,7 @@ events:
   - year: 2021
     country: Afghanistan
     city: null
-    desc: Sunder created its charity event O.S.S. (Operation Sunder Serves) and
+    desc: Created its charity event O.S.S. (Operation SPWR Serves) and
       donated over $50k to helping civilians evacuate Afghanistan from the
       Taliban.
     graphic: /static/img/OSS-Emblem-1Afghanistan.png
@@ -18,7 +18,7 @@ events:
   - year: 2022
     country: Mexico
     city: Merida
-    desc: Sunder helped build/renovate a community elementary school and donated
+    desc: Helped build/renovate a community elementary school and donated
       bikes to the students.
     graphic: /static/img/OSS-Emblem-2Mexico.png
     cta:
@@ -27,7 +27,7 @@ events:
       url: https://www.dropbox.com/scl/fi/rty8m7ra1isbcswv0q8jv/OSS-History-1Video.mov?rlkey=xh7aeis50ghl2qw29dfl9sw50&st=1c767ax0&dl=0
       new_tab: false
     gallery:
-      - title: Sunder reps painting a wall
+      - title: SPWR reps painting a wall
         src: /static/img/OSS-Mexico-1Photo.PNG
       - title: Children riding in a freight tricycle
         src: /static/img/OSS-Mexico-2Photo.PNG
@@ -35,7 +35,7 @@ events:
         src: /static/img/OSS-Mexico-3Photo.PNG
       - title: A man lifting a child to dunk a basketball
         src: /static/img/OSS-Mexico-4Photo.PNG
-      - title: A Sunder rep working hard
+      - title: A SPWR rep working hard
         src: /static/img/OSS-Mexico-5Photo.PNG
       - title: A group of children in white attire
         src: /static/img/OSS-Mexico-6Photo.PNG
@@ -50,7 +50,7 @@ events:
   - year: 2024
     country: Costa Rica
     city: Orosi Valley
-    desc: Sunder helped a local community build a community center and play ground.
+    desc: Helped a local community build a community center and play ground.
     graphic: /static/img/OSS-Emblem-3CostaRica.png
     cta:
       text: Play video
@@ -81,7 +81,7 @@ events:
   - year: 2025
     country: Peru
     city: Cuzco
-    desc: Sunder is currently preparing to serve in Peru![%br%] Register to join us!
+    desc: Served and renovated a local school in Cuzco and explored Machu Picchu.
     graphic: /static/img/OSS-Emblem-4Peru.png
     cta:
       text: Play video

@@ -34,8 +34,8 @@ form_data:
   label_checkbox_awareness: I am aware this is a role in direct sales
   show_recaptcha: true
   submit_btn_text: Submit
-  cta_2:
-    text: Contact us
-    text_desc: ""
-    url: /
-    new_tab: true
+  # cta_2:
+  #   text: Contact us
+  #   text_desc: ""
+  #   url: /
+  #   new_tab: true

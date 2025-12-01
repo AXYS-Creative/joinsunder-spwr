@@ -17,8 +17,8 @@ links:
     url: "https://sunderenergy.com/terms-conditions/"
     new_tab: true
   - title: Contact Us
-    url: "https://sunderenergy.com/contact/"
-    new_tab: true
+    url: "/join"
+    new_tab: false
   - title: SunPower
     url: "https://sunpower.com/"
     new_tab: true
