@@ -4,16 +4,11 @@
 
   .hero {
     $panel-ease: 0.75s ease;
-    --logo-width: min(90%, 380px);
 
     // @include dark-theme;
     @include row-center;
     @include full-height-section;
     gap: var(--body-padding-sm);
-
-    @include mq-max(xxl) {
-      --logo-width: min(90%, 320px);
-    }
 
     @include mq-max(lg) {
       flex-direction: column-reverse;
@@ -48,6 +43,7 @@
 
     .hero-panel {
       --children-gap: 48px;
+      --logo-width: min(90%, 380px);
 
       @include row-center;
       position: relative;
@@ -63,6 +59,7 @@
 
       @include mq-max(xxl) {
         --children-gap: 36px;
+        --logo-width: min(90%, 320px);
       }
 
       @include mq-max(xl) {
@@ -264,6 +261,12 @@
     }
 
     .spwr-external {
+      --logo-width: min(90%, 480px);
+
+      @include mq-max(xxl) {
+        --logo-width: min(90%, 420px);
+      }
+
       @include mq-max(lg) {
         &::before {
           background-color: rgba(0, 0, 0, 0.5);

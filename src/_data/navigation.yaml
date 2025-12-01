@@ -4,9 +4,9 @@
 
 # Missing forward slash "/" to allow active page nav close
 links:
-  - text: The [%span.reveal%]SWPR[%span%]Way
+  - text: The [%span.reveal%]SPWR[%span%]Way
     url: "spwr-way"
-  - text: The [%span.reveal%]SWPR[%span%] Platform
+  - text: The [%span.reveal%]SPWR[%span%] Platform
     url: "platform"
-  - text: Join [%span.reveal%]SWPR[%span%]
+  - text: Join [%span.reveal%]SPWR[%span%]
     url: "join"

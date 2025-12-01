@@ -367,7 +367,7 @@ body > * {
   left: 0;
   width: 0;
   height: var(--border-bold-girth);
-  background: var(--accent-color--primary);
+  background: var(--hero-color--primary);
 }
 @media (hover: hover) and (pointer: fine) {
   .site-nav .nav-links__link::before {
@@ -936,7 +936,6 @@ body .hide-load {
   padding: var(--body-padding-sm);
 }
 .main-home .hero {
-  --logo-width: min(90%, 380px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -952,11 +951,6 @@ body .hide-load {
 @media screen and (max-width: 1024px) {
   .main-home .hero {
     min-height: 850px;
-  }
-}
-@media screen and (max-width: 1512px) {
-  .main-home .hero {
-    --logo-width: min(90%, 320px);
   }
 }
 @media screen and (max-width: 1024px) {
@@ -985,6 +979,7 @@ body .hide-load {
 }
 .main-home .hero .hero-panel {
   --children-gap: 48px;
+  --logo-width: min(90%, 380px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1002,6 +997,7 @@ body .hide-load {
 @media screen and (max-width: 1512px) {
   .main-home .hero .hero-panel {
     --children-gap: 36px;
+    --logo-width: min(90%, 320px);
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1237,6 +1233,14 @@ body .hide-load {
     --direction: to top;
     top: auto;
     bottom: 0;
+  }
+}
+.main-home .hero .spwr-external {
+  --logo-width: min(90%, 480px);
+}
+@media screen and (max-width: 1512px) {
+  .main-home .hero .spwr-external {
+    --logo-width: min(90%, 420px);
   }
 }
 @media screen and (max-width: 1024px) {

@@ -251,7 +251,8 @@ body {
         left: 0;
         width: 0;
         height: var(--border-bold-girth);
-        background: var(--accent-color--primary);
+        // background: var(--accent-color--primary);
+        background: var(--hero-color--primary);
 
         @include mq-mouse {
           transition: width $ease;
