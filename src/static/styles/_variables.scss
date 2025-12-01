@@ -100,6 +100,7 @@ $test-bg: rgba(navy, 0.75);
   // Surface Colors
   --surface-color: #{$navy}; // Nav menu bg || ethos bottom when in light theme
   --on-surface-color: #{$white};
+  --surface-color-accent: #{$navy-dark}; // carousel-swiper pagination, form input filled out
   --surface-color-2: #{$white}; // hero-img-partial bg, form field bg
 
   // Size & Spacing

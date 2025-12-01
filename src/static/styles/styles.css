@@ -30,6 +30,7 @@
   --link-color-hover: #fdfd00;
   --surface-color: #002d52;
   --on-surface-color: #ffffff;
+  --surface-color-accent: #07253d;
   --surface-color-2: #ffffff;
   --body-padding: 24px;
   --body-padding-double: calc(var(--body-padding) * 2);
@@ -112,8 +113,8 @@
 }
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus-visible {
   -webkit-text-fill-color: var(--hero-color--primary);
-  -webkit-box-shadow: 0 0 0px 1000px #07253d inset;
-  border-color: #07253d !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--surface-color-accent) inset;
+  border-color: var(--surface-color-accent) !important;
 }
 *:-webkit-autofill + .label, *:-webkit-autofill:hover + .label, *:-webkit-autofill:focus-visible + .label {
   opacity: 0;
@@ -2443,7 +2444,7 @@ body .hide-load {
   top: auto;
   bottom: 16px;
   width: 66%;
-  background: var(--surface-color);
+  background: var(--surface-color-accent);
   height: 3px;
 }
 @media screen and (max-width: 768px) {

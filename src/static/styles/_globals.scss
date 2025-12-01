@@ -10,8 +10,8 @@
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus-visible {
     -webkit-text-fill-color: var(--hero-color--primary); // text color
-    -webkit-box-shadow: 0 0 0px 1000px $navy-dark inset; // "background" color
-    border-color: $navy-dark !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--surface-color-accent) inset; // "background" color
+    border-color: var(--surface-color-accent) !important;
 
     + .label {
       opacity: 0;

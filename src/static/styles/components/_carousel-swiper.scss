@@ -22,7 +22,7 @@
     top: auto;
     bottom: 16px;
     width: 66%;
-    background: var(--surface-color);
+    background: var(--surface-color-accent);
     height: 3px;
 
     @include mq-max(md) {
