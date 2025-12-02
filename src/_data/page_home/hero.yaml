@@ -10,7 +10,7 @@ external_panel:
     url: https://sunpower.com/
     new_tab: true
 internal_panel:
-  bg_img: /static/img/Landing-Hero-BG2.png
+  bg_img: /static/img/landing-hero-bg2.png
   logo: /static/img/spwr-white-word-mark.svg
   pre_title: Join America’s leading
   title: solar sales[%br%] company
