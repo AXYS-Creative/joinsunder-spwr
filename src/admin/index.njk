@@ -150,7 +150,7 @@
                   h("img", {
                     className: "logo-link__img footer-logo__img",
                     src: logoSrc,
-                    alt: "Join SPWR logo",
+                    alt: "Join Sunder logo",
                   })
                 ),
                 showSocial &&
@@ -385,7 +385,12 @@
               h(
                 "div",
                 { className: "ethos-middle" },
-                h("p", { className: "ethos-middle__p" }, data.section_desc),
+                h(
+                  "p",
+                  { className: "ethos-middle__p" },
+                  h("strong", { className: "description-title" }, data.section_desc_title),
+                  h("span", null, data.section_desc)
+                ),
                 h(
                   "div",
                   { className: "ethos-middle__panels", tabIndex: "-1" },
@@ -395,11 +400,11 @@
                       {
                         className: `ethos-middle__panels-panel value-panel value-panel-${
                           i + 1
-                        } gsap-animate animate`,
+                        } gsap-animate gsap-animated`,
                       },
                       h(
                         "h2",
-                        { className: "panel-title" },
+                        { className: "panel-title description-title" },
                         ...val.title
                           .split(" ")
                           .map((word, i) => [word, h("br", { "aria-hidden": "true", key: i })])
@@ -419,7 +424,7 @@
               // ── Bottom Section ────────────────
               h(
                 "div",
-                { className: "ethos-bottom gsap-animate animate" },
+                { className: "ethos-bottom gsap-animate gsap-animated" },
                 h("p", { className: "ethos-bottom__p" }, ctaP),
                 ctaText &&
                   h(

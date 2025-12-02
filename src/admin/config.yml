@@ -189,8 +189,13 @@ collections:
                 media_library:
                   config:
                     max_file_size: 5000000 # 1MB = 1,000,000 bytes
+          - name: section_desc_title
+            label: Section Description Title
+            widget: string
+            required: true
+            hint: e.g. We Believe
           - name: section_desc
-            label: Section Description (Middle)
+            label: Section Description
             widget: text
             required: true
           - name: values
