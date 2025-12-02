@@ -36,7 +36,7 @@ partials:
         label: Button URL
         widget: string
         required: false
-        hint: "e.g. '/join' or 'sunderenergy.com'. To return home use '/'."
+        hint: "e.g. '/join' or 'sunpower.com'. To return home use '/'."
       - name: new_tab
         label: Open in a new tab
         widget: boolean
@@ -72,7 +72,7 @@ collections:
             required: true
             hint: Semantic page heading for accessibility and SEO. Not visually shown on the page (per design) but improves site indexing and other areas. If left blank, defaults to 'Welcome to SunPower'
           - name: external_panel
-            label: External Panel (sunderenergy.com)
+            label: External Panel (sunpower.com)
             widget: object
             fields:
               - name: bg_img
@@ -102,7 +102,7 @@ collections:
                 hint: Customize text with tokens. Visit https://axyscreative.com/tokens to learn more.
               - *cta_field
           - name: internal_panel
-            label: Internal Panel (joinsunder.com)
+            label: Internal Panel (joinspwr.com)
             widget: object
             fields:
               - name: bg_img
@@ -718,7 +718,7 @@ collections:
             label: Section Title
             widget: string
             required: true
-            hint: Semantic page heading for accessibility and SEO. Not visually shown on the page (per design) but improves site indexing and other areas. If left blank, defaults to 'Sunder Tools'
+            hint: Semantic page heading for accessibility and SEO. Not visually shown on the page (per design) but improves site indexing and other areas. If left blank, defaults to 'SPWR Tools'
           - name: list
             label: Tools
             label_singular: Tool

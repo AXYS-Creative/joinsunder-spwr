@@ -14,9 +14,9 @@
   --btn-color-text--hover: #141414;
   --btn-color-border--hover: var(--btn-color-bg--hover);
   --btn-color-2-bg: #ffffff;
-  --btn-color-2-text: #0058f5;
+  --btn-color-2-text: #095cfb;
   --btn-color-2-border: var(--btn-color-2-text);
-  --btn-color-2-bg--hover: #0058f5;
+  --btn-color-2-bg--hover: #095cfb;
   --btn-color-2-text--hover: #ffffff;
   --btn-color-2-border--hover: var(--btn-color-2-bg--hover);
   --btn-padding: 10px 20px;
@@ -784,7 +784,7 @@ br.gap-sm {
   height: 100%;
 }
 .pin-steps .pin-step {
-  background: linear-gradient(180deg, #0058f5, #ffffff);
+  background: linear-gradient(180deg, #095cfb, #ffffff);
   flex: 1;
   width: 100%;
 }
@@ -1747,8 +1747,8 @@ body .hide-load {
 .section-oss-history .service-event .swiper {
   --surface-color: #ffffff;
   --font-color--primary: #141414;
-  --link-color: #0058f5;
-  --link-color-hover: #0058f5;
+  --link-color: #095cfb;
+  --link-color-hover: #095cfb;
   --btn-color-bg: #141414;
   --btn-color-text: #ffffff;
   --btn-color-border: var(--btn-color-bg);
@@ -3212,8 +3212,8 @@ body .hide-load {
 .partial-img-hero__sub-content {
   --surface-color: #ffffff;
   --font-color--primary: #141414;
-  --link-color: #0058f5;
-  --link-color-hover: #0058f5;
+  --link-color: #095cfb;
+  --link-color-hover: #095cfb;
   --btn-color-bg: #141414;
   --btn-color-text: #ffffff;
   --btn-color-border: var(--btn-color-bg);
@@ -3248,8 +3248,8 @@ body .hide-load {
 .partial-img-hero.has-subcontent .cta-group {
   --surface-color: #ffffff;
   --font-color--primary: #141414;
-  --link-color: #0058f5;
-  --link-color-hover: #0058f5;
+  --link-color: #095cfb;
+  --link-color-hover: #095cfb;
   --btn-color-bg: #141414;
   --btn-color-text: #ffffff;
   --btn-color-border: var(--btn-color-bg);
@@ -3311,8 +3311,8 @@ body .hide-load {
 .partial-img-hero.tools .cta-group {
   --surface-color: #ffffff;
   --font-color--primary: #141414;
-  --link-color: #0058f5;
-  --link-color-hover: #0058f5;
+  --link-color: #095cfb;
+  --link-color-hover: #095cfb;
   --btn-color-bg: #141414;
   --btn-color-text: #ffffff;
   --btn-color-border: var(--btn-color-bg);
