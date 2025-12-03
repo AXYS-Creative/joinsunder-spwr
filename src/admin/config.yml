@@ -513,7 +513,7 @@ collections:
                 widget: string
                 required: true
   - name: page_platform
-    label: Page - SPWR platform
+    label: Page - SPWR Platform
     files:
       - name: hero_platform # Updated from 'hero' for admin preview styles
         label: Section - Hero
@@ -523,7 +523,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Hero)
+            label: Show Section (SPWR Platform - Hero)
             widget: boolean
             default: true
           - name: section_title
@@ -552,7 +552,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Direct)
+            label: Show Section (SPWR Platform - Direct)
             widget: boolean
             default: true
           - name: section_title
@@ -607,7 +607,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Dealers)
+            label: Show Section (SPWR Platform - Dealers)
             widget: boolean
             default: true
           - name: section_title
@@ -659,7 +659,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Finance Options)
+            label: Show Section (SPWR Platform - Finance Options)
             widget: boolean
             default: true
           - name: section_title
@@ -711,7 +711,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Tools)
+            label: Show Section (SPWR Platform - Tools)
             widget: boolean
             default: true
           - name: section_title
@@ -759,7 +759,7 @@ collections:
           preview: true
         fields:
           - name: toggle_section
-            label: Show Section (SPWR platform - Quote)
+            label: Show Section (SPWR Platform - Quote)
             widget: boolean
             default: true
           - name: list

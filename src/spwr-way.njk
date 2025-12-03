@@ -13,11 +13,8 @@ hide_footer: false
 <section class="section-ethos">
   <div class="ethos-pin">
     <div class="ethos-top">
-      <h1
-        class="ethos-top__title sr-only"
-        aria-label="{{ page_spwr_way.ethos.section_title | removeTokens }}"
-      >
-        <span aria-hidden="true"> {{ page_spwr_way.ethos.section_title }}</span>
+      <h1 class="ethos-top__title sr-only">
+        {{ page_spwr_way.ethos.section_title }}
       </h1>
 
       <!-- prettier-ignore -->
@@ -35,16 +32,11 @@ hide_footer: false
       {% include "./_includes/components/cta-group.njk" %}
       </div>
       <div class="ethos-middle">
-        <p
-          class="ethos-middle__p"
-          aria-label="{{ page_spwr_way.ethos.section_desc_title | removeTokens }} {{
-            page_spwr_way.ethos.section_desc | removeTokens
-          }}"
-        >
-          <strong class="description-title" aria-hidden="true">
+        <p class="ethos-middle__p">
+          <strong class="description-title">
             {{ page_spwr_way.ethos.section_desc_title }}
           </strong>
-          <span aria-hidden="true">
+          <span>
             {{ page_spwr_way.ethos.section_desc }}
           </span>
         </p>
@@ -57,18 +49,11 @@ hide_footer: false
             data-gsap-media-query-up="lg"
             data-gsap-markers="false"
           >
-            <strong class="description-title" aria-label="{{ item.title | removeTokens }}">
-              <span aria-hidden="true">
-                {{ item.title }}
-              </span>
+            <strong class="description-title">
+              {{ item.title }}
             </strong>
-            <p
-              class="panel-desc panel-desc-{{ loop.index }}"
-              aria-label="{{ item.caption | removeTokens }}"
-            >
-              <span aria-hidden="true">
-                {{ item.caption }}
-              </span>
+            <p class="panel-desc panel-desc-{{ loop.index }}">
+              {{ item.caption }}
             </p>
           </div>
           {% endfor %}
