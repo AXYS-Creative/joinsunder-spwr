@@ -2,12 +2,12 @@
   font-family: "Fander";
   src: url("../fonts/Fander-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-display: swap; // pre-loading font in app head.
+  font-display: block; // pre-loading font in app head.
 }
 
 @font-face {
   font-family: "Geist";
   src: url("../fonts/Geist-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 900;
-  font-display: swap; // pre-loading font in app head.
+  font-display: block; // pre-loading font in app head.
 }
