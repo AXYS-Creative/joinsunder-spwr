@@ -2,6 +2,9 @@ toggle_section: true
 section_title: Experiences
 section_desc: From exhilarating excursions to inspiring events, we go further—together.
 videos:
+  - title: Cabo -2026 Top Performers
+    poster: /static/img/top-performers-2026-cabo.png
+    src: https://www.dropbox.com/scl/fi/fgix219bflfodzcao6cuf/Top-Performers-2026-Cabo.mp4?rlkey=sdfksdy9aw42v9symhuhzysp8&st=crhhgjie&dl=0
   - title: XCaret - 2025 Top Performers
     poster: /static/img/Way-Experience-1Video.png
     src: https://www.dropbox.com/scl/fi/gkfzto0gk50ux9hoidwes/Way-Experience-1Video.mov?rlkey=z18lot4x4ul79abjqybg0gwsd&st=vrfv0oy7&dl=0
