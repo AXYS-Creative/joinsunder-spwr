@@ -1,0 +1,28 @@
+---
+layout: app
+path: apply
+
+title: Join SPWR
+
+# master props
+hide_header: false
+hide_footer: true
+---
+
+<section class="hero">
+  <div class="carousel-panel">
+    <!-- prettier-ignore -->
+     {% set carousel_list = page_apply.hero.imgs %}
+    {% set carousel_interval = page_join.hero.autoplay_interval %}
+    {% set carousel_class = 'carousel-gallery--join' %}
+    {% include "./_includes/components/carousel-gallery.njk" %}
+  </div>
+
+  <div class="form-panel" data-lenis-prevent>
+    <h1 class="form-panel__title">{{ page_join.hero.section_title }}</h1>
+
+    <!-- prettier-ignore -->
+    {% set form_data = page_join.hero.form_data %}
+    {% include "./_includes/components/form-redirect.njk" %}
+  </div>
+</section>

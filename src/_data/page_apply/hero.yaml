@@ -1,0 +1,7 @@
+autoplay_interval: 5000
+
+imgs:
+  - title: Secret lives of solar reps
+    src: /static/img/SLSG-Picture-1.png
+  # - title: Woman going door to door
+  #   src: /static/img/Join-SlideShow-1Photo.png

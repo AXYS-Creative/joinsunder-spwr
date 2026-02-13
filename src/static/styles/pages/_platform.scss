@@ -151,7 +151,7 @@
         &.node-chart__node--first,
         &.node-chart__node--last {
           &::before {
-            width: 100%;
+            width: 120%;
             translate: 0 -100%;
             background: transparent;
           }
