@@ -59,7 +59,10 @@ body {
   padding: var(--body-padding);
   border: 1px solid var(--background-color);
   border-radius: var(--radius);
-  transition: transform $ease, border $ease, background $ease;
+  transition:
+    transform $ease,
+    border $ease,
+    background $ease;
 
   // :focus-within causes the header to persist on click, creating unwanted visibility on scroll
   &:has(.header-logo:focus-visible),
@@ -202,7 +205,9 @@ body {
 
     @include mq-motion-allow {
       translate: 0 -48px;
-      transition: opacity $ease, translate $ease;
+      transition:
+        opacity $ease,
+        translate $ease;
     }
   }
 

@@ -2,6 +2,8 @@
 // Media Queries
 //
 
+$max-height-md: 680px;
+
 $max-breakpoints: (
   "xs": 390px,
   "sm": 480px,
@@ -9,8 +11,7 @@ $max-breakpoints: (
   "lg": 1024px,
   "xl": 1200px,
   "xxl": 1512px,
-  "xxxl": 1750px,
-  // was 1920
+  "xxxl": 1750px, // was 1920
 );
 
 @mixin mq-max($breakpoint) {

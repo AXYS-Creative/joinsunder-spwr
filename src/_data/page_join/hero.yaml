@@ -24,7 +24,7 @@ imgs:
   # - title: Man rock climbing
   #   src: /static/img/Join-SlideShow-10Photo.png
 
-section_title: "[%span.title-sm%]Join[%span%] SPWR"
+section_title: "Join SPWR"
 
 form_data:
   show_field_discovery: true

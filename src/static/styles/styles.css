@@ -1352,7 +1352,7 @@ body .hide-load {
   background: var(--surface-color);
   border-radius: var(--radius);
   align-self: center;
-  padding-block: 128px 64px;
+  padding-block: 80px 64px;
   padding-inline: var(--body-padding);
   gap: 96px;
   overflow-y: auto;
@@ -1360,7 +1360,7 @@ body .hide-load {
 @media (max-height: 680px) {
   .main-join .hero .form-panel,
   .main-apply .hero .form-panel {
-    padding-block: 248px 64px;
+    padding-block: 148px 64px;
   }
 }
 @media screen and (max-width: 1512px) {
@@ -1394,9 +1394,8 @@ body .hide-load {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-size: 96px;
-  line-height: 80%;
-  font-size-adjust: 0.5;
+  font-size: 75px;
+  line-height: 132.2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1434,12 +1433,6 @@ body .hide-load {
     font-size: 55px;
     line-height: 90%;
     font-size-adjust: 0.5;
-  }
-}
-@media screen and (max-width: 1512px) {
-  .main-join .hero .form-panel__title,
-  .main-apply .hero .form-panel__title {
-    margin-block-end: 24px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2734,11 +2727,13 @@ body .hide-load {
   width: 100%;
   height: 3em;
 }
+@media (max-height: 680px) {
+  .form-redirect .form-block {
+    height: 2.75em;
+  }
+}
 .form-redirect .form-block:hover .label, .form-redirect .form-block:focus-within .label {
   color: var(--input-field-color-hover-on-background);
-}
-.form-redirect .form-block--discovery {
-  height: 6em;
 }
 .form-redirect .form-block--awareness {
   display: flex;
@@ -2773,10 +2768,6 @@ body .hide-load {
 .form-redirect .form-block .label:focus,
 .form-redirect .form-block .input:focus {
   border: 2px solid var(--hero-color--primary);
-}
-.form-redirect .form-block .label--textarea,
-.form-redirect .form-block .input--textarea {
-  align-items: flex-start;
 }
 .form-redirect .form-block .label {
   color: var(--input-field-color-on-background);
