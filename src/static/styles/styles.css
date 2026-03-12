@@ -2729,7 +2729,7 @@ body .hide-load {
 }
 @media (max-height: 680px) {
   .form-redirect .form-block {
-    height: 2.75em;
+    height: 2.5em;
   }
 }
 .form-redirect .form-block:hover .label, .form-redirect .form-block:focus-within .label {
