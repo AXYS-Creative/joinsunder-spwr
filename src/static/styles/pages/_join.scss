@@ -39,7 +39,10 @@
 
     .carousel-panel {
       position: relative;
-      z-index: -1;
+
+      @include mq-max(lg) {
+        z-index: -1;
+      }
 
       &::before {
         content: "";

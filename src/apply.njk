@@ -10,13 +10,29 @@ hide_footer: true
 ---
 
 <section class="hero">
-  <div class="carousel-panel">
-    <!-- prettier-ignore -->
-    {% set carousel_list = page_apply.hero.imgs %}
-    {% set carousel_interval = page_join.hero.autoplay_interval %}
-    {% set carousel_class = 'carousel-gallery--join' %}
-    {% include "./_includes/components/carousel-gallery.njk" %}
-  </div>
+  <button
+    class="video-panel video-toggle tab-element-page"
+    data-src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&dl=0"
+    aria-label="Open 'join sunpower' promo video"
+    aria-controls="video-overlay"
+  >
+    <span class="badge cta-1 tab-element-page">
+      {{ global.carousel.video_badge_text }}
+    </span>
+    <video
+      class="apply-video"
+      src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&raw=1"
+      muted
+      autoplay
+      playsinline
+      loop
+    ></video>
+  </button>
+  <!-- <video
+      class="apply-video tab-element-page"
+      src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&raw=1"
+      controls
+    ></video> -->
 
   <div class="form-panel" data-lenis-prevent>
     <h1 class="form-panel__title">{{ page_join.hero.section_title }}</h1>
