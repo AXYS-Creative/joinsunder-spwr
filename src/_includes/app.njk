@@ -23,7 +23,8 @@
     <!-- prettier-ignore -->
     <meta name="description" content="{% if pageMeta %}{{ pageMeta.description }}{% else %}Page description goes here{% endif %}" />
 
-    {% if path == "404" or path == 'form-submit' %}
+    {% if path == "404" or path == 'form-submit-join' or path ==
+    'form-submit-apply' %}
     <meta name="robots" content="noindex, nofollow" />
     {% else %}
     <meta name="robots" content="index, follow" />

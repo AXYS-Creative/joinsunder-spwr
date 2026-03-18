@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /admin
 Disallow: /404.html
-Disallow: /form-submit.html
+Disallow: /form-submit-join.html
+Disallow: /form-submit-apply.html
 Sitemap: https://joinspwr.com/sitemap.xml

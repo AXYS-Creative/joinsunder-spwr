@@ -22,6 +22,7 @@ hide_footer: true
     <h1 class="form-panel__title">{{ page_join.hero.section_title }}</h1>
 
     <!-- prettier-ignore -->
+    {% set form_action_path = '/form-submit-' + path %}
     {% set form_name = 'join-spwr-form-' + path %}
     {% set form_data = page_join.hero.form_data %}
     {% include "./_includes/components/form-redirect.njk" %}
