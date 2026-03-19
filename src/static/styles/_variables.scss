@@ -123,7 +123,9 @@ $test-bg: rgba(navy, 0.75);
 
   --full-height-snip: calc(100vh - var(--body-padding-double)); // Home page
   --full-height-snip-header: calc(
-    100vh - calc(var(--body-padding-double) + var(--header-height) - var(--body-padding))
+    100vh - calc(
+        var(--body-padding-double) + var(--header-height) - var(--body-padding)
+      )
   ); // Join Page
 
   --paragraph-snip: 650px;

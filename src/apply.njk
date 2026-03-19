@@ -6,17 +6,19 @@ title: Join SPWR
 
 # master props
 hide_header: false
-hide_footer: true
+hide_footer: false
 ---
 
-<section class="hero">
+<section class="video-hero">
   <button
-    class="video-panel video-toggle tab-element-page"
+    class="video-toggle cta-1 tab-element-page"
     data-src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&dl=0"
     aria-label="Open 'join sunpower' promo video"
     aria-controls="video-overlay"
   >
-    <span class="badge cta-1 tab-element-page"> Watch Trailer </span>
+    Watch Trailer
+  </button>
+  <figure class="apply-video-figure">
     <video
       class="apply-video"
       src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&raw=1"
@@ -25,20 +27,20 @@ hide_footer: true
       playsinline
       loop
     ></video>
-  </button>
+  </figure>
   <!-- <video
       class="apply-video tab-element-page"
       src="https://www.dropbox.com/scl/fi/vfsoc76xakepcgxzokkh9/SLoSG-Final.mp4?rlkey=n4rfne77fqzbh09o3bmp7drza&e=1&st=j1jsf1sg&raw=1"
       controls
     ></video> -->
+</section>
 
-  <div class="form-panel" data-lenis-prevent>
-    <h1 class="form-panel__title">{{ page_join.hero.section_title }}</h1>
+<section class="full-form-section section-solid-bg">
+  <h2 class="form-title">{{ page_join.hero.section_title }}</h2>
 
-    <!-- prettier-ignore -->
-    {% set form_action_path = '/form-submit-' + path %}
-    {% set form_name = 'join-spwr-form-' + path %}
-    {% set form_data = page_join.hero.form_data %}
-    {% include "./_includes/components/form-redirect.njk" %}
-  </div>
+  <!-- prettier-ignore -->
+  {% set form_action_path = '/form-submit-' + path %}
+  {% set form_name = 'join-spwr-form-' + path %}
+  {% set form_data = page_join.hero.form_data %}
+  {% include "./_includes/components/form-redirect.njk" %}
 </section>

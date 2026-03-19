@@ -320,7 +320,7 @@ body {
   max-width: var(--header-max-width);
   // max-width: unset; // toggle for ultra-wide behavior
   padding: var(--body-padding-double);
-  margin-block: var(--body-padding) var(--body-padding-sm);
+  margin-block: var(--body-padding-sm);
   border-radius: var(--radius-lg);
 
   &__inner {
@@ -385,8 +385,9 @@ body {
 
 .main-platform,
 .main-operation-spwr-serves,
-.main-spwr-way {
-  padding: var(--body-padding-sm);
+.main-spwr-way,
+.main-apply {
+  padding: var(--body-padding-sm) var(--body-padding-sm) 0;
 }
 
 .main-spwr-way {
