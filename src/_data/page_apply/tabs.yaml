@@ -1,0 +1,16 @@
+toggle_slider: "solid" # 'solid' | 'underline' | null
+default_panel: 1
+
+panels:
+  - title: Top Quality
+    tab_label: Tools
+    desc: Description 1 here best to keep this relatively short so people don’t feel the need to skip.
+    img: /static/img/Landing-Hero-BG1.png
+  - title: Top Pay
+    tab_label: Earn
+    desc: Description 2 here best to keep this relatively short so people don’t feel the need to skip.
+    img: /static/img/Way-Experience-24Photo.jpg
+  - title: Top Rewards
+    tab_label: Perks
+    desc: Description 3 here best to keep this relatively short so people don’t feel the need to skip.
+    img: /static/img/Way-Experience-21Photo.png

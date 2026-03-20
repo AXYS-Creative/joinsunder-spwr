@@ -172,6 +172,8 @@
     <button class="cta-1 tab-element-page" type="submit">{{ form_data.submit_btn_text }}</button>
     <!-- prettier-ignore -->
     {% set cta_1 = form_data.cta_2 %}
-    {% include "./cta-group.njk" %}
+    {% if form_data.cta_2.text %}
+      {% include "./cta-group.njk" %}
+    {% endif %}
   </div>
 </form>

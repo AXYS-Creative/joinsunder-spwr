@@ -12,18 +12,14 @@
   @include row-center;
   position: relative;
   margin-block-start: calc(var(--top-spacing-header) + var(--body-padding-sm));
-  height: calc(
-    100vh - var(--top-spacing-header) - var(--body-padding-sm) - var(
-        --header-height
-      )
-  );
+  height: calc(100vh - var(--body-padding-double) - var(--header-height));
   min-height: 720px;
   max-height: 1080px;
   padding-inline: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
 
-  @include mq-max(xl) {
+  @include mq-max(xxl) {
     min-height: 500px;
     max-height: 920px;
   }
@@ -64,6 +60,15 @@
 .full-form-section {
   @include section-solid;
   @include column-center;
+  padding-block: 128px;
+
+  @include mq-max(xxl) {
+    padding-block: 96px;
+  }
+
+  @include mq-max(md) {
+    padding-block: 48px;
+  }
 
   .form-title {
     @include h2;
@@ -76,6 +81,10 @@
   }
 
   form {
-    margin-block: 48px;
+    margin-block-start: 32px;
+
+    .form-footer {
+      margin-block-start: 24px;
+    }
   }
 }

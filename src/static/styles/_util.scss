@@ -106,6 +106,69 @@
   }
 }
 
+.toggle-slider {
+  --accent-color: #{$black};
+  // --accent-color: var(--color-brand--primary);
+  --toggle-padding: 4px;
+  --toggle-radius: var(--radius-btn);
+  --toggle-radius--inner: calc(var(--toggle-radius) - var(--toggle-padding));
+  --option-padding: var(--btn-padding); // btn size
+
+  isolation: isolate;
+  position: relative;
+  display: inline-block;
+
+  [class*="option"] {
+    padding: var(--option-padding);
+    transition: $ease;
+    cursor: pointer;
+    border-radius: var(--toggle-radius);
+
+    &:active {
+      scale: 0.94;
+    }
+
+    &.option-active,
+    &:has(input[checked]) {
+      opacity: 1;
+    }
+  }
+
+  [class*="slider"] {
+    background: var(--accent-color);
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    transition: $ease;
+  }
+
+  &--solid {
+    // --toggle-padding: 4px;
+    // --toggle-radius: 8px;
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--toggle-radius);
+    padding: var(--toggle-padding);
+
+    [class*="slider"] {
+      position: absolute;
+      top: var(--toggle-padding);
+      height: calc(100% - var(--toggle-padding) * 2);
+      border-radius: max(2px, var(--toggle-radius--inner));
+    }
+  }
+
+  &--underline {
+    --accent-color: var(--color-brand--primary);
+
+    [class*="slider"] {
+      bottom: 0;
+      left: 0;
+      height: 2px;
+    }
+  }
+}
+
 body .hide-load {
   display: none; // fixes a strange issue when visiting page on prod, the video shows briefly then goes away
 }

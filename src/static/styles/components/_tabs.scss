@@ -1,0 +1,119 @@
+// Unified for both component and utillity
+.tabs {
+  --tabs-gap: 64px;
+
+  @include column-center(start);
+  padding-block: 148px;
+  padding-inline: 0; // reset section padding
+
+  @include mq-max(xxl) {
+    --tabs-gap: 24px;
+    padding-block: 64px;
+  }
+
+  @include mq-max(xl) {
+    padding-block: 48px;
+  }
+
+  @include mq-max(lg) {
+    padding-block: 48px var(--body-padding-sm);
+  }
+
+  &-list {
+    border: 1px solid black;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-content {
+    width: 100%;
+    margin-block-start: var(--tabs-gap);
+
+    @include mq-min(lg) {
+      padding-inline: 64px;
+    }
+
+    @include mq-min(xxl) {
+      padding-inline: 128px;
+    }
+  }
+
+  &-panel {
+    @include column-center;
+    gap: var(--tabs-gap);
+    height: 100%;
+
+    picture,
+    &__img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+    }
+
+    &__text {
+      @include row-center(space-between);
+      width: 100%;
+
+      @include mq-max(lg) {
+        order: -1;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--panel-gap);
+      }
+    }
+
+    &__title {
+      @include h4;
+    }
+
+    &__desc {
+      @include body-font-styles(sm);
+
+      @include mq-min(md) {
+        max-width: 500px;
+        text-align: end;
+      }
+    }
+
+    // modifiers
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &-option {
+    border: 1px solid transparent;
+
+    @include desktop-hover {
+      border-color: var(--accent-color--primary);
+    }
+
+    &--active,
+    &[aria-selected="true"] {
+      // Be mindful to remove any styles here that might conflict with 'toggle-slider' styles
+      color: white;
+      opacity: 1;
+      text-transform: underline;
+
+      @include desktop-hover {
+        border-color: transparent;
+      }
+
+      &:active {
+        & ~ [class*="slider"] {
+          scale: 0.94;
+        }
+      }
+    }
+  }
+
+  // &:has(.toggle-slider) {
+  //   // Remove any styles added above or override them here when using 'toggle-slider' styles
+  //   // .tabs-option {
+  //   //   border: none;
+  //   // }
+  // }
+}
