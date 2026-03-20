@@ -61,6 +61,7 @@
   @include section-solid;
   @include column-center;
   padding-block: 128px;
+  overflow: hidden; // fixing the overflow scroll on mobile for some reason?
 
   @include mq-max(xxl) {
     padding-block: 96px;

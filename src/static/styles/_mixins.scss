@@ -165,6 +165,10 @@ $min-breakpoints: (
   // used on timeline
   @if $size == sm {
     --font-size: 22px;
+
+    @include mq-max(lg) {
+      --font-size: 18px;
+    }
   }
 
   // used on form page
@@ -310,11 +314,19 @@ $min-breakpoints: (
 }
 
 @mixin blue-gradient($dir: 180deg, $start: 30%, $end: 70%) {
-  background: linear-gradient($dir, $gradient-root $start, rgba(0, 0, 0, 0) $end);
+  background: linear-gradient(
+    $dir,
+    $gradient-root $start,
+    rgba(0, 0, 0, 0) $end
+  );
 }
 
 @mixin dark-gradient($dir: 180deg, $start: 30%, $end: 70%) {
-  background: linear-gradient($dir, rgba($black, 1) $start, rgba(0, 0, 0, 0) $end);
+  background: linear-gradient(
+    $dir,
+    rgba($black, 1) $start,
+    rgba(0, 0, 0, 0) $end
+  );
 }
 
 @mixin primary-border-hover {
