@@ -2522,6 +2522,10 @@ body .hide-load {
     color: var(--btn-color-text--hover);
   }
 }
+.cta-1:active,
+.cta-2:active {
+  scale: 0.94;
+}
 .cta-1.outline,
 .cta-2.outline {
   --btn-color-border--hover: var(--btn-color-bg);
@@ -3321,6 +3325,23 @@ body .hide-load {
 }
 .tabs-panel[hidden] {
   display: none;
+}
+.tabs-option {
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 1024px) {
+  .tabs-option {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tabs-option {
+    font-size: 14px;
+  }
 }
 .tabs-option {
   border: 1px solid transparent;

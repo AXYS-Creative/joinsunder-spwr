@@ -18,6 +18,10 @@
     color: var(--btn-color-text--hover);
   }
 
+  &:active {
+    scale: 0.94;
+  }
+
   &.outline {
     --btn-color-border--hover: var(--btn-color-bg);
   }

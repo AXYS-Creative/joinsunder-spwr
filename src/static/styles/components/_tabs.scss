@@ -85,6 +85,7 @@
   }
 
   &-option {
+    @include link-font-styles;
     border: 1px solid transparent;
 
     @include desktop-hover {
