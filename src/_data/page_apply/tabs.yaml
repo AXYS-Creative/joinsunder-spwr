@@ -4,13 +4,13 @@ default_panel: 1
 panels:
   - title: Top Quality
     tab_label: Tools
-    desc: Description 1 here best to keep this relatively short so people don’t feel the need to skip.
+    desc: Unparalleled options from tech to panels and support to financing
     img: /static/img/Landing-Hero-BG1.png
   - title: Top Pay
     tab_label: Earn
-    desc: Description 2 here best to keep this relatively short so people don’t feel the need to skip.
+    desc: Industry-leading standards with unlimited upward mobility
     img: /static/img/Way-Experience-24Photo.jpg
   - title: Top Rewards
     tab_label: Perks
-    desc: Description 3 here best to keep this relatively short so people don’t feel the need to skip.
+    desc: Multiple channels to earn gear and trips from quarterly competitions to year long incentives, plus surprise challenges along the way
     img: /static/img/Way-Experience-21Photo.png

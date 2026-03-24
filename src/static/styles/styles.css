@@ -3326,6 +3326,7 @@ body .hide-load {
 @media screen and (min-width: 769px) {
   .tabs-panel__desc {
     max-width: 500px;
+    text-wrap: balance;
     text-align: end;
   }
 }

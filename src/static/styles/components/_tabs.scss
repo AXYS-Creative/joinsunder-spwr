@@ -74,6 +74,7 @@
 
       @include mq-min(md) {
         max-width: 500px;
+        text-wrap: balance;
         text-align: end;
       }
     }
