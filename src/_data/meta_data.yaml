@@ -6,14 +6,12 @@ theme_color: "#f7f7f7"
 page_descriptions:
   - page: null
     label: Home
-    description:
-      Welcome to SunPower, America's leading solar sales company. Empower
+    description: Welcome to SunPower, America's leading solar sales company. Empower
       your future with us and discover why thousands are building brighter
       careers in the solar industry.
   - page: spwr-way
     label: SPWR Way
-    description:
-      Discover what it means to be a solar rep at SunPower. Explore our
+    description: Discover what it means to be a solar rep at SunPower. Explore our
       core values, competitions, exclusive merch, unforgettable trips, and a
       behind-the-scenes look at how we lead with integrity and service.
   - page: platform
@@ -29,26 +27,25 @@ page_descriptions:
       projects impacting lives across Mexico, Costa Rica, Peru, and beyond.
   - page: join
     label: Join
-    description: Ready to power your future with solar? Join SunPower and
-      become part of a team that’s making a real impact. Fill out the form and
-      take the first step toward a rewarding career in solar sales.
+    description: Ready to power your future with solar? Join SunPower and become
+      part of a team that’s making a real impact. Fill out the form and take the
+      first step toward a rewarding career in solar sales.
   - page: form-submit-join
     label: Form Submit
-    description: Thanks for reaching out to SunPower! Your form has been
-      submitted — we’ll be in touch soon to help you start your journey in solar
-      sales.
+    description: Thanks for reaching out to SunPower! Your form has been submitted —
+      we’ll be in touch soon to help you start your journey in solar sales.
   - page: form-submit-apply
     label: Form Submit
-    description: Thanks for reaching out to SunPower! Your form has been
-      submitted — we’ll be in touch soon to help you start your journey in solar
-      sales.
+    description: Thanks for reaching out to SunPower! Your form has been submitted —
+      we’ll be in touch soon to help you start your journey in solar sales.
   - page: "404"
     label: "404"
-    description:
-      The page you are looking for cannot be found. Please check the URL
+    description: The page you are looking for cannot be found. Please check the URL
       or return to the home page.
 og_label: Join Americas Leading Solar Company
+og_title: Empowering individuals to shape a brighter future through sustainable
+  energy solutions.
 og_description: Looking for your next opportunity? Join SunPower, where our
   mission is to empower individuals to shape a brighter future through
   sustainable energy solutions.
-og_image: /static/img/open-graph-image-100.jpg
+og_image: /static/img/joinspwr-thumbnail.png
