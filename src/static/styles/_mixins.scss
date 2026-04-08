@@ -173,10 +173,10 @@ $min-breakpoints: (
 
   // used on form page
   @if $size == xs {
-    --font-size: 18px;
+    --font-size: 16px;
 
     @include mq-max(lg) {
-      --font-size: 16px;
+      --font-size: 14px;
     }
   }
 }
@@ -224,7 +224,7 @@ $min-breakpoints: (
   --font-color--primary: #{$white};
 
   --link-color: #{$white};
-  --link-color-hover: #{$grey-light};
+  --link-color-hover: #{$yellow};
 
   color: var(--font-color--primary);
 }

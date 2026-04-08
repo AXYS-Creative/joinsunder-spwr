@@ -846,15 +846,6 @@ collections:
                 label: Discovery Field Label
                 widget: string
                 required: false
-              - name: show_checkbox_awareness
-                label: Add Checkbox — Awareness (That this is a sales position)
-                widget: boolean
-                default: true
-                hint: If removed, the reCaptcha will still be displayed (if toggled on)
-              - name: label_checkbox_awareness
-                label: Awareness Checkbox Label
-                widget: string
-                required: false
               - name: show_recaptcha
                 label: Add reCAPTCHA (Extra spam prevention)
                 widget: boolean

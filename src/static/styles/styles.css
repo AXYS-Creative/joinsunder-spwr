@@ -255,7 +255,7 @@ body > * {
   align-items: flex-start;
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   opacity: 0;
   pointer-events: none;
@@ -711,7 +711,7 @@ br.gap-sm {
 .section-solid-bg {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   border-radius: var(--radius-lg);
   background: var(--surface-color);
@@ -1188,7 +1188,7 @@ body .hide-load {
 .main-home .hero .hero-panel__text {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   display: flex;
   flex-direction: column;
@@ -1391,7 +1391,7 @@ body .hide-load {
   align-items: center;
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   border-radius: var(--radius-lg);
   background: var(--surface-color);
@@ -1556,7 +1556,7 @@ body .hide-load {
 .full-form-section {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   border-radius: var(--radius-lg);
   background: var(--surface-color);
@@ -1671,11 +1671,11 @@ body .hide-load {
   }
 }
 .direct .node-chart__node-desc {
-  --font-size: 18px;
+  --font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
   .direct .node-chart__node-desc {
-    --font-size: 16px;
+    --font-size: 14px;
   }
 }
 .direct .node-chart__top {
@@ -1964,7 +1964,7 @@ body .hide-load {
   --panel-translate-offset: 96px;
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   margin-block: var(--top-spacing-header) var(--space-between-sections);
   border-radius: var(--radius-lg);
@@ -2255,7 +2255,7 @@ body .hide-load {
   --content-offset: 48px 0;
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   display: flex;
   flex-direction: column;
@@ -2867,11 +2867,11 @@ body .hide-load {
   }
 }
 .form-redirect {
-  --font-size: 18px;
+  --font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
   .form-redirect {
-    --font-size: 16px;
+    --font-size: 14px;
   }
 }
 .form-redirect {
@@ -2896,11 +2896,31 @@ body .hide-load {
   color: var(--input-field-color-hover-on-background);
 }
 .form-redirect .form-block--awareness {
+  --font-size: 24px;
+  color: var(--font-color--primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--awareness {
+    --font-size: 18px;
+  }
+}
+.form-redirect .form-block--awareness {
+  --font-size: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--awareness {
+    --font-size: 14px;
+  }
+}
+.form-redirect .form-block--awareness {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1ch;
-  height: 2em;
+  height: auto;
 }
 .form-redirect .form-block--awareness .checkbox {
   accent-color: var(--hero-color--primary);
@@ -2911,6 +2931,41 @@ body .hide-load {
 .form-redirect .form-block--awareness .checkbox-label {
   font-size: inherit;
   cursor: pointer;
+}
+.form-redirect .form-block--awareness .form-policy-links {
+  --font-size: 24px;
+  color: var(--font-color--primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--awareness .form-policy-links {
+    --font-size: 18px;
+  }
+}
+.form-redirect .form-block--awareness .form-policy-links {
+  --font-size: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--awareness .form-policy-links {
+    --font-size: 14px;
+  }
+}
+.form-redirect .form-block--awareness .form-policy-links {
+  margin-block-start: 8px;
+}
+.form-redirect .form-block--awareness .form-policy-links a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: initial;
+}
+@media (hover: hover) and (pointer: fine) {
+  .form-redirect .form-block--awareness .form-policy-links a:hover, .form-redirect .form-block--awareness .form-policy-links a:focus-visible {
+    color: var(--link-color-hover);
+    rotate: 12deg;
+  }
 }
 .form-redirect .form-block .label,
 .form-redirect .form-block .input {
@@ -3019,7 +3074,7 @@ body .hide-load {
 .portrait-gradient {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   position: relative;
   border-radius: var(--radius);
@@ -3441,7 +3496,7 @@ body .hide-load {
 .partial-img-hero {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   padding: var(--body-padding);
 }
@@ -3783,7 +3838,7 @@ body .hide-load {
 .logos-group {
   --font-color--primary: #ffffff;
   --link-color: #ffffff;
-  --link-color-hover: #dddddd;
+  --link-color-hover: #fdfd00;
   color: var(--font-color--primary);
   border-radius: var(--radius-lg);
   background: var(--surface-color);

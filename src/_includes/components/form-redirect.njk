@@ -145,23 +145,27 @@
   {% endif %}
 
   <!-- prettier-ignore -->
-  {% if form_data.show_checkbox_awareness %}
-  <div class="form-block form-block--awareness">
-    <input
-      class="checkbox tab-element-page"
-      id="awareness"
-      name="awareness"
-      value="Yes"
-      type="checkbox"
-      title="{{ form_data.label_checkbox_awareness }}"
-      aria-label="{{ form_data.label_checkbox_awareness }}"
-      required
-    />
+<div class="form-block form-block--awareness">
+  <input
+    class="checkbox tab-element-page"
+    id="awareness"
+    name="awareness"
+    value="Yes"
+    type="checkbox"
+    required
+  />
+  <div>
     <label class="checkbox-label" for="awareness">
-      {{ form_data.label_checkbox_awareness }}
+      By checking this box, I consent to receive SMS/text messages from Complete Solaria (DBA SunPower Inc.) at the number provided above. Message &amp; data rates may apply. Reply STOP to opt out.
     </label>
+    <p class="form-policy-links">
+      View our 
+      <a class="classic-link" href="https://us.sunpower.com/privacy-policy" target="_blank">Privacy Policy</a> 
+      and 
+      <a class="classic-link" href="https://us.sunpower.com/terms" target="_blank">Terms of Use</a>.
+    </p>
   </div>
-  {% endif %}
+</div>
 
   <!-- prettier-ignore -->
   {% if form_data.show_recaptcha %}

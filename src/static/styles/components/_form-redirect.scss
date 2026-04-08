@@ -26,9 +26,10 @@
     // }
 
     &--awareness {
-      @include row-center;
+      @include body-font-styles(xs);
+      @include row-start;
       gap: 1ch;
-      height: 2em;
+      height: auto;
 
       .checkbox {
         accent-color: var(--hero-color--primary);
@@ -40,6 +41,21 @@
       .checkbox-label {
         font-size: inherit;
         cursor: pointer;
+      }
+
+      .form-policy-links {
+        @include body-font-styles(xs);
+        margin-block-start: 8px;
+
+        a {
+          @include inherit-font;
+          text-transform: initial;
+
+          @include desktop-hover {
+            color: var(--link-color-hover);
+            rotate: 12deg;
+          }
+        }
       }
     }
 

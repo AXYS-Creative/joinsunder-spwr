@@ -68,7 +68,12 @@
                 alt: "",
               }),
 
-            title && h(TitleTag, { className: `partial-img-hero__${titleTag}` }, title),
+            title &&
+              h(
+                TitleTag,
+                { className: `partial-img-hero__${titleTag}` },
+                title,
+              ),
 
             h(
               "div",
@@ -86,15 +91,22 @@
                       "aria-label": cta.text,
                     },
                     cta.text,
-                    h("span", { className: "sr-only" })
-                  )
-                )
-            )
-          )
+                    h("span", { className: "sr-only" }),
+                  ),
+                ),
+            ),
+          ),
         );
       };
 
-      const LogosGroupPreview = ({ id, title, desc, logos = [], grid = 3, gridSm = 2 }) => {
+      const LogosGroupPreview = ({
+        id,
+        title,
+        desc,
+        logos = [],
+        grid = 3,
+        gridSm = 2,
+      }) => {
         return h(
           "div",
           { className: "logos-group", id },
@@ -115,9 +127,9 @@
                 className: "",
                 src: logo.src,
                 alt: logo.title,
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       };
 
@@ -151,7 +163,7 @@
                     className: "logo-link__img footer-logo__img",
                     src: logoSrc,
                     alt: "Join SPWR logo",
-                  })
+                  }),
                 ),
                 showSocial &&
                   h(
@@ -204,12 +216,12 @@
                                 maskImage: `url(${social.icon})`,
                                 WebkitMaskImage: `url(${social.icon})`,
                               },
-                            })
-                          )
-                        )
-                      )
-                    )
-                  )
+                            }),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
               ),
               h(
                 "div",
@@ -227,15 +239,16 @@
                       h(
                         "a",
                         {
-                          className: "footer-links__link classic-link tab-element-page",
+                          className:
+                            "footer-links__link classic-link tab-element-page",
                           href: link.url,
                           target: link.new_tab ? "_blank" : null,
                           rel: link.new_tab ? "noopener noreferrer" : null,
                         },
-                        link.title
-                      )
-                    )
-                  )
+                        link.title,
+                      ),
+                    ),
+                  ),
                 ),
                 cta.text &&
                   h(
@@ -251,11 +264,11 @@
                         "aria-label": cta.text,
                       },
                       cta.text,
-                      h("span", { className: "sr-only" })
-                    )
-                  )
-              )
-            )
+                      h("span", { className: "sr-only" }),
+                    ),
+                  ),
+              ),
+            ),
           );
         },
       });
@@ -294,8 +307,16 @@
                 h(
                   "h2",
                   { className: "hero-panel__title" },
-                  h("span", { className: "hero-panel__title-sm" }, panelData.pre_title),
-                  h("span", { className: "hero-panel__title-lg" }, panelData.title)
+                  h(
+                    "span",
+                    { className: "hero-panel__title-sm" },
+                    panelData.pre_title,
+                  ),
+                  h(
+                    "span",
+                    { className: "hero-panel__title-lg" },
+                    panelData.title,
+                  ),
                 ),
                 // CTA
                 panelData.cta?.text &&
@@ -308,14 +329,20 @@
                         className: "cta-1 tab-element-page",
                         href: panelData.cta.url || "#",
                         target: panelData.cta.new_tab ? "_blank" : null,
-                        rel: panelData.cta.new_tab ? "noopener noreferrer" : null,
+                        rel: panelData.cta.new_tab
+                          ? "noopener noreferrer"
+                          : null,
                         "aria-label": `Learn More about ${panelData.title}`,
                       },
                       panelData.cta.text,
-                      h("span", { className: "sr-only" }, `Learn More about ${panelData.title}`)
-                    )
-                  )
-              )
+                      h(
+                        "span",
+                        { className: "sr-only" },
+                        `Learn More about ${panelData.title}`,
+                      ),
+                    ),
+                  ),
+              ),
             );
           };
 
@@ -327,8 +354,8 @@
               { className: "hero" },
               h("h1", { className: "sr-only" }, sectionTitle),
               renderPanel(data.external_panel, "spwr-external"),
-              renderPanel(data.internal_panel, "spwr-internal")
-            )
+              renderPanel(data.internal_panel, "spwr-internal"),
+            ),
           );
         },
       });
@@ -361,7 +388,10 @@
                   { className: "ethos-top__title" },
                   ...sectionTitle
                     .split(" ")
-                    .map((word, i) => [word, h("br", { "aria-hidden": "true", key: i })])
+                    .map((word, i) => [
+                      word,
+                      h("br", { "aria-hidden": "true", key: i }),
+                    ]),
                 ),
                 h(
                   "div",
@@ -376,9 +406,9 @@
                       src: img.src,
                       alt: img.title || "",
                       decoding: "async",
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               ),
 
               // ── Middle Section ─────────────────
@@ -388,8 +418,12 @@
                 h(
                   "p",
                   { className: "ethos-middle__p" },
-                  h("strong", { className: "description-title" }, data.section_desc_title),
-                  h("span", null, data.section_desc)
+                  h(
+                    "strong",
+                    { className: "description-title" },
+                    data.section_desc_title,
+                  ),
+                  h("span", null, data.section_desc),
                 ),
                 h(
                   "div",
@@ -407,18 +441,21 @@
                         { className: "panel-title description-title" },
                         ...val.title
                           .split(" ")
-                          .map((word, i) => [word, h("br", { "aria-hidden": "true", key: i })])
+                          .map((word, i) => [
+                            word,
+                            h("br", { "aria-hidden": "true", key: i }),
+                          ]),
                       ),
                       h(
                         "p",
                         {
                           className: `panel-desc panel-desc-${i + 1}`,
                         },
-                        val.caption
-                      )
-                    )
-                  )
-                )
+                        val.caption,
+                      ),
+                    ),
+                  ),
+                ),
               ),
 
               // ── Bottom Section ────────────────
@@ -438,11 +475,11 @@
                         "aria-label": ctaText,
                       },
                       ctaText,
-                      h("span", { className: "sr-only" })
-                    )
-                  )
-              )
-            )
+                      h("span", { className: "sr-only" }),
+                    ),
+                  ),
+              ),
+            ),
           );
         },
       });
@@ -465,7 +502,11 @@
             },
 
             // Title + Description
-            h("h2", { className: "section-solid-bg__title" }, data.section_title),
+            h(
+              "h2",
+              { className: "section-solid-bg__title" },
+              data.section_title,
+            ),
             h("p", { className: "section-solid-bg__desc" }, data.section_desc),
 
             // Competition Types
@@ -484,12 +525,24 @@
                   h(
                     "figcaption",
                     { className: "competition-types__caption" },
-                    h("h3", { className: "competition-types__caption-title" }, type.title),
-                    h("p", { className: "competition-types__caption-p" }, type.caption)
+                    h(
+                      "h3",
+                      { className: "competition-types__caption-title" },
+                      type.title,
+                    ),
+                    h(
+                      "p",
+                      { className: "competition-types__caption-p" },
+                      type.caption,
+                    ),
                   ),
-                  h("span", { className: "cta-1 competition-types__badge" }, "Read More")
-                )
-              )
+                  h(
+                    "span",
+                    { className: "cta-1 competition-types__badge" },
+                    "Read More",
+                  ),
+                ),
+              ),
             ),
 
             // Year of Gear
@@ -506,7 +559,7 @@
                     className: "yog-logo__img",
                     src: yogLogo,
                     alt: "Year of Gear",
-                  })
+                  }),
                 ),
 
               // Merch Rows
@@ -526,10 +579,10 @@
                         src: item.src,
                         alt: item.title,
                         key: j,
-                      })
-                    )
-                  )
-                )
+                      }),
+                    ),
+                  ),
+                ),
               ),
 
               // Yog Types
@@ -542,13 +595,17 @@
                     src: type.src,
                     alt: type.title,
                     key: i,
-                  })
-                )
+                  }),
+                ),
               ),
 
               // Stripe element
-              h("div", { className: "yog-stripes" }, h("div", { className: "yog-stripes__stripe" }))
-            )
+              h(
+                "div",
+                { className: "yog-stripes" },
+                h("div", { className: "yog-stripes__stripe" }),
+              ),
+            ),
           );
         },
       });
@@ -561,7 +618,12 @@
           const videos = data.videos || [];
           const collage = data.collage || {};
           // Handles both desktop and mobile, with opt-in for alternating mode
-          const renderImage = (img, imgIndex, colIndex, alternateByCol = false) => {
+          const renderImage = (
+            img,
+            imgIndex,
+            colIndex,
+            alternateByCol = false,
+          ) => {
             const isPortrait = alternateByCol
               ? colIndex % 2 === 0 // col 0 and 2 → portrait first
                 ? imgIndex % 2 === 0
@@ -588,12 +650,12 @@
               {
                 className: "section-solid-bg__title section-experiences__title",
               },
-              data.section_title
+              data.section_title,
             ),
             h(
               "p",
               { className: "section-solid-bg__desc section-experiences__desc" },
-              data.section_desc
+              data.section_desc,
             ),
 
             // ─── Simulated Swiper Carousel ───
@@ -628,10 +690,10 @@
                     h("img", {
                       src: vid.poster,
                       alt: vid.title,
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             ),
 
             // ─── Collage (optional) ───
@@ -639,16 +701,18 @@
               h(
                 "div",
                 { className: "collage" },
-                ["column_1", "column_2", "column_3", "column_4"].map((colKey, colIndex) =>
-                  h(
-                    "div",
-                    {
-                      className: `collage__column collage__column-${colIndex + 1}`,
-                    },
-                    (collage[colKey] || []).map(
-                      (img, imgIndex) => renderImage(img, imgIndex, colIndex, true) // ← alternateByCol = true
-                    )
-                  )
+                ["column_1", "column_2", "column_3", "column_4"].map(
+                  (colKey, colIndex) =>
+                    h(
+                      "div",
+                      {
+                        className: `collage__column collage__column-${colIndex + 1}`,
+                      },
+                      (collage[colKey] || []).map(
+                        (img, imgIndex) =>
+                          renderImage(img, imgIndex, colIndex, true), // ← alternateByCol = true
+                      ),
+                    ),
                 ),
                 ["column_1_mobile", "column_2_mobile"].map((colKey, colIndex) =>
                   h(
@@ -659,11 +723,12 @@
                       }`,
                     },
                     (collage[colKey] || []).map(
-                      (img, imgIndex) => renderImage(img, imgIndex, colIndex, false) // ← standard alt logic
-                    )
-                  )
-                )
-              )
+                      (img, imgIndex) =>
+                        renderImage(img, imgIndex, colIndex, false), // ← standard alt logic
+                    ),
+                  ),
+                ),
+              ),
           );
         },
       });
@@ -715,19 +780,23 @@
                       { className: "portrait-gradient__caption-name" },
                       item.name?.split(" ")[0],
                       h("br", { "aria-hidden": "true" }),
-                      item.name?.split(" ").slice(1).join(" ")
+                      item.name?.split(" ").slice(1).join(" "),
                     ),
-                    h("h4", { className: "portrait-gradient__caption-role" }, item.role)
-                  )
+                    h(
+                      "h4",
+                      { className: "portrait-gradient__caption-role" },
+                      item.role,
+                    ),
+                  ),
                 ),
                 h(
                   "div",
                   { className: "quote__text-block" },
                   h("h2", { className: "quote__text-block-title" }, item.title),
-                  h("blockquote", {}, `“${item.quote}”`)
-                )
-              )
-            )
+                  h("blockquote", {}, `“${item.quote}”`),
+                ),
+              ),
+            ),
           );
         },
       });
@@ -757,7 +826,8 @@
           // Fallbacks
           const sectionId = data.section_id || "direct";
           const sectionTitle =
-            data.section_title || 'The SPWR <br aria-hidden="true"> Direct Platform';
+            data.section_title ||
+            'The SPWR <br aria-hidden="true"> Direct Platform';
           const sectionDesc =
             data.section_desc ||
             "One company, one team, one seamless experience—premium solar delivered start to finish without handoffs or headaches.";
@@ -775,7 +845,9 @@
           const topLogoAlt = data.top_logo_alt || "SunPower";
 
           const nodes =
-            data.node_chart && Array.isArray(data.node_chart) && data.node_chart.length
+            data.node_chart &&
+            Array.isArray(data.node_chart) &&
+            data.node_chart.length
               ? data.node_chart
               : [
                   {
@@ -819,7 +891,7 @@
                 dangerouslySetInnerHTML: { __html: node.title || "" },
               }),
               h("p", { className: "node-chart__node-desc" }, node.desc || ""),
-              h("div", { className: "node-chart__node-dot" })
+              h("div", { className: "node-chart__node-dot" }),
             );
           };
 
@@ -840,7 +912,7 @@
                 className: "icon-svg",
                 style: { maskImage: `url('${iconDivider}')` },
                 "aria-hidden": "true",
-              })
+              }),
             ),
 
             // Section description
@@ -861,17 +933,19 @@
                     src: topLogoSrc,
                     alt: topLogoAlt,
                   }),
-                  h("div", { className: "node-chart__node-dot" })
-                )
+                  h("div", { className: "node-chart__node-dot" }),
+                ),
               ),
 
               // Bottom nodes
               h(
                 "div",
                 { className: "node-chart__bottom" },
-                nodes.map((node, index) => renderNode(node, index, nodes.length))
-              )
-            )
+                nodes.map((node, index) =>
+                  renderNode(node, index, nodes.length),
+                ),
+              ),
+            ),
           );
         },
       });
@@ -916,7 +990,11 @@
             { className: "section-tools", id: "platform-tools" },
 
             // Hidden H2 for a11y/SEO (optional)
-            h("h2", { className: "sr-only" }, data.section_title || "Sunder Tools"),
+            h(
+              "h2",
+              { className: "sr-only" },
+              data.section_title || "Sunder Tools",
+            ),
 
             // Loop over tools and render ImgHeroPreview for each
             ...tools.map((tool, i) =>
@@ -928,8 +1006,8 @@
                 graphic: tool.graphic,
                 cta: tool.cta,
                 sectionClass: `${tool.class || ""} tools stack-section`,
-              })
-            )
+              }),
+            ),
           );
         },
       });
@@ -952,7 +1030,7 @@
                 {
                   className: "section-values__text-desc section-solid-bg__desc",
                 },
-                data.section_desc
+                data.section_desc,
               ),
               data.cta?.text &&
                 h(
@@ -966,9 +1044,9 @@
                       "aria-label": data.cta.text,
                     },
                     data.cta.text,
-                    h("span", { className: "sr-only" })
-                  )
-                )
+                    h("span", { className: "sr-only" }),
+                  ),
+                ),
             ),
 
             // Static Image — Non CMS for gsap animation
@@ -976,7 +1054,7 @@
               className: "section-values__figure",
               src: "/static/img/icons/About-Hero-1CoreValues.svg",
               alt: "",
-            })
+            }),
           );
         },
       });
@@ -1002,11 +1080,11 @@
                       className: `mission-title__line ${item.style || ""}`,
                       key: i,
                     },
-                    item.text
-                  )
-                )
-              )
-            )
+                    item.text,
+                  ),
+                ),
+              ),
+            ),
           );
         },
       });
@@ -1022,7 +1100,11 @@
               className: "section-leadership section-solid-bg",
               id: "leadership",
             },
-            h("h2", { className: "section-solid-bg__title" }, data.section_title),
+            h(
+              "h2",
+              { className: "section-solid-bg__title" },
+              data.section_title,
+            ),
             h("p", { className: "section-solid-bg__desc" }, data.section_desc),
             h(
               "div",
@@ -1045,12 +1127,20 @@
                       className: "portrait-gradient__caption",
                       "aria-hidden": "true",
                     },
-                    h("h3", { className: "portrait-gradient__caption-name" }, person.name),
-                    h("h4", { className: "portrait-gradient__caption-role" }, person.role)
-                  )
-                )
-              )
-            )
+                    h(
+                      "h3",
+                      { className: "portrait-gradient__caption-name" },
+                      person.name,
+                    ),
+                    h(
+                      "h4",
+                      { className: "portrait-gradient__caption-role" },
+                      person.role,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         },
       });
@@ -1073,12 +1163,12 @@
                 {
                   className: "section-timeline__title section-solid-bg__title",
                 },
-                data.section_title
+                data.section_title,
               ),
               h(
                 "p",
                 { className: "section-timeline__desc section-solid-bg__desc" },
-                data.section_desc
+                data.section_desc,
               ),
 
               // Timeline Events
@@ -1096,15 +1186,15 @@
                     },
                     h("h3", { className: "timeline__event-year" }, event.year),
                     h("div", { className: "timeline__event-circle" }),
-                    h("p", { className: "timeline__event-desc" }, event.desc)
-                  )
+                    h("p", { className: "timeline__event-desc" }, event.desc),
+                  ),
                 ),
                 h("div", {
                   className: "timeline__bar",
                   style: { width: "100%" },
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         },
       });
@@ -1137,8 +1227,8 @@
                     src: img.src,
                     alt: img.title,
                     key: i,
-                  })
-                )
+                  }),
+                ),
               ),
 
               // ─── Form Panel ───
@@ -1162,30 +1252,39 @@
                       className: "form-block-group form-block-group--full-name",
                     },
                     [
-                      h("div", { className: "form-block form-block--first-name" }, [
-                        h("input", {
-                          className: "input",
-                          placeholder: "",
-                          required: true,
-                        }),
-                        h("label", { className: "label" }, "First Name"),
-                      ]),
-                      h("div", { className: "form-block form-block--last-name" }, [
-                        h("input", {
-                          className: "input",
-                          placeholder: "",
-                          required: true,
-                        }),
-                        h("label", { className: "label" }, "Last Name"),
-                      ]),
-                    ]
+                      h(
+                        "div",
+                        { className: "form-block form-block--first-name" },
+                        [
+                          h("input", {
+                            className: "input",
+                            placeholder: "",
+                            required: true,
+                          }),
+                          h("label", { className: "label" }, "First Name"),
+                        ],
+                      ),
+                      h(
+                        "div",
+                        { className: "form-block form-block--last-name" },
+                        [
+                          h("input", {
+                            className: "input",
+                            placeholder: "",
+                            required: true,
+                          }),
+                          h("label", { className: "label" }, "Last Name"),
+                        ],
+                      ),
+                    ],
                   ),
 
                   // Email + Phone
                   h(
                     "div",
                     {
-                      className: "form-block-group form-block-group--email-phone",
+                      className:
+                        "form-block-group form-block-group--email-phone",
                     },
                     [
                       h("div", { className: "form-block form-block--email" }, [
@@ -1206,7 +1305,7 @@
                         }),
                         h("label", { className: "label" }, "Phone"),
                       ]),
-                    ]
+                    ],
                   ),
 
                   // City
@@ -1242,35 +1341,41 @@
                         }),
                         h("label", { className: "label" }, "Zip"),
                       ]),
-                    ]
+                    ],
                   ),
 
                   // Optional: Discovery Field
                   form.show_field_discovery &&
-                    h("div", { className: "form-block form-block--discovery" }, [
-                      h("textarea", {
-                        className: "input input--textarea",
-                        placeholder: "",
-                        required: true,
-                        maxLength: form.max_count_discovery || 250,
-                      }),
-                      h("label", { className: "label label--textarea" }, form.label_discovery),
-                    ]),
+                    h(
+                      "div",
+                      { className: "form-block form-block--discovery" },
+                      [
+                        h("textarea", {
+                          className: "input input--textarea",
+                          placeholder: "",
+                          required: true,
+                          maxLength: form.max_count_discovery || 250,
+                        }),
+                        h(
+                          "label",
+                          { className: "label label--textarea" },
+                          form.label_discovery,
+                        ),
+                      ],
+                    ),
 
-                  // Optional: Awareness Checkbox
-                  form.show_checkbox_awareness &&
-                    h("div", { className: "form-block form-block--awareness" }, [
-                      h("input", {
-                        type: "checkbox",
-                        className: "checkbox",
-                        required: true,
-                      }),
-                      h(
-                        "label",
-                        { className: "checkbox-label" },
-                        form.label_checkbox_awareness || "I understand this is a sales position."
-                      ),
-                    ]),
+                  h("div", { className: "form-block form-block--awareness" }, [
+                    h("input", {
+                      type: "checkbox",
+                      className: "checkbox",
+                      required: true,
+                    }),
+                    h(
+                      "label",
+                      { className: "checkbox-label" },
+                      "I understand this is a sales position.",
+                    ),
+                  ]),
 
                   // Optional: reCAPTCHA
                   form.show_recaptcha &&
@@ -1291,7 +1396,7 @@
                           marginTop: "12px",
                         },
                       },
-                      "reCAPTCHA placeholder"
+                      "reCAPTCHA placeholder",
                     ),
 
                   // Submit
@@ -1299,12 +1404,12 @@
                     h(
                       "button",
                       { className: "cta-1 outline", type: "submit" },
-                      form.submit_btn_text || "Submit"
+                      form.submit_btn_text || "Submit",
                     ),
-                  ])
-                )
-              )
-            )
+                  ]),
+                ),
+              ),
+            ),
           );
         },
       });
@@ -1328,7 +1433,11 @@
               }),
 
               // Title (h1) — this version uses h1 for the hero
-              h("h1", { className: "partial-img-hero__h1" }, data.section_title),
+              h(
+                "h1",
+                { className: "partial-img-hero__h1" },
+                data.section_title,
+              ),
 
               // Footer
               h("div", { className: "partial-img-hero__footer" }, [
@@ -1343,7 +1452,7 @@
                         "aria-label": cta.text,
                       },
                       cta.text,
-                      h("span", { className: "sr-only" })
+                      h("span", { className: "sr-only" }),
                     ),
                 ]),
               ]),
@@ -1362,10 +1471,10 @@
                       "aria-label": cta.text,
                     },
                     cta.text,
-                    h("span", { className: "sr-only" })
+                    h("span", { className: "sr-only" }),
                   ),
               ]),
-            ])
+            ]),
           );
         },
       });
@@ -1388,12 +1497,12 @@
               {
                 className: "section-solid-bg__title section-oss-history__title",
               },
-              data.section_title
+              data.section_title,
             ),
             h(
               "p",
               { className: "section-solid-bg__desc section-oss-history__desc" },
-              data.section_desc
+              data.section_desc,
             ),
 
             // Loop through service events
@@ -1417,10 +1526,19 @@
                     h("h3", { className: "service-event__year" }, item.year),
                     h("h4", { className: "service-event__location" }, [
                       item.city &&
-                        h("span", { className: "service-event__location-city" }, `${item.city}, `),
-                      h("span", { className: "service-event__location-country" }, item.country),
+                        h(
+                          "span",
+                          { className: "service-event__location-city" },
+                          `${item.city}, `,
+                        ),
+                      h(
+                        "span",
+                        { className: "service-event__location-country" },
+                        item.country,
+                      ),
                     ]),
-                    item.desc && h("p", { className: "service-event__desc" }, item.desc),
+                    item.desc &&
+                      h("p", { className: "service-event__desc" }, item.desc),
 
                     // Image Gallery Carousel (Simulated as horizontal scroll)
                     gallery.length > 0 &&
@@ -1448,9 +1566,9 @@
                                 src: img.src,
                                 alt: img.title,
                               }),
-                            ]
-                          )
-                        )
+                            ],
+                          ),
+                        ),
                       ),
 
                     // CTA (if no gallery or standalone)
@@ -1463,16 +1581,18 @@
                             href: cta.url || "#",
                             "aria-label": cta.text,
                             target: cta.new_tab ? "_blank" : "_self",
-                            rel: cta.new_tab ? "noopener noreferrer" : undefined,
+                            rel: cta.new_tab
+                              ? "noopener noreferrer"
+                              : undefined,
                           },
                           cta.text,
-                          h("span", { className: "sr-only" })
+                          h("span", { className: "sr-only" }),
                         ),
                       ]),
                   ]),
                 ]);
-              })
-            )
+              }),
+            ),
           );
         },
       });
@@ -1496,11 +1616,15 @@
                 h(
                   "a",
                   { className: "cta-1 outline", href: data.cta_1.url || "#" },
-                  data.cta_1.text
+                  data.cta_1.text,
                 ),
               data.cta_2?.text &&
-                h("a", { className: "cta-2", href: data.cta_2.url || "#" }, data.cta_2.text)
-            )
+                h(
+                  "a",
+                  { className: "cta-2", href: data.cta_2.url || "#" },
+                  data.cta_2.text,
+                ),
+            ),
           );
         },
       });
