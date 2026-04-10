@@ -2895,7 +2895,9 @@ body .hide-load {
 .form-redirect .form-block:hover .label, .form-redirect .form-block:focus-within .label {
   color: var(--input-field-color-hover-on-background);
 }
-.form-redirect .form-block--awareness {
+.form-redirect .form-block--compliance {
+  --overflow-field-height: 5.5em;
+  --top-padding: 12px;
   --font-size: 24px;
   color: var(--font-color--primary);
   font-family: var(--font-family-body);
@@ -2903,36 +2905,81 @@ body .hide-load {
   font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
-  .form-redirect .form-block--awareness {
+  .form-redirect .form-block--compliance {
     --font-size: 18px;
   }
 }
-.form-redirect .form-block--awareness {
+.form-redirect .form-block--compliance {
   --font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
-  .form-redirect .form-block--awareness {
+  .form-redirect .form-block--compliance {
     --font-size: 14px;
   }
 }
-.form-redirect .form-block--awareness {
+.form-redirect .form-block--compliance {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
   gap: 1ch;
   height: auto;
+  max-height: var(--overflow-field-height);
 }
-.form-redirect .form-block--awareness .checkbox {
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--compliance {
+    --overflow-field-height: auto;
+  }
+}
+.form-redirect .form-block--compliance::before, .form-redirect .form-block--compliance::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--compliance::before, .form-redirect .form-block--compliance::after {
+    display: none;
+  }
+}
+.form-redirect .form-block--compliance::before {
+  top: 0;
+  height: 25%;
+  background: linear-gradient(to top, transparent, var(--surface-color));
+}
+.form-redirect .form-block--compliance::after {
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, var(--surface-color));
+}
+.form-redirect .form-block--compliance .form-block-overflow-wrapper {
+  overflow: scroll;
+  max-height: var(--overflow-field-height);
+  padding-block-end: 32px;
+}
+@media screen and (min-width: 1025px) {
+  .form-redirect .form-block--compliance .form-block-overflow-wrapper {
+    padding-block-start: var(--top-padding);
+  }
+}
+.form-redirect .form-block--compliance .checkbox {
   accent-color: var(--hero-color--primary);
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-.form-redirect .form-block--awareness .checkbox-label {
+@media screen and (min-width: 1025px) {
+  .form-redirect .form-block--compliance .checkbox {
+    margin-block-start: var(--top-padding);
+  }
+}
+.form-redirect .form-block--compliance .checkbox-label {
   font-size: inherit;
   cursor: pointer;
 }
-.form-redirect .form-block--awareness .form-policy-links {
+.form-redirect .form-block--compliance .form-policy-links {
   --font-size: 24px;
   color: var(--font-color--primary);
   font-family: var(--font-family-body);
@@ -2940,29 +2987,29 @@ body .hide-load {
   font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
-  .form-redirect .form-block--awareness .form-policy-links {
+  .form-redirect .form-block--compliance .form-policy-links {
     --font-size: 18px;
   }
 }
-.form-redirect .form-block--awareness .form-policy-links {
+.form-redirect .form-block--compliance .form-policy-links {
   --font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
-  .form-redirect .form-block--awareness .form-policy-links {
+  .form-redirect .form-block--compliance .form-policy-links {
     --font-size: 14px;
   }
 }
-.form-redirect .form-block--awareness .form-policy-links {
+.form-redirect .form-block--compliance .form-policy-links {
   margin-block-start: 8px;
 }
-.form-redirect .form-block--awareness .form-policy-links a {
+.form-redirect .form-block--compliance .form-policy-links a {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   text-transform: initial;
 }
 @media (hover: hover) and (pointer: fine) {
-  .form-redirect .form-block--awareness .form-policy-links a:hover, .form-redirect .form-block--awareness .form-policy-links a:focus-visible {
+  .form-redirect .form-block--compliance .form-policy-links a:hover, .form-redirect .form-block--compliance .form-policy-links a:focus-visible {
     color: var(--link-color-hover);
     rotate: 12deg;
   }

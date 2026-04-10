@@ -25,17 +25,70 @@
     //   height: 6em;
     // }
 
-    &--awareness {
+    &--compliance {
+      --overflow-field-height: 5.5em;
+      --top-padding: 12px;
+
       @include body-font-styles(xs);
       @include row-start;
+      position: relative;
       gap: 1ch;
       height: auto;
+      max-height: var(--overflow-field-height);
+
+      @include mq-max(lg) {
+        --overflow-field-height: auto;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+
+        @include mq-max(lg) {
+          display: none;
+        }
+      }
+
+      &::before {
+        top: 0;
+        height: 25%;
+        background: linear-gradient(to top, transparent, var(--surface-color));
+      }
+
+      &::after {
+        bottom: 0;
+        height: 50%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          var(--surface-color)
+        );
+      }
+
+      .form-block-overflow-wrapper {
+        overflow: scroll;
+        max-height: var(--overflow-field-height);
+        padding-block-end: 32px;
+
+        @include mq-min(lg) {
+          padding-block-start: var(--top-padding);
+        }
+      }
 
       .checkbox {
         accent-color: var(--hero-color--primary);
         width: 16px;
         height: 16px;
         cursor: pointer;
+
+        @include mq-min(lg) {
+          margin-block-start: var(--top-padding);
+        }
       }
 
       .checkbox-label {
