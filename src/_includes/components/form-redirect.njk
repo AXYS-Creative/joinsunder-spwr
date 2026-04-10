@@ -154,16 +154,21 @@
     type="checkbox"
     required
   />
-  <div class="form-block-overflow-wrapper" data-lenis-prevent>
-    <label class="checkbox-label" for="compliance">
-      By checking this box, I consent to receive automated SMS/text messages from Complete Solaria, Inc. (DBA SunPower) at the number provided. Messages may include interview scheduling, application status updates, and recruiting-related communications. Message frequency varies. Msg & data rates may apply. Consent is not required to apply. Reply STOP to opt out or HELP for assistance.
-    </label>
-    <p class="form-policy-links">
-      View our 
-      <a class="classic-link" href="https://us.sunpower.com/privacy-policy" target="_blank">Privacy Policy</a> 
-      and 
-      <a class="classic-link" href="https://us.sunpower.com/terms" target="_blank">Terms of Use</a>.
-    </p>
+  <div class="form-nested-div">
+    <div class="compliance-overflow-wrapper" data-lenis-prevent>
+      <label class="checkbox-label" for="compliance">
+        By checking this box, I consent to receive automated SMS/text messages from Complete Solaria, Inc. (DBA SunPower) at the number provided. Messages may include interview scheduling, application status updates, and recruiting-related communications. Message frequency varies. Msg & data rates may apply. Consent is not required to apply. Reply STOP to opt out or HELP for assistance.
+      </label>
+      <p class="form-policy-links">
+        View our 
+        <a class="classic-link" href="https://us.sunpower.com/privacy-policy" target="_blank">Privacy Policy</a> 
+        and 
+        <a class="classic-link" href="https://us.sunpower.com/terms" target="_blank">Terms of Use</a>.
+      </p>
+    </div>
+    <button class="compliance-expand-btn" type="button" aria-label="Expand compliance message">
+      <span class="compliance-expand-btn__icon" style="mask-image: url('/static/img/icons/chevron-down.svg');"></span>
+    </button>
   </div>
 </div>
 

@@ -36,6 +36,10 @@
       height: auto;
       max-height: var(--overflow-field-height);
 
+      @include mq-min(lg) {
+        margin-block-end: 48px;
+      }
+
       @include mq-max(lg) {
         --overflow-field-height: auto;
       }
@@ -70,13 +74,37 @@
         );
       }
 
-      .form-block-overflow-wrapper {
+      .compliance-overflow-wrapper {
         overflow: scroll;
         max-height: var(--overflow-field-height);
-        padding-block-end: 32px;
 
         @include mq-min(lg) {
+          padding-block-end: 32px;
           padding-block-start: var(--top-padding);
+        }
+      }
+
+      .form-nested-div {
+        @include column-center;
+      }
+
+      .compliance-expand-btn {
+        @include row-center;
+        width: 24px;
+        margin-inline: auto;
+        translate: -20px;
+
+        @include mq-max(lg) {
+          display: none;
+        }
+
+        &__icon {
+          background: white;
+          mask-size: cover;
+          width: 100%;
+          aspect-ratio: 1;
+          display: block;
+          // transition: $ease;
         }
       }
 
@@ -108,6 +136,23 @@
             color: var(--link-color-hover);
             rotate: 12deg;
           }
+        }
+      }
+
+      &--expanded {
+        --overflow-field-height: 100%;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        .compliance-overflow-wrapper {
+          padding-block: 16px;
+        }
+
+        .compliance-expand-btn__icon {
+          transform: scaleY(-1);
         }
       }
     }

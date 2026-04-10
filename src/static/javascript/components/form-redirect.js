@@ -10,6 +10,8 @@ if (document.querySelector(".form-redirect")) {
   const nestedLabel = document.querySelector(".form-redirect .nested-label");
   const checkbox = document.querySelector(".form-redirect .checkbox");
   const captchaContainer = document.querySelector(".recaptcha");
+  const expandBtn = document.querySelector(".compliance-expand-btn");
+  const formBlockCompliance = document.querySelector(".form-block--compliance");
   const maxLength = textarea?.maxLength;
 
   const updateCharCount = () => {
@@ -41,6 +43,16 @@ if (document.querySelector(".form-redirect")) {
       }
     });
   }
+
+  expandBtn?.addEventListener("click", () => {
+    formBlockCompliance.classList.toggle("form-block--compliance--expanded");
+    expandBtn.setAttribute(
+      "aria-label",
+      formBlockCompliance.classList.contains("form-block--compliance--expanded")
+        ? "Collapse compliance message"
+        : "Expand compliance message",
+    );
+  });
 
   // // reCAPTCHA theme
   // const recaptcha = document.querySelector(".g-recaptcha");

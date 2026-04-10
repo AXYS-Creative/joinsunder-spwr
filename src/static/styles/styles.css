@@ -2926,6 +2926,11 @@ body .hide-load {
   height: auto;
   max-height: var(--overflow-field-height);
 }
+@media screen and (min-width: 1025px) {
+  .form-redirect .form-block--compliance {
+    margin-block-end: 48px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .form-redirect .form-block--compliance {
     --overflow-field-height: auto;
@@ -2954,15 +2959,42 @@ body .hide-load {
   height: 50%;
   background: linear-gradient(to bottom, transparent, var(--surface-color));
 }
-.form-redirect .form-block--compliance .form-block-overflow-wrapper {
+.form-redirect .form-block--compliance .compliance-overflow-wrapper {
   overflow: scroll;
   max-height: var(--overflow-field-height);
-  padding-block-end: 32px;
 }
 @media screen and (min-width: 1025px) {
-  .form-redirect .form-block--compliance .form-block-overflow-wrapper {
+  .form-redirect .form-block--compliance .compliance-overflow-wrapper {
+    padding-block-end: 32px;
     padding-block-start: var(--top-padding);
   }
+}
+.form-redirect .form-block--compliance .form-nested-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-redirect .form-block--compliance .compliance-expand-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  margin-inline: auto;
+  translate: -20px;
+}
+@media screen and (max-width: 1024px) {
+  .form-redirect .form-block--compliance .compliance-expand-btn {
+    display: none;
+  }
+}
+.form-redirect .form-block--compliance .compliance-expand-btn__icon {
+  background: white;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
 }
 .form-redirect .form-block--compliance .checkbox {
   accent-color: var(--hero-color--primary);
@@ -3013,6 +3045,18 @@ body .hide-load {
     color: var(--link-color-hover);
     rotate: 12deg;
   }
+}
+.form-redirect .form-block--compliance--expanded {
+  --overflow-field-height: 100%;
+}
+.form-redirect .form-block--compliance--expanded::before, .form-redirect .form-block--compliance--expanded::after {
+  display: none;
+}
+.form-redirect .form-block--compliance--expanded .compliance-overflow-wrapper {
+  padding-block: 16px;
+}
+.form-redirect .form-block--compliance--expanded .compliance-expand-btn__icon {
+  transform: scaleY(-1);
 }
 .form-redirect .form-block .label,
 .form-redirect .form-block .input {
