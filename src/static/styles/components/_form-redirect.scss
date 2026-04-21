@@ -258,6 +258,12 @@
   .form-footer {
     display: flex; // align-items: shrinks cta-1
     gap: 16px;
+
+    button[type="submit"]:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
 }
 

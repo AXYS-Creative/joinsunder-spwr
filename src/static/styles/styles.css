@@ -3100,6 +3100,11 @@ body .hide-load {
   display: flex;
   gap: 16px;
 }
+.form-redirect .form-footer button[type=submit]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 .icon-svg {
   --icon-size: 1em;

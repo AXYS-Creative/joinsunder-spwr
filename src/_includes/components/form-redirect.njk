@@ -172,12 +172,10 @@
 </div>
 
   <!-- prettier-ignore -->
-  {% if form_data.show_recaptcha %}
   <div data-netlify-recaptcha="true" class="recaptcha" style="width: 304px; height: 78px;"></div>
-  {% endif %}
 
   <div class="form-footer">
-    <button class="cta-1 tab-element-page" type="submit">{{ form_data.submit_btn_text }}</button>
+    <button class="cta-1 tab-element-page" type="submit" disabled aria-disabled="true">{{ form_data.submit_btn_text }}</button>
     <!-- prettier-ignore -->
     {% set cta_1 = form_data.cta_2 %}
     {% if form_data.cta_2.text %}

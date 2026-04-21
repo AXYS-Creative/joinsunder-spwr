@@ -846,10 +846,6 @@ collections:
                 label: Discovery Field Label
                 widget: string
                 required: false
-              - name: show_recaptcha
-                label: Add reCAPTCHA (Extra spam prevention)
-                widget: boolean
-                default: true
               - name: submit_btn_text
                 label: Submit Button Text
                 widget: string

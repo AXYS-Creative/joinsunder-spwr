@@ -30,7 +30,6 @@ form_data:
   show_field_discovery: true
   label_discovery: How did you hear about us?
   max_count_discovery: 250
-  show_recaptcha: true
   submit_btn_text: Submit
   # cta_2:
   #   text: Contact us

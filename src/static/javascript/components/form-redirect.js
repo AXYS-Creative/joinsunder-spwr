@@ -2,10 +2,10 @@ if (document.querySelector(".form-redirect")) {
   // Telephone Regex
   const phoneInput = document.getElementById("phone");
   phoneInput.addEventListener("input", () => {
-    phoneInput.value = phoneInput.value.replace(/\D/g, ""); // Remove all non-digits
+    phoneInput.value = phoneInput.value.replace(/\D/g, "");
   });
 
-  // Textarea max character count (feel free to drop the .form-redirect class if there's only one form/textarea)
+  // Textarea max character count
   const textarea = document.querySelector(".form-redirect .input--textarea");
   const nestedLabel = document.querySelector(".form-redirect .nested-label");
   const checkbox = document.querySelector(".form-redirect .checkbox");
@@ -16,14 +16,11 @@ if (document.querySelector(".form-redirect")) {
 
   const updateCharCount = () => {
     const remaining = maxLength - textarea.value.length;
-
     if (nestedLabel) {
       nestedLabel.textContent =
         remaining === maxLength
           ? `Max — ${maxLength} characters`
           : `${remaining} character${remaining === 1 ? "" : "s"} remaining`;
-
-      // nestedLabel.classList.toggle("text-error", remaining === 0);
     }
   };
 
@@ -32,17 +29,33 @@ if (document.querySelector(".form-redirect")) {
     textarea.addEventListener("input", updateCharCount);
   }
 
-  // if (checkbox && captchaContainer) {
-  //   let captchaShown = false;
-  //   captchaContainer.style.display = "none";
+  // reCAPTCHA submit guard
+  if (captchaContainer) {
+    const form = captchaContainer.closest("form");
+    const submitBtn = form?.querySelector('[type="submit"]');
 
-  //   checkbox.addEventListener("change", () => {
-  //     if (!captchaShown && checkbox.checked) {
-  //       captchaContainer.style.display = "block";
-  //       captchaShown = true;
-  //     }
-  //   });
-  // }
+    if (form && submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute("aria-disabled", "true");
+
+      const enableIfSolved = () => {
+        const response = form.querySelector(
+          'textarea[name="g-recaptcha-response"]',
+        );
+        const isSolved = response && response.value.length > 0;
+        submitBtn.disabled = !isSolved;
+        submitBtn.setAttribute("aria-disabled", String(!isSolved));
+      };
+
+      new MutationObserver(enableIfSolved).observe(form, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
+
+      setInterval(enableIfSolved, 300);
+    }
+  }
 
   expandBtn?.addEventListener("click", () => {
     formBlockCompliance.classList.toggle("form-block--compliance--expanded");
@@ -53,8 +66,4 @@ if (document.querySelector(".form-redirect")) {
         : "Expand compliance message",
     );
   });
-
-  // // reCAPTCHA theme
-  // const recaptcha = document.querySelector(".g-recaptcha");
-  // recaptcha?.setAttribute("data-theme", "dark");
 }
