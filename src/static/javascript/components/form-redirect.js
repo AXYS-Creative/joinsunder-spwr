@@ -32,17 +32,17 @@ if (document.querySelector(".form-redirect")) {
     textarea.addEventListener("input", updateCharCount);
   }
 
-  if (checkbox && captchaContainer) {
-    let captchaShown = false;
-    captchaContainer.style.display = "none";
+  // if (checkbox && captchaContainer) {
+  //   let captchaShown = false;
+  //   captchaContainer.style.display = "none";
 
-    checkbox.addEventListener("change", () => {
-      if (!captchaShown && checkbox.checked) {
-        captchaContainer.style.display = "block";
-        captchaShown = true;
-      }
-    });
-  }
+  //   checkbox.addEventListener("change", () => {
+  //     if (!captchaShown && checkbox.checked) {
+  //       captchaContainer.style.display = "block";
+  //       captchaShown = true;
+  //     }
+  //   });
+  // }
 
   expandBtn?.addEventListener("click", () => {
     formBlockCompliance.classList.toggle("form-block--compliance--expanded");
